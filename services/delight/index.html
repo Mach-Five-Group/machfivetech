@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification Services - Mach Five Tech</title>
+    
+    <!-- Neodigm Scripts -->
+    <script>
+        let neodigmOptCustom = { CONSOLE_LOG_VER:true, W4S_VOLUME: .016 }
+        let neodigmOpt_launchCompleteCustom = {
+          ver: "1.2.4",
+          N55_LC_DOMAIN: ["MachFiveTech.com", 256],
+          N55_LC_TAG1: ["MachFiveTech 🎮 Gamification & Engagement Services", 256],
+          N55_LC_COLOR_BRAND: ["192839", 256],
+          CONSOLE_LOG_VER: true,
+        }
+    </script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.css">
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.css">
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300;400|Roboto+Mono:wght@300;400|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0|Permanent+Marker">
+
+    <style>
+        :root {
+            --m5-brand: #DD4124;
+            --m5-brand-dark: #810000;
+            --m5-accent: #7BC4C4;
+            --m5-dark: #181818;
+            --m5-darker: #000;
+            --m5-night-mid: #323232;
+            --m5-light: #f8f8f8;
+            --m5-lighter: #fff;
+            --m5-text: #333;
+            --m5-text-light: #666;
+            --m5-border: #e0e0e0;
+            --m5-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            --m5-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--m5-lighter);
+            color: var(--m5-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 120px;
+            position: relative;
+        }
+
+        /* Grid texture with fade effect - from home page */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Enhanced fade for laptop viewports */
+        @media (min-width: 1024px) and (max-width: 1600px) {
+            body::before {
+                mask-image: linear-gradient(90deg, 
+                    transparent 0%, 
+                    rgba(0,0,0,0.2) 10%,
+                    rgba(0,0,0,0.6) 20%,
+                    black 30%, 
+                    black 70%, 
+                    rgba(0,0,0,0.6) 80%,
+                    rgba(0,0,0,0.2) 90%,
+                    transparent 100%);
+                -webkit-mask-image: linear-gradient(90deg, 
+                    transparent 0%, 
+                    rgba(0,0,0,0.2) 10%,
+                    rgba(0,0,0,0.6) 20%,
+                    black 30%, 
+                    black 70%, 
+                    rgba(0,0,0,0.6) 80%,
+                    rgba(0,0,0,0.2) 90%,
+                    transparent 100%);
+            }
+
+            /* Adjust top-bar-right position for laptop viewports */
+            .top-bar-right {
+                margin-right: 150px;
+            }
+
+            /* Make footer tighter on laptop viewports */
+            .footer {
+                padding: 40px 24px 0;
+            }
+
+            .footer::before {
+                bottom: 60px;
+            }
+
+            .footer-content {
+                gap: 20px;
+                padding-bottom: 20px;
+            }
+
+            .footer-brand {
+                flex: 1 1 300px;
+            }
+
+            .footer-section {
+                flex: 1 1 150px;
+            }
+
+            .footer-bottom {
+                margin-top: 16px;
+                padding: 16px 0;
+            }
+        }
+
+        /* Neodigm button overrides */
+        [data-n55-enchanted-cta][data-n55-theme='primary'] { 
+            background: linear-gradient(var(--m5-night-mid), var(--m5-night-mid)) !important; 
+        }
+
+        /* Header - Fixed */
+        .header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar {
+            background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 36px;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            margin-right: 200px;
+        }
+
+        .top-bar-link {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar-link:hover {
+            color: var(--m5-brand);
+        }
+
+        .top-bar-link .material-symbols-outlined {
+            font-size: 16px;
+            color: var(--m5-brand);
+        }
+
+        /* Make login link more prominent */
+        .top-bar-link[href="/customer-portal/"] {
+            background: var(--m5-brand);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--m5-brand);
+            transition: all 0.2s ease;
+        }
+
+        .top-bar-link[href="/customer-portal/"]:hover {
+            background: var(--m5-brand-dark);
+            border-color: var(--m5-brand-dark);
+            color: white;
+        }
+
+        .top-bar-link[href="/customer-portal/"] .material-symbols-outlined {
+            color: white;
+        }
+
+        .main-nav {
+            background: white;
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 3px solid var(--m5-brand);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 280px auto 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Show nav logo on desktop */
+        .main-nav .nav-logo {
+            display: inline-flex;
+            justify-self: start;
+        }
+
+        /* Desktop only logo */
+        .nav-logo.desktop-only {
+            display: none;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: white;
+            background: var(--m5-brand);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 20px;
+            transition: all 0.2s ease;
+            display: inline-block;
+            line-height: 1.2;
+            vertical-align: baseline;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo:hover span {
+            /* Remove hover effect - no transform or shadow */
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            list-style: none;
+            justify-self: center;
+            white-space: nowrap;
+        }
+
+        .nav-menu a {
+            white-space: nowrap;
+        }
+
+        .nav-spacer {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        /* I Need prompt */
+        .nav-prompt {
+            color: var(--m5-brand);
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        .nav-prompt::after {
+            content: '→';
+            font-size: 20px;
+            animation: pointRight 2s ease-in-out infinite;
+        }
+
+        @keyframes pointRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        /* Updated nav menu with glassmorphic style from Marketing site */
+        .nav-menu a {
+            color: var(--m5-text);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--m5-brand);
+            background: rgba(221, 65, 36, 0.05);
+            border-color: rgba(221, 65, 36, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.1);
+        }
+
+        /* Special styling for Contact CTA */
+        .nav-menu a[onclick*="openContactForm"] {
+            background: rgba(221, 65, 36, 0.1) !important;
+            border-color: rgba(221, 65, 36, 0.2) !important;
+            color: var(--m5-brand) !important;
+        }
+
+        .nav-menu a[onclick*="openContactForm"]:hover {
+            background: var(--m5-brand) !important;
+            border-color: var(--m5-brand) !important;
+            color: white !important;
+            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3) !important;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        /* Hero Section - Mini version with whiteboard background */
+        .delight-hero {
+            background: linear-gradient(135deg, var(--m5-brand) 0%, var(--m5-brand-dark) 100%);
+            color: white;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Add mini hero background - whiteboard texture like home page CTA */
+        .delight-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/img/whiteboard.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .delight-hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .delight-hero h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .delight-hero-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            line-height: 1.5;
+        }
+
+        /* Results Indicators */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat-number {
+            font-size: 15px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 40px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section:last-of-type {
+            padding: 20px 0;
+        }
+
+        .content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 5vw, 48px);
+            font-weight: 700;
+            color: var(--m5-dark);
+            margin-bottom: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--m5-text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Grid Layout - Full width for gamification content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .content-grid.full-width {
+            grid-template-columns: 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .content-grid:nth-child(even) {
+            direction: rtl;
+        }
+
+        .content-grid:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .content-grid.full-width:nth-child(even) {
+            direction: ltr;
+        }
+
+        .content-text h3 {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--m5-text);
+            margin-bottom: 20px;
+        }
+
+        /* Updated Proficiencies Panel to match standard styling */
+        .proficiencies-panel {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 32px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 320px;
+            overflow: visible;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .proficiencies-panel:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .proficiencies-header {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff;
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 24px;
+            transform: rotate(-2deg);
+        }
+
+        .proficiencies-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #DD4124;
+            z-index: -1;
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .proficiencies-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.1) 2px,
+                rgba(255, 255, 255, 0.1) 4px
+            );
+            z-index: -1;
+        }
+
+        /* Different angles for variety */
+        .content-grid:nth-child(1) .proficiencies-header {
+            transform: rotate(-3deg);
+        }
+
+        .content-grid:nth-child(2) .proficiencies-header {
+            transform: rotate(2deg);
+        }
+
+        .proficiencies-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .proficiencies-list li {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-left: 28px;
+            position: relative;
+            color: #2c3e50;
+            transition: all 0.2s ease;
+            font-weight: 400;
+        }
+
+        .proficiencies-list li:hover {
+            color: #DD4124;
+            transform: translateX(4px);
+        }
+
+        .proficiencies-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #666;
+            font-weight: 600;
+            opacity: 1;
+            transition: all 0.2s ease;
+        }
+
+        .proficiencies-list li:hover::before {
+            color: #DD4124;
+            transform: translateX(0);
+        }
+
+        /* Problem Panel - Match Applications Panel Style */
+        .problem-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 50px 40px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 320px;
+            overflow: visible;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .problem-panel:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .problem-header {
+            position: absolute;
+            top: -5px;
+            left: -20px;
+            transform: rotate(-3deg);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 25px 8px 40px;
+            margin: 0;
+            
+            /* Heavy wear pattern with brand color */
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .problem-header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+        }
+
+        /* Arrow end */
+        .problem-header::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 10px;
+            border-color: transparent transparent transparent #C63C28;
+            filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.2));
+        }
+
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .problem-item {
+            padding: 16px;
+            background: var(--m5-light);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .problem-item:hover {
+            background: var(--m5-brand);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.2);
+        }
+
+        .problem-item:hover h5,
+        .problem-item:hover p {
+            color: white;
+        }
+
+        .problem-content h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--m5-dark);
+            transition: color 0.3s ease;
+        }
+
+        .problem-content p {
+            font-size: 13px;
+            line-height: 1.4;
+            color: var(--m5-text);
+            transition: color 0.3s ease;
+        }
+
+        .problem-icon {
+            display: none;
+        }
+
+        /* Applications Panel - Full width styling */
+        .applications-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: visible;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .applications-panel:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .applications-header {
+            position: absolute;
+            top: -5px;
+            left: -20px;
+            transform: rotate(2deg);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 25px 8px 40px;
+            margin: 0;
+            
+            /* Heavy wear pattern with brand color */
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .applications-header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+        }
+
+        /* Arrow end */
+        .applications-header::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 10px;
+            border-color: transparent transparent transparent #C63C28;
+            filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.2));
+        }
+
+        .applications-panel {
+            position: relative;
+            padding-top: 40px;
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .application-item {
+            padding: 16px;
+            background: var(--m5-light);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .application-item:hover {
+            background: var(--m5-brand);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.2);
+        }
+
+        .application-item:hover h5,
+        .application-item:hover p {
+            color: white;
+        }
+
+        .application-item h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--m5-dark);
+            transition: color 0.3s ease;
+        }
+
+        .application-item p {
+            font-size: 13px;
+            line-height: 1.4;
+            color: var(--m5-text);
+            transition: color 0.3s ease;
+        }
+
+        /* Process Section - Improved spacing */
+        .process-section {
+            padding: 80px 0;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 8%;
+            right: 8%;
+            height: 2px;
+            background: var(--m5-border);
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 3px solid var(--m5-brand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            color: var(--m5-brand);
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--m5-text-light);
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--m5-brand) 0%, var(--m5-brand-dark) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/img/whiteboard.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(36px, 5vw, 48px);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .cta-content p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: white;
+            color: var(--m5-brand);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button .material-symbols-outlined {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+            border-top: 1px solid var(--m5-border);
+            color: var(--m5-text);
+            padding: 80px 24px 0;
+            position: relative;
+        }
+
+        /* Add grid background to footer - stops before footer-bottom */
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 100px;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle brand accent line at top */
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--m5-brand);
+            border-radius: 0 0 3px 3px;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px;
+            border-bottom: 1px solid var(--m5-border);
+            padding-bottom: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            flex: 1 1 400px;
+        }
+
+        .footer-brand p {
+            color: var(--m5-text-light);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .footer-contact .material-symbols-outlined {
+            color: var(--m5-brand);
+            font-size: 20px;
+        }
+
+        .footer-contact:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+        }
+
+        .footer-section h4 {
+            color: var(--m5-brand);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--m5-text-light);
+            position: relative;
+            z-index: 1;
+            background: #fafafa;
+            padding: 32px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-bottom a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--m5-brand);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process-timeline::before {
+                display: none;
+            }
+
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-grid.full-width {
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .content-section {
+                padding: 25px 0;
+            }
+
+            .content-section:last-of-type {
+                padding: 15px 0;
+            }
+
+            .delight-hero {
+                padding: 30px 0;
+            }
+
+            .cta-section {
+                padding: 40px 0;
+            }
+
+            /* Show nav logo on mobile, hide top bar */
+            .top-bar {
+                display: none;
+            }
+
+            .main-nav .nav-logo {
+                display: inline-flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                font-size: 26px;
+            }
+
+            .main-nav .nav-logo span {
+                font-size: 22px;
+                padding: 4px 12px;
+            }
+
+            .nav-container {
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+
+            .mobile-menu-toggle {
+                display: block !important;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                position: relative;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
+            .mobile-menu-toggle span {
+                display: block !important;
+                width: 28px;
+                height: 3px;
+                background-color: #181818 !important;
+                margin: 6px 0;
+                transition: all 0.3s ease;
+                border-radius: 2px;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform-origin: center;
+            }
+
+            /* Hamburger to X animation */
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 80px 32px;
+                gap: 24px;
+                box-shadow: -2px 0 16px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s;
+                z-index: 999;
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 20px;
+            }
+
+            .content-grid:nth-child(even) {
+                direction: ltr;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .cta-button {
+                width: auto;
+                min-width: 200px;
+                justify-content: center;
+            }
+
+            .proficiencies-panel {
+                padding: 25px 20px;
+                min-height: 250px;
+            }
+
+            .proficiencies-header {
+                margin-bottom: 15px;
+            }
+
+            .proficiencies-list li {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+
+            .section-header {
+                margin-bottom: 20px;
+            }
+
+            .footer {
+                padding: 30px 0 15px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid #333;
+            }
+
+            .footer-brand,
+            .footer-section {
+                flex: 1 1 auto;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                padding-top: 15px;
+            }
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 998;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--m5-brand);
+            outline-offset: 2px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 32px 0 20px 0;
+            background: #f8f8f8;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb-list a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-list a:hover {
+            color: var(--m5-brand);
+        }
+
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '/';
+            margin-left: 16px;
+            color: #ccc;
+        }
+
+        .breadcrumb-list li:last-child {
+            color: var(--m5-brand);
+            font-weight: 500;
+        }
+
+        /* Target Neodigm widget in footer - let JavaScript handle specific targeting */
+        neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] span:first-child,
+        neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] .word-1,
+        neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:first-child {
+            color: var(--m5-dark) !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="top-bar">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                </div>
+                <div class="top-bar-right">
+                    <a href="/blog" class="top-bar-link">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                        Knowledge Base
+                    </a>
+                    <a href="tel:+1234567890" class="top-bar-link">
+                        <span class="material-symbols-outlined">person</span>
+                        Careers
+                    </a>
+                    <a href="/customer-portal/" class="top-bar-link">
+                        <span class="material-symbols-outlined">login</span>
+                        Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-prompt">I Need...</li>
+                    <li><a href="/services/plan">A Plan</a></li>
+                    <li><a href="/services/code">Code</a></li>
+                    <li><a href="/services/culture">Culture</a></li>
+                    <li><a href="/services/minds">Minds</a></li>
+                    <li><a href="/services/future-proof">To Future-Proof</a></li>
+                    <li><a href="/services/delight">To Delight</a></li>
+                    <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
+                </ul>
+
+                <div class="nav-spacer"></div>
+
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-overlay"></div>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-container">
+            <ul class="breadcrumb-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li>Delight</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="delight-hero">
+            <div class="delight-hero-content">
+                <h1 class="fade-in">Building Engaging Digital Experiences</h1>
+                <p class="delight-hero-subtitle fade-in">
+                    We design gamification systems that naturally encourage user participation and create positive 
+                    engagement patterns. Our approach combines behavioral psychology with thoughtful design to build 
+                    experiences people genuinely enjoy using.
+                </p>
+                <div class="stat-grid fade-in">
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined" style="font-size: 28px; color: white;">psychology</span>
+                        <span class="stat-number">Behavioral Design Expertise</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined" style="font-size: 28px; color: white;">build</span>
+                        <span class="stat-label">Custom Implementation</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined" style="font-size: 28px; color: white;">analytics</span>
+                        <span class="stat-label">Data-Driven Optimization</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined" style="font-size: 28px; color: white;">integration_instructions</span>
+                        <span class="stat-label">Platform Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content-section">
+            <div class="content-container">
+                <div class="content-grid fade-in">
+                    <div class="content-text">
+                        <h3>Our Approach to Digital Engagement</h3>
+                        <p>
+                            We specialize in creating gamification systems that feel natural and purposeful. Rather than 
+                            adding superficial game elements, we study how people naturally interact with digital products 
+                            and design mechanics that enhance those existing behaviors.
+                        </p>
+                        <p>
+                            Our team understands the psychology behind user motivation and applies proven behavioral design 
+                            principles to create experiences that encourage regular use and positive engagement patterns.
+                        </p>
+                        <p>
+                            Every system we build is designed around your specific users and business objectives, ensuring 
+                            the mechanics we implement serve both user satisfaction and your organizational goals.
+                        </p>
+                    </div>
+                    <div class="problem-panel fade-in">
+                        <div class="problem-header">What We Help With</div>
+                        <ul class="problem-list">
+                            <li class="problem-item">
+                                <span class="material-symbols-outlined problem-icon">trending_down</span>
+                                <div class="problem-content">
+                                    <h5>User Engagement Systems</h5>
+                                    <p>Creating meaningful pathways that encourage users to return and explore more features</p>
+                                </div>
+                            </li>
+                            <li class="problem-item">
+                                <span class="material-symbols-outlined problem-icon">hourglass_empty</span>
+                                <div class="problem-content">
+                                    <h5>Feature Discovery Design</h5>
+                                    <p>Guiding users to discover and adopt valuable features through progressive engagement</p>
+                                </div>
+                            </li>
+                            <li class="problem-item">
+                                <span class="material-symbols-outlined problem-icon">cancel</span>
+                                <div class="problem-content">
+                                    <h5>Value Demonstration</h5>
+                                    <p>Helping users understand and experience the full value of your product offerings</p>
+                                </div>
+                            </li>
+                            <li class="problem-item">
+                                <span class="material-symbols-outlined problem-icon">group_remove</span>
+                                <div class="problem-content">
+                                    <h5>Community Building</h5>
+                                    <p>Fostering connections and shared experiences that create lasting user relationships</p>
+                                </div>
+                            </li>
+                            <li class="problem-item">
+                                <span class="material-symbols-outlined problem-icon">visibility_off</span>
+                                <div class="problem-content">
+                                    <h5>Organic Growth Mechanics</h5>
+                                    <p>Designing systems that naturally encourage users to share and invite others</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+ <div class="content-grid full-width fade-in">
+                    <div class="content-text" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                        <h3>Thoughtful Design Over Quick Fixes</h3>
+                        <p>
+                            We believe effective gamification goes beyond points and badges. Our approach focuses on 
+                            understanding user motivations and creating systems that naturally align with how people 
+                            prefer to interact with digital products.
+                        </p>
+                        <p>
+                            We start by studying your users' goals and behaviors, then design mechanics that make 
+                            achieving those goals more satisfying and clear. Each element we implement serves a specific 
+                            purpose in the overall user experience.
+                        </p>
+                        <p>
+                            The result is engagement that feels organic rather than forced. Users participate because 
+                            the experience is genuinely rewarding, not because they're being manipulated into activity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-grid full-width fade-in">
+                    <div class="applications-panel">
+                        <div class="applications-header">Where Gamification Works</div>
+                        <div class="applications-grid">
+                            <div class="application-item">
+                                <h5>SaaS Onboarding</h5>
+                                <p>Guide users through complex features with progress tracking and achievement unlocks</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>E-commerce Loyalty</h5>
+                                <p>Transform one-time buyers into repeat customers with points, tiers, and exclusive rewards</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Learning Platforms</h5>
+                                <p>Keep students motivated with streaks, badges, and social leaderboards</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Employee Training</h5>
+                                <p>Make compliance and skill development engaging instead of mandatory</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Health & Fitness</h5>
+                                <p>Build habits that stick through challenges, milestones, and community support</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Financial Services</h5>
+                                <p>Encourage better financial habits with goal tracking and reward mechanisms</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Event Activation</h5>
+                                <p>Drive booth traffic and lead capture with interactive experiences</p>
+                            </div>
+                            <div class="application-item">
+                                <h5>Mobile Apps</h5>
+                                <p>Increase daily active usage with missions, streaks, and push notifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="content-container">
+                <div class="section-header">
+                    <h2 class="section-title fade-in">How We Approach Engagement Design</h2>
+                    <p class="section-subtitle fade-in">
+                        We combine behavioral research with practical implementation to create sustainable engagement systems.
+                    </p>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step fade-in">
+                        <div class="process-icon">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <h4>User Research</h4>
+                        <p>We study how your users currently interact with your product and identify natural engagement patterns</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="process-icon">
+                            <span class="material-symbols-outlined">architecture</span>
+                        </div>
+                        <h4>System Design</h4>
+                        <p>We design mechanics that enhance existing behaviors and create clear pathways for user progression</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="process-icon">
+                            <span class="material-symbols-outlined">science</span>
+                        </div>
+                        <h4>Prototype Testing</h4>
+                        <p>We validate our concepts with real users to ensure the mechanics feel natural and effective</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="process-icon">
+                            <span class="material-symbols-outlined">build</span>
+                        </div>
+                        <h4>Implementation</h4>
+                        <p>We integrate the engagement systems seamlessly into your existing platform and workflows</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="process-icon">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <h4>Refinement</h4>
+                        <p>We monitor user behavior and continuously improve the system based on real usage patterns</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Get in Touch</h2>
+                <p>
+                    Let's talk about your project. We'll help you choose the right technologies, 
+                    plan your architecture, and deliver code that exceeds expectations.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button" onclick="openContactForm()">
+                        <span class="material-symbols-outlined">send</span>
+                        Contact Us
+                    </a>
+                    <a href="/blog" class="cta-button">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                        Knowledge Base
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+                <p>We are a technical consulting and development team helping companies move faster and build smarter through architecture, automation, and app delivery.</p>
+                <p>Headquartered in Chicago. Supporting clients nationwide.</p>
+                <a href="mailto:support@machfivetech.com" class="footer-contact">
+                    <span class="material-symbols-outlined">mail</span>
+                    support@machfivetech.com
+                </a>
+            </div>
+
+            <div class="footer-section">
+                <h4>I Need...</h4>
+                <ul>
+                    <li><a href="/services/plan">A Plan</a></li>
+                    <li><a href="/services/code">Code</a></li>
+                    <li><a href="/services/culture">Culture</a></li>
+                    <li><a href="/services/minds">Minds</a></li>
+                    <li><a href="/services/future-proof">To Future-Proof</a></li>
+                    <li><a href="/services/delight">To Delight</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Mach Five</h4>
+                <ul>
+                    <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
+                    <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
+                    <li><a href="https://www.webtooltoys.com" target="_blank">Web Tool Toys</a></li>
+                    <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Proudly built by the <a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a>.</p>
+            <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
+
+    <script>
+        // Mobile menu
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.menu-overlay');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        overlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const intersectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    intersectionObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            intersectionObserver.observe(el);
+        });
+
+        // Contact form
+        function openContactForm() {
+            if (typeof contact_form_iframe_sfdc !== 'undefined') {
+                contact_form_iframe_sfdc.openCTA();
+            }
+        }
+
+        const contact_form_iframe_sfdcCustom = {
+            "contact_cta_theme": ["danger"],
+            "contact_cta_theme_hex": ["#DD4124"],
+            "contact_cta_oid": ["00D6A000002intt"]
+        };
+
+        function contactSodaPop() {
+            document.body.dataset.cta = "true";
+            if (typeof neodigmSodaPop !== 'undefined') {
+                neodigmSodaPop.setOnClose(function() {
+                    document.body.dataset.cta = "false";
+                }, "contact_templ_wdgt_CTA__id");
+            }
+        }
+
+        // Function to target only "Mach" text in Neodigm widget
+        function styleMachText() {
+            const widget = document.querySelector('neodigm-widget[data-n55-widget-id="effect_two_word_rotate"]');
+            if (widget) {
+                // Target all text nodes and spans within the widget
+                const allElements = widget.querySelectorAll('*');
+                allElements.forEach(el => {
+                    if (el.textContent && el.textContent.trim()) {
+                        const text = el.textContent.trim();
+                        // Only target elements that contain exactly "Mach" (not "Five" or other text)
+                        if (text === 'Mach' || (text.includes('Mach') && !text.includes('Five'))) {
+                            el.style.setProperty('color', '#181818', 'important');
+                        }
+                        // Reset any "Five" text that might have been affected
+                        else if (text === 'Five' || text.includes('Five')) {
+                            el.style.removeProperty('color');
+                        }
+                    }
+                });
+            }
+        }
+
+        // Try to style immediately and on interval
+        setTimeout(styleMachText, 100);
+        setTimeout(styleMachText, 500);
+        setTimeout(styleMachText, 1000);
+        setTimeout(styleMachText, 2000);
+
+        // Also observe for widget changes (with error handling)
+        try {
+            const mutationObserver = new MutationObserver(styleMachText);
+            mutationObserver.observe(document.body, { childList: true, subtree: true });
+        } catch(e) {
+            console.log('Observer error:', e);
+        }
+    </script>
+</body>
+</html>

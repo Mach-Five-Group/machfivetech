@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "machfivetech.com",
+  "Id": "0ae4ec0f-7a51-4f7f-828b-7ba28fcf6194"
+}

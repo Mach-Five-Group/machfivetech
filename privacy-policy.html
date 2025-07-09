@@ -1,0 +1,2265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mach Five Tech</title>
+    <script> // init
+        let neodigmOptCustom = { CONSOLE_LOG_VER:true, W4S_VOLUME: .016 }
+        let neodigmOpt_launchCompleteCustom = {
+          ver: "1.2.4",
+          N55_LC_DOMAIN: ["MachFiveTech.com", 256],
+          N55_LC_TAG1: ["MachFiveTech 🌶️ a Creative Fusion of Business Perspective and Technical Agility", 256],
+          N55_LC_TAG2: ["MachFiveTech 🌶️ a Creative Fusion of Business Perspective and Technical Agility", 256],
+          N55_LC_TAG3: ["MachFiveTech 🌶️ a Creative Fusion of Business Perspective and Technical Agility", 256],
+          N55_LC_COLOR_BRAND: ["192839", 256],
+          N55_LC_KEYWORDS: [["A", "B"], 256],
+          CONSOLE_LOG_VER: true,
+        }
+    </script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.css"></link>
+    <script>
+        const effect_3d_spheresCustom = {"context": "[data-n55-token='effect_3d_spheres']", "color": 0xFFB11B, "speed_x": 0.0004, "speed_y": 0.002, "camera_z": "+1500"}
+    </script>
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.css"></link>
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400|Roboto+Slab:wght@300|Roboto+Mono:wght@300">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="stylesheet" type="text/css" requestor="Neodigm 55" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400|Roboto+Slab:wght@300|Roboto+Mono:wght@300|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d83e22">
+    <meta name="msapplication-TileColor" content="#d83e22">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+    <meta property="og:title" content="Mach Five Tech | Technical Project Management & Web Application Development | Chicago">
+    <meta property="og:site_name" content="Mach Five Tech">
+    <meta property="og:url" content="https://www.machfivetech.com/">
+    <meta property="og:description" content="Chicago Technical Project Management & Web Application Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.machfivetech.com/img/android-chrome-512x512.png">
+    <meta property="og:logo" content="https://www.machfivetech.com/img/android-chrome-512x512.png" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JXK6LQW');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="x9fg0pyi7ejVptCd_wXmH90YQjBnXMa--L-Aqzrt_3U" />
+
+<style>
+        :root {
+            --m5-brand: #DD4124;
+            --m5-brand-dark: #810000;
+            --m5-accent: #7BC4C4;
+            --m5-dark: #181818;
+            --m5-darker: #000;
+            --m5-night-mid: #323232;
+            --m5-light: #f8f8f8;
+            --m5-lighter: #fff;
+            --m5-text: #333;
+            --m5-text-light: #666;
+            --m5-border: #e0e0e0;
+            --m5-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            --m5-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--m5-lighter);
+            color: var(--m5-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 120px;
+            position: relative;
+        }
+
+        /* Grid texture with fade effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Enhanced fade for laptop viewports */
+        @media (min-width: 1024px) and (max-width: 1600px) {
+            body::before {
+                mask-image: linear-gradient(90deg, 
+                    transparent 0%, 
+                    rgba(0,0,0,0.2) 10%,
+                    rgba(0,0,0,0.6) 20%,
+                    black 30%, 
+                    black 70%, 
+                    rgba(0,0,0,0.6) 80%,
+                    rgba(0,0,0,0.2) 90%,
+                    transparent 100%);
+                -webkit-mask-image: linear-gradient(90deg, 
+                    transparent 0%, 
+                    rgba(0,0,0,0.2) 10%,
+                    rgba(0,0,0,0.6) 20%,
+                    black 30%, 
+                    black 70%, 
+                    rgba(0,0,0,0.6) 80%,
+                    rgba(0,0,0,0.2) 90%,
+                    transparent 100%);
+            }
+        }
+
+        /* Header - Fixed */
+        .header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar {
+            background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 36px;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .top-bar-link {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar-link:hover {
+            color: var(--m5-brand);
+        }
+
+        .top-bar-link .material-symbols-outlined {
+            font-size: 16px;
+            color: var(--m5-brand);
+        }
+
+        .main-nav {
+            background: white;
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 3px solid var(--m5-brand);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hide nav logo on desktop */
+        .main-nav .nav-logo {
+            display: none;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: white;
+            background: var(--m5-brand);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 20px;
+            transition: all 0.2s ease;
+            display: inline-block;
+            line-height: 1.2;
+            vertical-align: baseline;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            list-style: none;
+        }
+
+        /* I Need prompt */
+        .nav-prompt {
+            color: var(--m5-brand);
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-prompt::after {
+            content: '→';
+            font-size: 20px;
+            animation: pointRight 2s ease-in-out infinite;
+        }
+
+        /* Mobile nav prompt - hidden by default */
+        .mobile-nav-prompt {
+            display: none;
+            color: var(--m5-brand);
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(221, 65, 36, 0.2);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .mobile-nav-prompt::after {
+            content: '→';
+            font-size: 22px;
+            margin-left: 8px;
+            display: inline-block;
+            animation: pointRight 2s ease-in-out infinite;
+        }
+
+        @keyframes pointRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        /* Updated nav menu with glassmorphic style */
+        .nav-menu a {
+            color: var(--m5-text);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--m5-brand);
+            background: rgba(221, 65, 36, 0.05);
+            border-color: rgba(221, 65, 36, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.1);
+        }
+
+        /* Special styling for Contact CTA */
+        .nav-menu a[onclick*="openContactForm"] {
+            background: rgba(221, 65, 36, 0.1) !important;
+            border-color: rgba(221, 65, 36, 0.2) !important;
+            color: var(--m5-brand) !important;
+        }
+
+        .nav-menu a[onclick*="openContactForm"]:hover {
+            background: var(--m5-brand) !important;
+            border-color: var(--m5-brand) !important;
+            color: white !important;
+            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3) !important;
+        }
+
+        /* Mobile menu links with icons - hidden on desktop */
+        .nav-menu .mobile-only {
+            display: none;
+        }
+
+        /* Add divider styling for mobile menu */
+        .nav-menu .nav-divider {
+            display: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        /* Menu overlay */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 998;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section - Privacy Policy */
+        .privacy-hero {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add subtle grid pattern to hero */
+        .privacy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(221, 65, 36, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(221, 65, 36, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .privacy-hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .privacy-hero-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--m5-dark);
+        }
+
+        .privacy-hero-subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--m5-text-light);
+            max-width: 600px;
+        }
+
+        /* Policy Content Sections */
+        .policy-content {
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .policy-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            background: white;
+            position: relative;
+        }
+
+        .policy-section:not(:last-child) {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .policy-paragraph {
+            margin-bottom: 16px;
+            line-height: 1.8;
+            color: var(--m5-text);
+            font-size: 16px;
+        }
+
+        .policy-header {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--m5-brand);
+            display: inline-block;
+        }
+
+        /* Remove old l-content-row styling */
+        .l-content-row {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .i-need-tag {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Policy Lists */
+        .policy-list {
+            margin: 20px 0;
+            padding-left: 20px;
+            color: var(--m5-text);
+        }
+
+        .policy-list li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .policy-list a {
+            color: var(--m5-brand);
+            text-decoration: none;
+        }
+
+        .policy-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Policy Sub-headers */
+        .policy-subheader {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--m5-dark);
+            margin: 20px 0 16px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+            border-top: 1px solid var(--m5-border);
+            color: var(--m5-text);
+            padding: 80px 24px 32px;
+            position: relative;
+        }
+
+        /* Add grid background to footer */
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle brand accent line at top */
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--m5-brand);
+            border-radius: 0 0 3px 3px;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px;
+            border-bottom: 1px solid var(--m5-border);
+            padding-bottom: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            flex: 1 1 400px;
+        }
+
+        .footer-brand p {
+            color: var(--m5-text-light);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+        }
+
+        .footer-section h4 {
+            color: var(--m5-brand);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .footer-contact .material-symbols-outlined {
+            color: var(--m5-brand);
+            font-size: 20px;
+        }
+
+        .footer-contact:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--m5-text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--m5-brand);
+        }
+
+        /* Override conflicting nav styles */
+        .nav-main {
+            position: relative !important;
+            top: auto !important;
+            z-index: auto !important;
+            display: none !important;
+        }
+        
+        .nav-container {
+            height: auto !important;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            background: #f8f8f8;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb-list a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-list a:hover {
+            color: var(--m5-brand);
+        }
+
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '/';
+            margin-left: 16px;
+            color: #ccc;
+        }
+
+        .breadcrumb-list li:last-child {
+            color: var(--m5-brand);
+            font-weight: 500;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .top-bar {
+                display: none;
+            }
+
+            .main-nav {
+                padding: 12px 0;
+            }
+
+            .main-nav .nav-logo {
+                display: block;
+            }
+
+            .nav-container {
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+
+            .mobile-menu-toggle {
+                display: block !important;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                position: relative;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
+            .mobile-menu-toggle span {
+                display: block !important;
+                width: 28px;
+                height: 3px;
+                background-color: #181818 !important;
+                margin: 6px 0;
+                transition: all 0.3s ease;
+                border-radius: 2px;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform-origin: center;
+            }
+
+            /* Hamburger to X animation */
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
+
+            /* Updated mobile nav menu with scroll */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 80px 32px 32px 32px;
+                gap: 20px;
+                box-shadow: -2px 0 16px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s;
+                z-index: 999;
+                align-items: stretch;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            /* Hide desktop nav prompt on mobile */
+            .nav-prompt {
+                display: none !important;
+            }
+
+            /* Show mobile nav prompt */
+            .mobile-nav-prompt {
+                display: block !important;
+            }
+
+            /* Show mobile-only links */
+            .nav-menu .mobile-only {
+                display: block;
+            }
+
+            /* Show nav divider on mobile */
+            .nav-menu .nav-divider {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: rgba(221, 65, 36, 0.2);
+                margin: 10px 0;
+                border-radius: 1px;
+            }
+
+            /* Update mobile nav menu styles */
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                font-size: 1.125rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            /* Mobile menu icon styling */
+            .nav-menu a .material-symbols-outlined {
+                font-size: 20px;
+                color: var(--m5-brand);
+            }
+
+            .nav-logo {
+                font-size: 20px;
+            }
+
+            .nav-logo span {
+                font-size: 18px;
+                padding: 2px 8px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+</style>
+
+</head>
+
+<body data-n55-ampm-theme="light">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JXK6LQW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="header-wrapper">
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+            </div>
+            <div class="top-bar-right">
+                <a href="/knowledge-base" class="top-bar-link">
+                    <span class="material-symbols-outlined">rss_feed</span>
+                    Knowledge Base
+                </a>
+                <a href="/careers" class="top-bar-link">
+                    <span class="material-symbols-outlined">person</span>
+                    Careers
+                </a>
+                <a href="/customer-portal/" class="top-bar-link">
+                    <span class="material-symbols-outlined">login</span>
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+            
+            <ul class="nav-menu">
+                <li class="mobile-nav-prompt">I Need...</li>
+                <li class="nav-prompt">I Need...</li>
+                <li><a href="/services/plan">A Plan</a></li>
+                <li><a href="/services/code">Code</a></li>
+                <li><a href="/services/culture">Culture</a></li>
+                <li><a href="/services/minds">Minds</a></li>
+                <li><a href="/services/future-proof">To Future-Proof</a></li>
+                <li><a href="/services/delight">To Delight</a></li>
+                <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
+                <li class="nav-divider"></li>
+                <li class="mobile-only">
+                    <a href="/knowledge-base">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                        Knowledge Base
+                    </a>
+                </li>
+                <li class="mobile-only">
+                    <a href="/careers">
+                        <span class="material-symbols-outlined">person</span>
+                        Careers
+                    </a>
+                </li>
+                <li class="mobile-only">
+                    <a href="/customer-portal/">
+                        <span class="material-symbols-outlined">login</span>
+                        Login
+                    </a>
+                </li>
+            </ul>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div class="menu-overlay"></div>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+            <li><a href="/">Home</a></li>
+            <li>Privacy Policy</li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main">
+
+<!-- Hero Section -->
+<section class="privacy-hero" id="a11y-skipmain">
+    <div class="privacy-hero-content">
+        <h1 class="privacy-hero-title">Privacy Policy</h1>
+        <p class="privacy-hero-subtitle">Understanding how we collect, use, and protect your personal information when you use our services.</p>
+    </div>
+</section>
+
+<!-- Policy Content -->
+<div class="policy-content">
+<section class="policy-section">
+  <p class="policy-paragraph"><strong>Last updated:</strong> May 11, 2025</p>
+  
+  <p class="policy-paragraph">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+
+  <p class="policy-paragraph">We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Interpretation and Definitions</h2>
+
+  <h3 class="policy-subheader">Interpretation</h3>
+  <p class="policy-paragraph">The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+  <h3 class="policy-subheader">Definitions</h3>
+  <p class="policy-paragraph">For the purposes of this Privacy Policy:</p>
+  <ul class="policy-list">
+    <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+    <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+    <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Arcanus 55, 668 Beth Ct, Gurnee, IL, 60031.</li>
+    <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+    <li><strong>Country</strong> refers to: Illinois, United States</li>
+    <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+    <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+    <li><strong>Service</strong> refers to the Website.</li>
+    <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+    <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+    <li><strong>Website</strong> refers to Mach Five Tech, accessible from machfivetech.com</li>
+    <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+  </ul>
+</section>
+
+    
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Collecting and Using Your Personal Data</h2>
+  
+  <h3 class="policy-subheader">Types of Data Collected</h3>
+  
+  <h4 class="policy-subheader">Personal Data</h4>
+  <p class="policy-paragraph">While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+  <ul class="policy-list">
+    <li>Email address</li>
+    <li>First name and last name</li>
+    <li>Phone number</li>
+    <li>Usage Data</li>
+  </ul>
+
+  <h4 class="policy-subheader">Usage Data</h4>
+  <p class="policy-paragraph">Usage Data is collected automatically when using the Service.</p>
+  <p class="policy-paragraph">Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+  <p class="policy-paragraph">When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+  <p class="policy-paragraph">We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+
+  <h3 class="policy-subheader">Tracking Technologies and Cookies</h3>
+  <p class="policy-paragraph">We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
+  <ul class="policy-list">
+    <li><strong>Cookies or Browser Cookies:</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
+    <li><strong>Web Beacons:</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
+  </ul>
+  <p class="policy-paragraph">Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.</p>
+
+  <p class="policy-paragraph">We use both Session and Persistent Cookies for the purposes set out below:</p>
+  <ul class="policy-list">
+    <li><strong>Necessary / Essential Cookies</strong><br>Type: Session Cookies<br>Administered by: Us<br>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</li>
+    <li><strong>Cookies Policy / Notice Acceptance Cookies</strong><br>Type: Persistent Cookies<br>Administered by: Us<br>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</li>
+    <li><strong>Functionality Cookies</strong><br>Type: Persistent Cookies<br>Administered by: Us<br>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</li>
+  </ul>
+  <p class="policy-paragraph">For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Use of Your Personal Data</h2>
+  <p class="policy-paragraph">The Company may use Personal Data for the following purposes:</p>
+  <ul class="policy-list">
+    <li>To provide and maintain our Service, including to monitor the usage of our Service.</li>
+    <li>To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+    <li>For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+    <li>To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
+    <li>To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</li>
+    <li>To manage Your requests: To attend and manage Your requests to Us.</li>
+    <li>For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</li>
+    <li>For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
+  </ul>
+
+  <p class="policy-paragraph">We may share Your personal information in the following situations:</p>
+  <ul class="policy-list">
+    <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+    <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+    <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+    <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+    <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+    <li><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</li>
+  </ul>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Retention of Your Personal Data</h2>
+  <p class="policy-paragraph">The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+  <p class="policy-paragraph">The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Transfer of Your Personal Data</h2>
+  <p class="policy-paragraph">Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
+  <p class="policy-paragraph">Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+  <p class="policy-paragraph">The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Delete Your Personal Data</h2>
+  <p class="policy-paragraph">You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+  <p class="policy-paragraph">Our Service may give You the ability to delete certain information about You from within the Service.</p>
+  <p class="policy-paragraph">You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
+  <p class="policy-paragraph">Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Disclosure of Your Personal Data</h2>
+  <h3 class="policy-subheader">Business Transactions</h3>
+  <p class="policy-paragraph">If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+
+  <h3 class="policy-subheader">Law enforcement</h3>
+  <p class="policy-paragraph">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+
+  <h3 class="policy-subheader">Other legal requirements</h3>
+  <p class="policy-paragraph">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+  <ul class="policy-list">
+    <li>Comply with a legal obligation</li>
+    <li>Protect and defend the rights or property of the Company</li>
+    <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+    <li>Protect the personal safety of Users of the Service or the public</li>
+    <li>Protect against legal liability</li>
+  </ul>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Security of Your Personal Data</h2>
+  <p class="policy-paragraph">The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Children's Privacy</h2>
+  <p class="policy-paragraph">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+  <p class="policy-paragraph">If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Links to Other Websites</h2>
+  <p class="policy-paragraph">Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+  <p class="policy-paragraph">We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Changes to this Privacy Policy</h2>
+  <p class="policy-paragraph">We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+  <p class="policy-paragraph">We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+  <p class="policy-paragraph">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 policy-section">
+  <h2 class="policy-header">Contact Us</h2>
+  <p class="policy-paragraph">If you have any questions about this Privacy Policy, You can contact us:</p>
+  <ul class="policy-list">
+    <li>By visiting this page on our website: <a href="https://machfivetech.com/privacy-policy">machfivetech.com/privacy-policy</a></li>
+  </ul>
+</section>
+
+</div> <!-- End policy-content -->
+    
+</main>
+<!-- 
+<footer class="l-foot">
+    <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+    <br><br>
+    <nav class="foot-nav-cta">
+        <a tabindex="0" aria-haspopup="true"
+        data-n55-enchanted-cta data-n55-enchanted-cta-dont-touch="false" data-n55-enchanted-cta-shape-off="true" data-n55-enchanted-cta-hover-an="true"
+        data-n55-enchanted-cta-size="small" data-n55-enchanted-cta-ambient="emit"
+        onClick="contact_form_iframe_sfdc.openCTA()"
+        data-n55-theme="night"
+        ><span>Contact</span><span>Let's Talk</span>
+        </a>
+    </nav>
+</footer>
+-->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+            <p>We are a technical consulting and development team helping companies move faster and build smarter through architecture, automation, and app delivery.</p>
+            <p>Headquartered in Chicago. Supporting clients nationwide.</p>
+            <a href="mailto:support@machfivetech.com" class="footer-contact">
+                <span class="material-symbols-outlined">mail</span>
+                support@machfivetech.com
+            </a>
+        </div>
+
+        <div class="footer-section">
+            <h4>I Need...</h4>
+            <ul>
+                <li><a href="/services/plan">A Plan</a></li>
+                <li><a href="/services/code">Code</a></li>
+                <li><a href="/services/culture">Culture</a></li>
+                <li><a href="/services/minds">Minds</a></li>
+                <li><a href="/services/future-proof">To Future-Proof</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Mach Five</h4>
+            <ul>
+                <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
+                <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
+                <li><a href="https://www.webtooltoys.com" target="_blank">Web Tool Toys</a></li>
+                <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Proudly built by the <a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a>.</p>
+        <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a></p>
+    </div>
+</footer>
+
+
+</body>
+<style>
+/*  Global Helpers | Launch Complete Overrides */
+
+:root {
+  --m5lc-theme-brand:  #DD4124; --m5lc-theme-brand-alt:  #810000;  /* Custom Override */
+  --m5lc-theme-danger: #DD4124; --m5lc-theme-danger-alt: #810000;  /* Tangerine Tango */
+  --m5lc-theme-info:   #7BC4C4; --m5lc-theme-info-alt:   #1F6868;  /* Aqua Sky */
+  --m5lc-theme-night:  var( --neodigm-theme-disabled-alt ); --m5lc-theme-night-alt:  #242424;  --m5lc-theme-night-mid:  #323232;  /* Charcoal */
+}
+*::-webkit-scrollbar-track { background: #fff; }
+*::-webkit-scrollbar-thumb { background: #000; }
+</style>
+<style>
+/*  Overrides  */
+[data-n55-enchanted-cta][data-n55-theme='primary'] { background: linear-gradient(var( --m5lc-theme-night-mid ), var( --m5lc-theme-night-mid )) !important; }
+body[data-cta='true'] neodigm-sodapop{ background-color: #333; }
+.l-hero {
+    QQQQdisplay: block; width: 100%; height: 100vh;
+    background-color: var( --m5lc-theme-night-mid );
+}
+.lgo-banner {
+    position: sticky; top: 0px; z-index: 256;
+    margin-bottom: -1px;
+    background-color: var( --m5lc-theme-night-mid );
+}
+.lgo-banner .lgo-banner__image{
+    float: left;
+    user-select: none;
+    padding-top: 14px;
+    width: 112px;
+}
+.lgo-banner .lgo-banner-cta { margin: 4px; }
+.hero__img {
+    width: 380px;
+    height: auto;
+    position: absolute;
+    display: block;
+    top: calc(50vh - 196px);
+    margin: 8px;
+    left: calc(50vw - 196px);
+    user-select: none;
+}
+.l-foot {
+    position: relative;
+    display: block; width: 100%; height: 32vh;
+    background-color: var( --m5lc-theme-night-mid );
+}
+.l-foot .foot-nav-cta {
+    position: absolute;
+    bottom: 56px;
+    left: calc( 50vw - 86px);
+}
+.foot-copy {
+    position: relative;
+    display: block; width: 100%; height: 48px;
+    background-color: #161616;
+}
+.foot-copy p {
+    color: #fff !important;
+    margin: 0;
+}
+
+.l-content-row .content-row__panel { background-color: var(--m5lc-theme-night-mid); border-radius: 8px; margin: 12px; height: min-content; }
+.l-content-row .content-row__panel p { color: #fff; }
+.l-content-row > div > article { padding: 8px; }
+.l-content-row p.readampm { line-height: 1.4; }
+.l-content-row .hd2,
+ .hd2 { font-family: "Helvetica", "Roboto", sans-serif; }
+ .l-content-row .hd2 {font-size: 34px;}
+.l-content-row [data-n55-enchanted-cta]{ margin: 0; }
+.l-content-row .h-padding-16px { padding: 16px; }
+.l-content-row .h-margin_bottom_0 { margin-bottom: 0; }
+.l-content-row .h-margin_0 { margin: 0; }
+.l-content-row .readampm { color: #000; letter-spacing: .4px; }
+
+.l-content-row .hd2 { font-size: 42px !important; line-height: .94;}
+
+.l-content-row:hover .iconthumb IMG{
+    rotate: 0deg;
+}
+
+.l-content-row:hover [data-n55-enchanted-cta][data-n55-theme='primary'] {
+    background: linear-gradient(var(  --m5lc-theme-brand ), var(  --m5lc-theme-brand-alt )) !important;
+}
+
+.iconthumb {
+    position: absolute;
+}
+.iconthumb IMG {
+    display: none;
+    transition: all 1s;
+}
+
+
+/* Policy Page Styles - Mach Five Tech */
+
+.policy-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+
+.policy-subheader {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+  color: #222;
+}
+
+.policy-paragraph {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #111;
+  margin-bottom: 1em;
+}
+
+.policy-list {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 1.5em;
+  color: #111;
+  list-style-type: disc;
+  margin-bottom: 1em;
+}
+
+.policy-list li {
+  margin-bottom: 0.5em;
+}
+
+.policy-section {
+  padding: 24px;
+  background-color: #fefefe;
+  margin-bottom: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+
+
+#txt-rotate,
+#txt-rotate__verb {
+  font-size: clamp(36px, 8vw, 96px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 0;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  #txt-rotate,
+  #txt-rotate__verb {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #txt-rotate,
+  #txt-rotate__verb {
+    font-size: 72px;
+  }
+}
+
+
+
+
+
+/*  MQ  */
+@media only screen and (min-width:48.1em){/* med *//* lg */
+   
+
+    .lgo-banner .lgo-banner__image { padding-top: 6px; width: 176px; }
+    .lgo-banner .lgo-banner-cta { margin: 8px 12px 4px 1px; }
+
+    .hd2 {
+    font-size: 56px;
+    }
+    .l-content-row .hd2 {
+    font-size: 72px !important;
+    }
+
+    .iconthumb IMG {
+  position: relative;
+  display: block;
+  max-width: 256px;
+  width: 16cqw;
+  top: -196px;
+  right: -22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(-2.5deg) translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.content-row__panel:nth-of-type(even) .iconthumb IMG {
+  transform: rotate(2.5deg) translateY(-6px);
+}
+
+
+}
+
+.content-row__panel {
+  perspective: 1000px;
+}
+
+.iconthumb IMG {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.content-row__panel:hover .iconthumb IMG {
+  transform: rotateY(6deg) rotateX(3deg) scale(1.02);
+}
+
+
+
+.content-row__panel {
+  background: linear-gradient(180deg, #181818 0%, #000 100%);
+  border-top: 4px solid var(--m5lc-theme-brand);
+  border-radius: 6px;
+  margin: 12px;
+  padding: 24px;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  color: #ccc;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.content-row__panel:hover {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(221, 65, 36, 0.3); /* glow effect */
+  border-top-color: var(--m5lc-theme-brand); /* keeps orange vivid */
+}
+
+
+
+.content-row__panel {
+  transform: rotate(-0.3deg);
+}
+
+@keyframes wipeIn {
+  0%   { width: 0; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
+}
+.content-row__panel p:first-child {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: wipeIn 0.6s ease-in-out forwards;
+}
+
+
+
+.vignette {
+  position: relative;
+  z-index: 0;
+}
+
+.vignette::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vignette-mask {
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+
+.note-pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, #444 40%, #222 100%);
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+
+/* Align nav font with site typography */
+.nav-main,
+.nav-title,
+.nav-links a,
+.nav-cta {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Refine nav title */
+.nav-title {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Refine nav link style */
+.nav-links li a {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Refine nav button style */
+.nav-cta {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 24px;
+  padding: 6px 18px;
+  background: linear-gradient(var(--m5lc-theme-brand), var(--m5lc-theme-brand-alt));
+  transition: background 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: linear-gradient(var(--m5lc-theme-info), var(--m5lc-theme-info-alt));
+}
+
+
+    
+.nav-main {
+  background: linear-gradient(180deg, #181818 0%, #000 100%);
+  border-bottom: 3px solid var(--m5lc-theme-brand);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  width: 100%;
+  left: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: box-shadow 0.3s ease, background-color 0.3s, background 0.3s;
+  backdrop-filter: blur(6px);
+}
+
+.nav-main.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #222;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.6px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 4px 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--m5lc-theme-brand);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  background-color: var(--m5lc-theme-brand);
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Hamburger menu */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  width: 32px;
+  height: 24px;
+  position: relative;
+  z-index: 1001;
+}
+
+.nav-toggle-label span {
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background-color: #1e1e1e;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 16px 0;
+    align-items: center;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+}
+
+.l-content-row {
+  position: relative;
+  z-index: 1;
+}
+
+.l-content-row::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  bottom: -48px;
+  left: -32px;
+  right: -32px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='rgba(128,128,128,0.08)' stroke-width='1'%3E%3Cline x1='0' y1='0' x2='100' y2='0' /%3E%3Cline x1='0' y1='20' x2='100' y2='20' /%3E%3Cline x1='0' y1='40' x2='100' y2='40' /%3E%3Cline x1='0' y1='60' x2='100' y2='60' /%3E%3Cline x1='0' y1='80' x2='100' y2='80' /%3E%3Cline x1='0' y1='100' x2='100' y2='100' /%3E%3Cline x1='0' y1='0' x2='0' y2='100' /%3E%3Cline x1='20' y1='0' x2='20' y2='100' /%3E%3Cline x1='40' y1='0' x2='40' y2='100' /%3E%3Cline x1='60' y1='0' x2='60' y2='100' /%3E%3Cline x1='80' y1='0' x2='80' y2='100' /%3E%3Cline x1='100' y1='0' x2='100' y2='100' /%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+              linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
+                      linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+}
+
+
+
+#txt-rotate__verb::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+#txt-rotate {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+
+
+
+
+@keyframes dashedPulse {
+  0% { border-color: rgba(123,196,196,0.4); }
+  50% { border-color: rgba(123,196,196,0.6); }
+  100% { border-color: rgba(123,196,196,0.4); }
+}
+
+
+
+
+@keyframes blipPulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+
+
+
+.we-help-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 32px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.8s ease;
+}
+
+
+.we-help-wrapper.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.reticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.03), transparent 70%);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.05);
+  animation: pulseReticle 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+
+
+
+@keyframes pulseReticle {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.65;
+  }
+}
+
+.i-need-tag {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 72px;
+  line-height: 1.1;
+  color: #000;
+  position: relative;
+}
+
+.i-need-tag .tag-icon {
+  color: var(--m5lc-theme-brand);
+  position: absolute;
+  left: -36px;
+  top: 12px;
+  opacity: 0.75;
+}
+
+.i-need-tag .tagline {
+  font-size: 0.5em;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  color: #ccc;
+  margin-left: 2px;
+  letter-spacing: 0.5px;
+}
+
+
+/* Fade-up staggered nav animation */
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-main.fade-in .nav-title {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.15s;
+}
+
+.nav-main.fade-in .nav-links li:nth-child(1) {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.25s;
+}
+.nav-main.fade-in .nav-links li:nth-child(2) {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.35s;
+}
+.nav-main.fade-in .nav-links li:nth-child(3) {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.45s;
+}
+.nav-main.fade-in .nav-links li:nth-child(4) {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.55s;
+}
+.nav-main.fade-in .nav-links li:nth-child(5) {
+  animation: navFadeIn 0.6s ease forwards;
+  animation-delay: 0.65s;
+}
+
+.nav-main.fade-in .nav-title,
+.nav-main.fade-in .nav-links li {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+.m5t-footer {
+  background: #000;
+  color: #ccc;
+  padding: 48px 24px 24px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.9em;
+}
+
+.m5t-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #222;
+  padding-bottom: 32px;
+}
+
+.m5t-footer__top div {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.m5t-footer__top h3, .m5t-footer__top h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.m5t-footer__top p {
+  margin: 6px 0;
+}
+
+.m5t-footer__top a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.m5t-footer__top a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.m5t-footer__top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.m5t-footer__top li {
+  margin-bottom: 6px;
+}
+
+.footer-icon {
+  font-size: 1em;
+  margin-right: 6px;
+}
+
+.m5t-footer__bottom {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.m5t-footer__bottom a {
+  color: #888;
+  text-decoration: underline;
+}
+
+/* Add a subtle gradient or brand accent bar at the top */
+.m5t-footer {
+  background: linear-gradient(180deg, #181818 0%, #000 100%);
+  border-top: 4px solid var(--m5lc-theme-brand);
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.3);
+}
+
+/* Make headings more distinct */
+.m5t-footer__top h3, .m5t-footer__top h4 {
+  color: var(--m5lc-theme-brand);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+/* Add icon color accent */
+.footer-icon {
+  color: var(--m5lc-theme-brand);
+}
+
+/* Add hover effect to all footer links */
+.m5t-footer__top a, .m5t-footer__bottom a {
+  color: #ccc;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 1px solid transparent;
+}
+.m5t-footer__top a:hover, .m5t-footer__bottom a:hover {
+  color: var(--m5lc-theme-brand);
+  border-bottom: 1px solid var(--m5lc-theme-brand);
+}
+
+/* Add spacing between columns on desktop */
+.m5t-footer__top > div {
+  padding: 0 16px;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  .m5t-footer {
+    padding: 32px 8px 16px;
+  }
+  .m5t-footer__top {
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .m5t-footer__top > div {
+    padding: 0;
+  }
+}
+
+   
+.final-cta-section {
+  background: repeating-linear-gradient(
+    45deg,
+    #f8f8f8,
+    #f8f8f8 10px,
+    #f7f7f7 10px,
+    #f7f7f7 20px
+  );
+  border-top: 1px solid #ddd;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.final-cta-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.final-cta-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+.final-cta-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 32px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.final-cta-action [data-n55-enchanted-cta] {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .note-block {
+    font-size: 1rem;
+    padding: 24px 16px;
+    margin: 24px auto;
+  }
+}
+
+.readampm__legal {
+ font-family: 'Permanent Marker', 'Comic Neue', 'Segoe Print', 'Chalkboard SE', 'Arial Rounded MT Bold', cursive, sans-serif;
+
+}
+
+@media (max-width: 768px) {
+  .l-content-row .h-left.h-padding-16px {
+    padding: 32px 24px !important;
+  }
+
+  .l-content-row article > p.readampm {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  .i-need-tag {
+    font-size: 42px !important;
+  }
+
+  .i-need-tag .tagline {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  section.l-content-row {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-content-row::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    margin: 48px auto 48px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(216, 62, 34, 0.6),
+      transparent
+    );
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-content-row nav.h-left,
+  .l-content-row nav.h-right {
+    text-align: center;
+  }
+
+  .l-content-row nav.h-left a,
+  .l-content-row nav.h-right a {
+    margin: 0 auto;
+    display: inline-block;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#txt-rotate__verb {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.6s ease;
+}
+
+#txt-rotate__verb.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.we-help-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.we-help-subline {
+  font-size: 1.25rem;
+  color: #888;
+  font-family: 'Roboto', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.we-help-wrapper {
+  position: relative;
+  padding: 96px 24px;
+  margin: 12px auto;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1;
+  max-width: 960px;
+}
+
+@media (max-width: 768px) {
+  .we-help-wrapper {
+    padding: 48px 16px;
+    margin: 0 auto;
+  }
+}
+
+
+  .we-help-line h2 {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+
+
+  .we-help-wrapper p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+.we-help-wrapper::before,
+.we-help-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.12), transparent);
+  z-index: 0;
+}
+
+.we-help-wrapper::before {
+  top: 0;
+}
+
+.we-help-wrapper::after {
+  bottom: 0;
+}
+
+
+
+.we-help-line {
+  white-space: nowrap;
+  overflow-x: auto;
+  text-align: center;
+}
+
+#txt-rotate {
+  display: inline-block;
+}
+
+
+
+</style>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('m5tNav');
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.content-row__panel, .we-help-wrapper').forEach(el => {
+  observer.observe(el);
+});
+    document.querySelectorAll('.content-row__panel').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+    
+    <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
+
+    <script>
+        // Mobile menu
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.menu-overlay');
+        
+        if (mobileToggle && navMenu && overlay) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            overlay.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Contact form
+        function openContactForm() {
+            if (typeof contact_form_iframe_sfdc !== 'undefined') {
+                contact_form_iframe_sfdc.openCTA();
+            }
+        }
+
+        const contact_form_iframe_sfdcCustom = {
+            "contact_cta_theme": ["danger"],
+            "contact_cta_theme_hex": ["#DD4124"],
+            "contact_cta_oid": ["00D6A000002intt"]
+        };
+
+        function contactSodaPop() {
+            document.body.dataset.cta = "true";
+            if (typeof neodigmSodaPop !== 'undefined') {
+                neodigmSodaPop.setOnClose(function() {
+                    document.body.dataset.cta = "false";
+                }, "contact_templ_wdgt_CTA__id");
+            }
+        }
+    </script>
+
+<neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
+
+<script>
+    setTimeout(()=>{
+        const verbs = ["Architect", "Be Awesome", "Code", "Communicate", "Deliver", "Design", "Develop", "Envision", "Ideate", "Level Up", "Plan", "Scale", "Test", "Thrive", "Understand"]
+        neodigmUtils.typeOn({"q1st":"#txt-rotate__verb", "msg": verbs.join("|"), "mode":"LOOP","uniqueDelay":203})        
+    }, 2e3)
+    setTimeout(() => {
+  const verbSpan = document.getElementById("txt-rotate__verb");
+  verbSpan.classList.add("fade-in");
+}, 1800); // trigger after brief delay
+
+</script>
+    
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".nav-main").classList.add("fade-in");
+  });
+</script>
+
+
+<template src="js/noise.min.js"></template>
+<template src="js/util.js"></template>
+<template src="js/shift.js"></template>
+</html>
+

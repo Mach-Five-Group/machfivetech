@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Join the Team | Mach Five Tech</title>
+    
+    <!-- Neodigm Scripts -->
+    <script>
+        let neodigmOptCustom = { CONSOLE_LOG_VER:true, W4S_VOLUME: .016 }
+        let neodigmOpt_launchCompleteCustom = {
+          ver: "1.2.4",
+          N55_LC_DOMAIN: ["MachFiveTech.com", 256],
+          N55_LC_TAG1: ["MachFiveTech 🌶️ Careers - Build Your Future", 256],
+          N55_LC_COLOR_BRAND: ["192839", 256],
+          CONSOLE_LOG_VER: true,
+        }
+    </script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.css">
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.css">
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:wght@200;300;400;500;600;700|Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300;400|Roboto+Mono:wght@300;400|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0|Permanent+Marker">
+
+    <style>
+        :root {
+            --m5-brand: #DD4124;
+            --m5-brand-dark: #810000;
+            --m5-accent: #7BC4C4;
+            --m5-dark: #181818;
+            --m5-darker: #000;
+            --m5-night-mid: #323232;
+            --m5-light: #f8f8f8;
+            --m5-lighter: #fff;
+            --m5-text: #333;
+            --m5-text-light: #666;
+            --m5-border: #e0e0e0;
+            --m5-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            --m5-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--m5-lighter);
+            color: var(--m5-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 120px;
+            position: relative;
+        }
+
+        /* Grid texture with fade effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Neodigm button overrides */
+        [data-n55-enchanted-cta][data-n55-theme='primary'] { 
+            background: linear-gradient(var(--m5-night-mid), var(--m5-night-mid)) !important; 
+        }
+        
+        .l-content-row:hover [data-n55-enchanted-cta][data-n55-theme='primary'] {
+            background: linear-gradient(var(--m5-brand), var(--m5-brand-dark)) !important;
+        }
+
+        /* Header - Fixed */
+        .header-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-bar {
+            background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+            font-size: 13px;
+        }
+
+        .top-bar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 36px;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .top-bar-link {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar-link:hover {
+            color: var(--m5-brand);
+        }
+
+        .top-bar-link .material-symbols-outlined {
+            font-size: 16px;
+            color: var(--m5-brand);
+        }
+
+        .main-nav {
+            background: white;
+            padding: 20px 0;
+            position: relative;
+            border-bottom: 3px solid var(--m5-brand);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hide nav logo on desktop */
+        .main-nav .nav-logo {
+            display: none;
+        }
+
+        /* Desktop only logo */
+        .nav-logo.desktop-only {
+            display: none;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: white;
+            background: var(--m5-brand);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 20px;
+            transition: all 0.2s ease;
+            display: inline-block;
+            line-height: 1.2;
+            vertical-align: baseline;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            list-style: none;
+        }
+
+        /* I Need prompt */
+        .nav-prompt {
+            color: var(--m5-brand);
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-prompt::after {
+            content: '→';
+            font-size: 20px;
+            animation: pointRight 2s ease-in-out infinite;
+        }
+
+        /* Mobile nav prompt - hidden by default */
+        .mobile-nav-prompt {
+            display: none;
+            color: var(--m5-brand);
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(221, 65, 36, 0.2);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .mobile-nav-prompt::after {
+            content: '→';
+            font-size: 22px;
+            margin-left: 8px;
+            display: inline-block;
+            animation: pointRight 2s ease-in-out infinite;
+        }
+
+        @keyframes pointRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        /* Updated nav menu with glassmorphic style from home page */
+        .nav-menu a {
+            color: var(--m5-text);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--m5-brand);
+            background: rgba(221, 65, 36, 0.05);
+            border-color: rgba(221, 65, 36, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.1);
+        }
+
+        /* Special styling for Contact CTA */
+        .nav-menu a[onclick*="openContactForm"] {
+            background: rgba(221, 65, 36, 0.1) !important;
+            border-color: rgba(221, 65, 36, 0.2) !important;
+            color: var(--m5-brand) !important;
+        }
+
+        .nav-menu a[onclick*="openContactForm"]:hover {
+            background: var(--m5-brand) !important;
+            border-color: var(--m5-brand) !important;
+            color: white !important;
+            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3) !important;
+        }
+
+        /* Mobile menu links with icons - hidden on desktop */
+        .nav-menu .mobile-only {
+            display: none;
+        }
+
+        /* Add divider styling for mobile menu */
+        .nav-menu .nav-divider {
+            display: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--m5-dark) 0%, var(--m5-night-mid) 100%);
+        }
+
+        .hero-background {
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background: url('/img/machfivetech-code.jpg') center/cover;
+            opacity: 0.1;
+            will-change: transform;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(24, 24, 24, 0.3) 0%,
+                rgba(24, 24, 24, 0.8) 100%
+            );
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 1000px;
+            padding: 0 24px;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: clamp(48px, 8vw, 84px);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .hero-title span {
+            color: var(--m5-brand);
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 3vw, 28px);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 48px;
+            line-height: 1.4;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: 20px;
+        }
+
+        .hero-button {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 32px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-button-primary {
+            background: linear-gradient(135deg, var(--m5-brand) 0%, var(--m5-brand-dark) 100%);
+            color: white;
+            box-shadow: 0 8px 24px rgba(221, 65, 36, 0.4);
+        }
+
+        .hero-button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(221, 65, 36, 0.5);
+        }
+
+        /* Why Work Here Section */
+        .why-work-here {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-headline {
+            text-align: center;
+            font-size: clamp(48px, 5vw, 72px);
+            font-weight: 700;
+            color: var(--m5-dark);
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-bottom: 64px;
+            line-height: 1.1;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 48px;
+            margin-bottom: 80px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 16px;
+            padding: 48px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--m5-brand);
+            transform: skew(-45deg);
+            transform-origin: top left;
+            box-shadow: 0 2px 4px rgba(221, 65, 36, 0.3);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Updated Value Title with Plan Page Orange Tape Style */
+        .value-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-3deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
+        }
+
+        /* Heavy wear pattern with brand color - matching plan page */
+        .value-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .value-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Paper texture overlay */
+        .texture-noise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.15;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255,255,255,0.02) 2px,
+                    rgba(255,255,255,0.02) 3px
+                );
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+
+        /* Different angles for each card - more subtle */
+        .value-card:nth-child(1) .value-title {
+            transform: rotate(-1deg);
+        }
+
+        .value-card:nth-child(2) .value-title {
+            transform: rotate(1deg);
+        }
+
+        .value-card:nth-child(3) .value-title {
+            transform: rotate(-0.5deg);
+        }
+
+        .value-card:nth-child(4) .value-title {
+            transform: rotate(1.5deg);
+        }
+
+        .value-card:nth-child(5) .value-title {
+            transform: rotate(-1deg);
+        }
+
+        .value-card:nth-child(6) .value-title {
+            transform: rotate(0.5deg);
+        }
+
+        .value-description {
+            color: var(--m5-text-light);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Open Positions Section - Updated with hero background */
+        .open-positions {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add hero background image with light opacity */
+        .open-positions-background {
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background-image: url('/img/mt5-hero.png');
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .open-positions::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(221, 65, 36, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(123, 196, 196, 0.06) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 0%, rgba(221, 65, 36, 0.02) 50%, transparent 100%);
+            z-index: 2;
+        }
+
+        .open-positions .section-headline {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .positions-container {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Evergreen Section - Updated for dark theme */
+        .evergreen-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.9) 100%);
+            border-radius: 20px;
+            padding: 64px 48px;
+            margin-bottom: 80px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .evergreen-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--m5-brand);
+            border-radius: 20px 20px 0 0;
+            transform: skew(-2deg);
+            transform-origin: top left;
+            box-shadow: 0 2px 8px rgba(221, 65, 36, 0.4);
+        }
+
+        .evergreen-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .evergreen-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: var(--m5-dark);
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .evergreen-description {
+            font-size: 20px;
+            color: var(--m5-text-light);
+            line-height: 1.6;
+            margin-bottom: 48px;
+        }
+
+        .evergreen-roles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .evergreen-role {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            text-align: left;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .evergreen-role:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .role-content {
+            flex: 1;
+        }
+
+        /* Role titles with plan page orange tape style */
+        .role-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-2deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+        }
+
+        /* Heavy wear pattern with brand color - matching plan page */
+        .role-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .role-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Different angles for role titles - more subtle */
+        .evergreen-role:nth-child(1) .role-title {
+            transform: rotate(-1deg);
+        }
+
+        .evergreen-role:nth-child(2) .role-title {
+            transform: rotate(1deg);
+        }
+
+        .role-desc {
+            color: var(--m5-text-light);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .evergreen-cta {
+            text-align: center;
+        }
+
+        /* Specific Openings Section */
+        .specific-openings {
+            margin-top: 80px;
+        }
+
+        .openings-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-align: center;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .openings-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 64px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .positions-grid {
+            display: grid;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .position-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.9) 100%);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .position-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(45deg, var(--m5-brand) 0%, var(--m5-accent) 100%);
+            transform: skew(-3deg);
+            transform-origin: top left;
+            box-shadow: 0 2px 8px rgba(221, 65, 36, 0.4);
+        }
+
+        .position-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 0.95) 100%);
+        }
+
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        /* Position titles with plan page orange tape style */
+        .position-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-2deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+        }
+
+        /* Heavy wear pattern with brand color - matching plan page */
+        .position-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .position-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Different angles for position titles - more subtle */
+        .position-card:nth-child(1) .position-title {
+            transform: rotate(-1deg);
+        }
+
+        .position-card:nth-child(2) .position-title {
+            transform: rotate(1deg);
+        }
+
+        .position-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .position-tag {
+            padding: 4px 12px;
+            background: rgba(221, 65, 36, 0.1);
+            color: var(--m5-brand);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .position-description {
+            color: var(--m5-text);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .position-requirements {
+            margin-bottom: 32px;
+        }
+
+        .position-requirements h4 {
+            color: var(--m5-dark);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .position-requirements ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .position-requirements li {
+            color: var(--m5-text-light);
+            font-size: 15px;
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .position-requirements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--m5-brand);
+            font-weight: 600;
+        }
+
+        .position-apply {
+            text-align: right;
+        }
+
+        /* Culture Section - Updated with whiteboard background */
+        .culture-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--m5-dark) 0%, var(--m5-night-mid) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add whiteboard background image with light opacity */
+        .culture-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/img/whiteboard.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .culture-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(221, 65, 36, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .culture-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+        }
+
+        .culture-headline {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 32px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .culture-headline span {
+            color: var(--m5-brand);
+            font-weight: 700;
+        }
+
+        .culture-description {
+            font-size: clamp(18px, 2.5vw, 24px);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 64px auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .culture-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 48px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .culture-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: clamp(36px, 5vw, 54px);
+            font-weight: 700;
+            color: var(--m5-brand);
+            line-height: 1;
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(221, 65, 36, 0.3);
+        }
+
+        /* Larger infinity symbol */
+        .culture-stat:nth-child(3) .stat-number {
+            font-size: clamp(72px, 8vw, 96px);
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: clamp(14px, 1.5vw, 16px);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer - Matching home page */
+        .footer {
+            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+            border-top: 1px solid var(--m5-border);
+            color: var(--m5-text);
+            padding: 80px 24px 32px;
+            position: relative;
+        }
+
+        /* Add grid background to footer */
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px;
+            mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg, 
+                transparent 0%, 
+                black 15%, 
+                black 85%, 
+                transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle brand accent line at top */
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--m5-brand);
+            border-radius: 0 0 3px 3px;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px;
+            border-bottom: 1px solid var(--m5-border);
+            padding-bottom: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            flex: 1 1 400px;
+        }
+
+        .footer-brand p {
+            color: var(--m5-text-light);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .footer-section {
+            flex: 1 1 200px;
+        }
+
+        .footer-section h4 {
+            color: var(--m5-brand);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .footer-contact .material-symbols-outlined {
+            color: var(--m5-brand);
+            font-size: 20px;
+        }
+
+        .footer-contact:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--m5-text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom a {
+            color: var(--m5-text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--m5-brand);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            /* Hide top bar on mobile */
+            .top-bar {
+                display: none;
+            }
+
+            /* Show nav logo on mobile */
+            .main-nav .nav-logo {
+                display: inline-flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                font-size: 26px;
+            }
+
+            .main-nav .nav-logo span {
+                font-size: 22px;
+                padding: 4px 12px;
+            }
+
+            /* Adjust main nav for mobile */
+            .nav-container {
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: block !important;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                position: relative;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
+            .mobile-menu-toggle span {
+                display: block !important;
+                width: 28px;
+                height: 3px;
+                background-color: #181818 !important;
+                margin: 6px 0;
+                transition: all 0.3s ease;
+                border-radius: 2px;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform-origin: center;
+            }
+
+            /* Hamburger to X animation */
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
+
+            /* Updated mobile nav menu with scroll */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 80px 32px 32px 32px;
+                gap: 20px;
+                box-shadow: -2px 0 16px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s;
+                z-index: 999;
+                align-items: stretch;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            /* Add scrollbar styling */
+            .nav-menu::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .nav-menu::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu::-webkit-scrollbar-thumb {
+                background: rgba(221, 65, 36, 0.3);
+                border-radius: 3px;
+            }
+
+            .nav-menu::-webkit-scrollbar-thumb:hover {
+                background: rgba(221, 65, 36, 0.5);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            /* Hide desktop nav prompt on mobile */
+            .nav-prompt {
+                display: none !important;
+            }
+
+            /* Show mobile nav prompt */
+            .mobile-nav-prompt {
+                display: block !important;
+            }
+
+            /* Show mobile only links on mobile */
+            .nav-menu .mobile-only {
+                display: list-item !important;
+            }
+
+            /* Enhanced divider styling on mobile */
+            .nav-menu .nav-divider {
+                display: block;
+                width: calc(100% + 64px);
+                margin-left: -32px;
+                margin-right: -32px;
+                height: 1px;
+                background: linear-gradient(
+                    90deg, 
+                    transparent 0%, 
+                    rgba(221, 65, 36, 0.2) 20%, 
+                    rgba(221, 65, 36, 0.2) 80%, 
+                    transparent 100%
+                );
+                margin-top: 24px;
+                margin-bottom: 24px;
+                position: relative;
+            }
+
+            /* Optional: Add decorative element to divider */
+            .nav-menu .nav-divider::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px;
+                height: 8px;
+                background: rgba(221, 65, 36, 0.2);
+                border-radius: 50%;
+            }
+
+            /* Update mobile nav menu styles */
+            .nav-menu a {
+                width: 100%;
+                text-align: center;
+                font-size: 1.125rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            /* Mobile menu icon styling */
+            .nav-menu a .material-symbols-outlined {
+                font-size: 20px;
+                color: var(--m5-brand);
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .hero-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .value-card {
+                padding: 32px 24px;
+            }
+
+            .evergreen-section {
+                padding: 48px 32px;
+                margin-bottom: 64px;
+            }
+
+            .evergreen-roles {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .evergreen-role {
+                padding: 24px;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .role-content {
+                margin-top: 16px;
+            }
+
+            .position-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .position-meta {
+                margin-top: 8px;
+            }
+
+            .position-apply {
+                text-align: left;
+            }
+
+            .apply-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .culture-stats {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 32px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 998;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--m5-brand);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="top-bar">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+                </div>
+                <div class="top-bar-right">
+                    <a href="/blog" class="top-bar-link">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                        Knowledge Base
+                    </a>
+                    <a href="/careers" class="top-bar-link">
+                        <span class="material-symbols-outlined">person</span>
+                        Careers
+                    </a>
+                    <a href="/customer-portal/" class="top-bar-link">
+                        <span class="material-symbols-outlined">login</span>
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+                
+                <ul class="nav-menu">
+                    <li class="mobile-nav-prompt">I Need...</li>
+                    <li class="nav-prompt">I Need...</li>
+                    <li><a href="/services/plan">A Plan</a></li>
+                    <li><a href="/services/code">Code</a></li>
+                    <li><a href="/services/culture">Culture</a></li>
+                    <li><a href="/services/minds">Minds</a></li>
+                    <li><a href="/services/future-proof">To Future-Proof</a></li>
+                    <li><a href="/services/delight">To Delight</a></li>
+                    <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
+                    <li class="nav-divider"></li>
+                    <li class="mobile-only">
+                        <a href="/blog">
+                            <span class="material-symbols-outlined">rss_feed</span>
+                            Knowledge Base
+                        </a>
+                    </li>
+                    <li class="mobile-only">
+                        <a href="/careers">
+                            <span class="material-symbols-outlined">person</span>
+                            Careers
+                        </a>
+                    </li>
+                    <li class="mobile-only">
+                        <a href="/customer-portal/">
+                            <span class="material-symbols-outlined">login</span>
+                            Login
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-overlay"></div>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-background" id="heroBackground"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Build Your
+                    <br>
+                    <span id="rotatingWord">Future</span> 
+                    <br>
+                    With Us
+                </h1>
+                <p class="hero-subtitle">
+                    Join a team that values excellence, innovation, and the craft of building software that actually works. Where your expertise drives real impact.
+                </p>
+            </div>
+        </section>
+
+        <section class="why-work-here" id="why-work-here">
+            <div class="section-container">
+                <h2 class="section-headline">Why Work at Mach Five Tech?</h2>
+                
+                <div class="values-grid">
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Impact From Day One
+                        </h3>
+                        <p class="value-description">
+                            No months of onboarding or meaningless busy work. You'll be solving real problems for real clients from your first week, with the autonomy to implement solutions your way.
+                        </p>
+                    </div>
+
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Learn From the Best
+                        </h3>
+                        <p class="value-description">
+                            Work alongside engineers who've scaled systems, led teams, and solved problems you've only read about. Continuous learning isn't a buzzword here—it's how we operate.
+                        </p>
+                    </div>
+
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Sustainable Excellence
+                        </h3>
+                        <p class="value-description">
+                            We believe great work comes from great developers, not burned-out ones. Flexible schedules, remote-first culture, and a team that respects your time and expertise.
+                        </p>
+                    </div>
+
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Own Your Growth
+                        </h3>
+                        <p class="value-description">
+                            Whether you want to dive deep into architecture, lead client relationships, or explore new technologies, we'll support your path with real opportunities and resources.
+                        </p>
+                    </div>
+
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Client Partnership
+                        </h3>
+                        <p class="value-description">
+                            Work directly with CTOs, founders, and technical leaders who value your expertise. Your recommendations drive real business decisions, not just code changes.
+                        </p>
+                    </div>
+
+                    <div class="value-card fade-in">
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Technology That Matters
+                        </h3>
+                        <p class="value-description">
+                            Build with modern stacks, proven patterns, and tools that make sense. No legacy PHP from 2008 or frameworks chosen by committee. Technology decisions based on what actually works.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="open-positions" id="positions">
+            <div class="open-positions-background"></div>
+            <div class="section-container positions-container">
+                <h2 class="section-headline">Join Our Team</h2>
+                
+                <!-- Evergreen Positions Section -->
+                <div class="evergreen-section">
+                    <div class="evergreen-content">
+                        <h3 class="evergreen-title">Always Looking For</h3>
+                        <p class="evergreen-description">
+                        Even if we don't have a specific opening posted, we're always interested in connecting with experienced professionals who share our commitment to technical excellence.
+                        </p>
+                        
+                        <div class="evergreen-roles">
+                            <div class="evergreen-role">
+                                <div class="role-content">
+                                    <h4 class="role-title">
+                                        <div class="texture-noise"></div>
+                                        Full-Stack Engineers
+                                    </h4>
+                                    <p class="role-desc">Strong problem solvers with deep vanilla JavaScript skills and solid web fundamentals. You build reliable REST APIs, work confidently with PostgreSQL, and choose proven technologies over the latest trends.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="evergreen-role">
+                                <div class="role-content">
+                                    <h4 class="role-title">
+                                        <div class="texture-noise"></div>
+                                        Technical Project Managers
+                                    </h4>
+                                    <p class="role-desc">Technical leaders who can bridge client needs with engineering solutions and drive successful project delivery. You speak both business and code, manage scope without micromanaging people, and keep projects moving through technical complexity and changing requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="evergreen-cta">
+                            <p style="font-size: 18px; color: var(--m5-text-light); margin-bottom: 0;">
+                                We always take resumes for these roles at 
+                                <a href="mailto:jobs@machfivetech.com" class="footer-contact" style="color: var(--m5-brand); text-decoration: none; font-weight: 500;">
+                                    <span class="material-symbols-outlined" style="color: var(--m5-brand);">mail</span>
+                                    jobs@machfivetech.com
+                                </a>
+                                (yes, we check the inbox).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specific Openings Section -->
+                <div class="specific-openings">
+                    <h3 class="openings-title">Current Specific Openings</h3>
+                    <p class="openings-subtitle">
+                        We currently have these specific roles available with immediate start dates.
+                    </p>
+
+                    <div class="positions-grid">
+                        <div class="position-card fade-in">
+                            <div class="position-header">
+                                <div>
+                                    <h3 class="position-title">
+                                        <div class="texture-noise"></div>
+                                        Senior Full-Stack Engineer
+                                    </h3>
+                                    <div class="position-meta">
+                                        <span class="position-tag">Remote</span>
+                                        <span class="position-tag">Full-Time</span>
+                                        <span class="position-tag">Immediate Start</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="position-description">
+                                Join our client delivery team to architect and build scalable web applications. You'll work directly with clients to understand their needs, design technical solutions, and implement systems that grow with their business.
+                            </p>
+
+                            <div class="position-requirements">
+                                <h4>What We're Looking For:</h4>
+                                <ul>
+                                    <li>5+ years building production web applications</li>
+                                    <li>Deep experience with React, Node.js, and modern JavaScript</li>
+                                    <li>Database design and optimization (PostgreSQL, MongoDB)</li>
+                                    <li>API design and integration experience</li>
+                                    <li>Client communication and technical leadership skills</li>
+                                    <li>Experience with cloud platforms (AWS, Azure, or GCP)</li>
+                                </ul>
+                            </div>
+
+                            <div class="position-apply">
+                                <nav>
+                                    <a href="#contact" onclick="openContactForm()" tabindex="0" aria-haspopup="true"
+                                       data-n55-enchanted-cta data-n55-enchanted-cta-dont-touch="true" 
+                                       data-n55-enchanted-cta-shape-off="false" data-n55-enchanted-cta-hover-an="true"
+                                       data-n55-enchanted-cta-size="medium"
+                                       data-n55-theme="primary" data-n55-flash-theme="danger">
+                                        <span>Apply Now</span><span>Let's Talk</span>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="position-card fade-in">
+                            <div class="position-header">
+                                <div>
+                                    <h3 class="position-title">
+                                        <div class="texture-noise"></div>
+                                        DevOps Engineer
+                                    </h3>
+                                    <div class="position-meta">
+                                        <span class="position-tag">Remote</span>
+                                        <span class="position-tag">Full-Time</span>
+                                        <span class="position-tag">March 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="position-description">
+                                Help our clients build resilient, scalable infrastructure. You'll design deployment pipelines, implement monitoring systems, and ensure applications perform under real-world conditions.
+                            </p>
+
+                            <div class="position-requirements">
+                                <h4>What We're Looking For:</h4>
+                                <ul>
+                                    <li>3+ years of infrastructure and deployment experience</li>
+                                    <li>Expertise with Docker, Kubernetes, and container orchestration</li>
+                                    <li>CI/CD pipeline design and implementation</li>
+                                    <li>Cloud infrastructure management (AWS preferred)</li>
+                                    <li>Monitoring and observability tools (DataDog, New Relic, etc.)</li>
+                                    <li>Security best practices and compliance experience</li>
+                                </ul>
+                            </div>
+
+                            <div class="position-apply">
+                                <nav>
+                                    <a href="#contact" onclick="openContactForm()" tabindex="0" aria-haspopup="true"
+                                       data-n55-enchanted-cta data-n55-enchanted-cta-dont-touch="true" 
+                                       data-n55-enchanted-cta-shape-off="false" data-n55-enchanted-cta-hover-an="true"
+                                       data-n55-enchanted-cta-size="medium"
+                                       data-n55-theme="primary" data-n55-flash-theme="danger">
+                                        <span>Apply Now</span><span>Let's Talk</span>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="culture-section">
+            <div class="section-container">
+                <div class="culture-content">
+                    <h2 class="culture-headline">
+                        Built by <span>Engineers</span>, For Engineers
+                    </h2>
+                    <p class="culture-description">
+                        Our leadership team has shipped code, managed production systems, and solved the problems you face every day. We make technical decisions based on engineering reality, not boardroom theory. You'll work alongside people who understand the craft because they've lived it.
+                    </p>
+                    
+                    <div class="culture-stats">
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Remote First</div>
+                        </div>
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">Stock</div>
+                            <div class="stat-label">Options Included</div>
+                        </div>
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Pointless Meetings</div>
+                        </div>
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">4 Weeks</div>
+                            <div class="stat-label">Paid Time Off</div>
+                        </div>
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">$5K</div>
+                            <div class="stat-label">Annual Learning Budget</div>
+                        </div>
+                        <div class="culture-stat fade-in">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Learning Opportunities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+                <p>We are a technical consulting and development team helping companies move faster and build smarter through architecture, automation, and app delivery.</p>
+                <p>Headquartered in Chicago. Supporting clients nationwide.</p>
+                <a href="mailto:support@machfivetech.com" class="footer-contact">
+                    <span class="material-symbols-outlined">mail</span>
+                    support@machfivetech.com
+                </a>
+            </div>
+
+            <div class="footer-section">
+                <h4>I Need...</h4>
+                <ul>
+                    <li><a href="/services/plan">A Plan</a></li>
+                    <li><a href="/services/code">Code</a></li>
+                    <li><a href="/services/culture">Culture</a></li>
+                    <li><a href="/services/minds">Minds</a></li>
+                    <li><a href="/services/future-proof">To Future-Proof</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Mach Five</h4>
+                <ul>
+                    <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
+                    <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
+                    <li><a href="https://www.webtooltoys.com" target="_blank">Web Tool Toys</a></li>
+                    <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Proudly built by the <a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a>.</p>
+            <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
+
+    <script>
+        // Prevent multiple script executions
+        if (window.mfCareersScriptLoaded) {
+            console.log('Careers script already loaded, skipping initialization');
+        } else {
+            window.mfCareersScriptLoaded = true;
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize only once
+                if (window.mfCareersInitialized) return;
+                window.mfCareersInitialized = true;
+
+                // Mobile menu
+                const mobileToggle = document.querySelector('.mobile-menu-toggle');
+                const navMenu = document.querySelector('.nav-menu');
+                const overlay = document.querySelector('.menu-overlay');
+                
+                if (mobileToggle && navMenu && overlay) {
+                    mobileToggle.addEventListener('click', () => {
+                        navMenu.classList.toggle('active');
+                        overlay.classList.toggle('active');
+                        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+                    });
+
+                    overlay.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+
+                    // Close menu when clicking nav links on mobile
+                    navMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            navMenu.classList.remove('active');
+                            overlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    });
+                }
+
+                // Scroll animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all elements that need animation
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    observer.observe(el);
+                });
+
+                // Parallax effect for hero background
+                let parallaxInitialized = false;
+                
+                function updateParallax() {
+                    const scrolled = window.pageYOffset;
+                    const parallax = document.getElementById('heroBackground');
+                    const hero = document.querySelector('.hero');
+                    
+                    if (parallax && hero) {
+                        const heroBottom = hero.offsetTop + hero.offsetHeight;
+                        if (scrolled < heroBottom) {
+                            const speed = 0.3;
+                            const yPos = scrolled * speed;
+                            parallax.style.transform = `translateY(${yPos}px)`;
+                        }
+                    }
+
+                    // Parallax for open positions background
+                    const openPositionsParallax = document.querySelector('.open-positions-background');
+                    const openPositions = document.querySelector('.open-positions');
+                    
+                    if (openPositionsParallax && openPositions) {
+                        const openPositionsTop = openPositions.offsetTop;
+                        const openPositionsBottom = openPositionsTop + openPositions.offsetHeight;
+                        if (scrolled + window.innerHeight > openPositionsTop && scrolled < openPositionsBottom) {
+                            const speed = 0.3;
+                            const relativeScrolled = scrolled - openPositionsTop;
+                            const yPos = relativeScrolled * speed;
+                            openPositionsParallax.style.transform = `translateY(${yPos}px)`;
+                        }
+                    }
+                }
+
+                if (!parallaxInitialized) {
+                    parallaxInitialized = true;
+                    window.addEventListener('scroll', () => {
+                        requestAnimationFrame(updateParallax);
+                    });
+                }
+            });
+
+            // Wait for neodigm library to load, then start rotating text
+            function initRotatingText() {
+                if (typeof neodigmUtils !== 'undefined') {
+                    const words = [
+                        "Future", "Career", "Success", "Impact", "Growth", "Excellence", 
+                        "Innovation", "Legacy", "Skills", "Journey", "Vision", 
+                        "Dreams", "Destiny", "Purpose", "Momentum"
+                    ];
+                    
+                    neodigmUtils.typeOn({
+                        "q1st": "#rotatingWord", 
+                        "msg": words.join("|"), 
+                        "mode": "LOOP",
+                        "uniqueDelay": 203
+                    });
+                } else {
+                    // Retry if neodigm isn't loaded yet
+                    setTimeout(initRotatingText, 500);
+                }
+            }
+
+            // Start the rotating text after a delay
+            setTimeout(initRotatingText, 2000);
+        }
+
+        // Contact form
+        function openContactForm() {
+            if (typeof contact_form_iframe_sfdc !== 'undefined') {
+                contact_form_iframe_sfdc.openCTA();
+            }
+        }
+
+        const contact_form_iframe_sfdcCustom = {
+            "contact_cta_theme": ["danger"],
+            "contact_cta_theme_hex": ["#DD4124"],
+            "contact_cta_oid": ["00D6A000002intt"]
+        };
+    </script>
+</body>
+</html>

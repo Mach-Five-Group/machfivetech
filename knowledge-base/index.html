@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base | Mach Five Tech - Technical Insights & Engineering Excellence</title>
+    
+    <!-- Existing scripts and styles from main site -->
+    <script>
+        let neodigmOptCustom = { CONSOLE_LOG_VER:true, W4S_VOLUME: .016 }
+        let neodigmOpt_launchCompleteCustom = {
+          ver: "1.2.4",
+          N55_LC_DOMAIN: ["MachFiveTech.com", 256],
+          N55_LC_TAG1: ["MachFiveTech Knowledge Base 🌶️ Engineering Insights & Technical Excellence", 256],
+          N55_LC_COLOR_BRAND: ["192839", 256],
+          CONSOLE_LOG_VER: true,
+        }
+    </script>
+    <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.css">
+    <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300|Roboto+Mono:wght@300|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0">
+
+    <!-- Existing favicon and meta tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <meta property="og:title" content="Blog | Mach Five Tech - Technical Insights">
+    <meta property="og:site_name" content="Mach Five Tech Blog">
+    <meta property="og:url" content="https://www.machfivetech.com/blog">
+    <meta property="og:description" content="Engineering insights, technical deep-dives, and lessons learned from building scalable software">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* Global theme variables */
+        :root {
+            --m5lc-theme-brand: #DD4124;
+            --m5lc-theme-brand-alt: #810000;
+            --m5lc-theme-danger: #DD4124;
+            --m5lc-theme-danger-alt: #810000;
+            --m5lc-theme-info: #7BC4C4;
+            --m5lc-theme-info-alt: #1F6868;
+            --m5lc-theme-night: #424242;
+            --m5lc-theme-night-alt: #242424;
+            --m5lc-theme-night-mid: #323232;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Blog-specific navigation */
+        .blog-nav {
+            background: linear-gradient(180deg, #181818 0%, #000 100%);
+            border-bottom: 3px solid var(--m5lc-theme-brand);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .blog-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blog-nav-title {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1.2px;
+        }
+
+        .blog-nav-title span {
+            color: var(--m5lc-theme-brand);
+        }
+
+        .blog-nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .blog-nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .blog-nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--m5lc-theme-brand);
+            transition: width 0.3s;
+        }
+
+        .blog-nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero section */
+        .blog-hero {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(221, 65, 36, 0.05) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, -50px) rotate(180deg); }
+        }
+
+        .blog-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 300;
+            margin-bottom: 16px;
+            color: #000;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blog-hero h1 span {
+            color: var(--m5lc-theme-brand);
+            font-weight: 400;
+        }
+
+        .blog-hero p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Category filter */
+        .category-filter {
+            background: #fff;
+            padding: 32px 24px;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 72px;
+            z-index: 900;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .category-filter-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .category-btn {
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .category-btn:hover {
+            border-color: var(--m5lc-theme-brand);
+            color: var(--m5lc-theme-brand);
+        }
+
+        .category-btn.active {
+            background: var(--m5lc-theme-brand);
+            color: #fff;
+            border-color: var(--m5lc-theme-brand);
+        }
+
+        /* Featured post */
+        .featured-section {
+            padding: 64px 24px;
+            background: #fff;
+        }
+
+        .featured-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 48px;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .featured-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .featured-content h2 a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .featured-content h2 a:hover {
+            color: var(--m5lc-theme-brand);
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .featured-excerpt {
+            font-size: 1.125rem;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .featured-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .featured-post:hover .featured-image img {
+            transform: scale(1.05);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5lc-theme-brand);
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 12px;
+        }
+
+        /* Blog grid */
+        .blog-grid-section {
+            padding: 64px 24px;
+            background: #fafafa;
+        }
+
+        .blog-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-card-image {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--m5lc-theme-info);
+            color: #fff;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            flex: 1;
+        }
+
+        .blog-card h3 a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--m5lc-theme-brand);
+        }
+
+        .blog-card-excerpt {
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #999;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .blog-card-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Load more */
+        .load-more-section {
+            padding: 64px 24px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .load-more-btn {
+            display: inline-block;
+            padding: 16px 48px;
+            background: var(--m5lc-theme-brand);
+            color: #fff;
+            border: none;
+            border-radius: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .load-more-btn:hover {
+            background: var(--m5lc-theme-brand-alt);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3);
+        }
+
+        /* Newsletter section */
+        .newsletter-section {
+            background: linear-gradient(180deg, #181818 0%, #000 100%);
+            padding: 80px 24px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .newsletter-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .newsletter-section p {
+            font-size: 1.125rem;
+            color: #ccc;
+            margin-bottom: 32px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 16px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 24px;
+            border: 1px solid #444;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 32px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .newsletter-input::placeholder {
+            color: #999;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--m5lc-theme-brand);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .newsletter-submit {
+            padding: 16px 32px;
+            background: var(--m5lc-theme-brand);
+            color: #fff;
+            border: none;
+            border-radius: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-submit:hover {
+            background: var(--m5lc-theme-brand-alt);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .blog-footer {
+            background: #000;
+            color: #ccc;
+            padding: 48px 24px 24px;
+            text-align: center;
+        }
+
+        .blog-footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .blog-footer a:hover {
+            color: var(--m5lc-theme-brand);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+
+            .featured-content h2 {
+                font-size: 1.75rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .category-filter {
+                top: 60px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blog-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .blog-card:nth-child(1) { animation-delay: 0.1s; }
+        .blog-card:nth-child(2) { animation-delay: 0.2s; }
+        .blog-card:nth-child(3) { animation-delay: 0.3s; }
+        .blog-card:nth-child(4) { animation-delay: 0.4s; }
+        .blog-card:nth-child(5) { animation-delay: 0.5s; }
+        .blog-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Blog Navigation -->
+    <nav class="blog-nav">
+        <div class="blog-nav-inner">
+            <a href="/blog" class="blog-nav-title">Mach Five <span>Tech</span> Knowledge Base</a>
+            <ul class="blog-nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">All Posts</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <h1 class="fade-in">Engineering <span>Excellence</span> & Technical Insights</h1>
+        <p class="fade-in">Deep dives, tutorials, and lessons learned from building scalable software</p>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter" id="categories">
+        <div class="category-filter-inner">
+            <button class="category-btn active" data-category="all">All Posts</button>
+            <button class="category-btn" data-category="architecture">Architecture</button>
+            <button class="category-btn" data-category="devops">DevOps</button>
+            <button class="category-btn" data-category="frontend">Frontend</button>
+            <button class="category-btn" data-category="backend">Backend</button>
+            <button class="category-btn" data-category="culture">Engineering Culture</button>
+            <button class="category-btn" data-category="case-study">Case Studies</button>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-section">
+        <div class="featured-inner">
+            <article class="featured-post">
+                <div class="featured-content">
+                    <h2><a href="/blog/scaling-microservices-at-mach-speed">Scaling Microservices at Mach Speed: Lessons from the Trenches</a></h2>
+                    <div class="featured-meta">
+                        <span><span class="material-symbols-outlined">calendar_today</span> Dec 15, 2024</span>
+                        <span><span class="material-symbols-outlined">schedule</span> 12 min read</span>
+                        <span><span class="material-symbols-outlined">folder</span> Architecture</span>
+                    </div>
+                    <p class="featured-excerpt">
+                        How we helped a fintech startup scale from 10K to 10M requests per day without breaking a sweat. 
+                        Learn about our battle-tested approach to microservices architecture, service mesh implementation, 
+                        and the critical monitoring strategies that kept everything running smoothly.
+                    </p>
+                    <a href="/blog/scaling-microservices-at-mach-speed" class="read-more">
+                        Read full article <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="featured-image">
+                    <img src="/blog/images/microservices-hero.jpg" alt="Microservices Architecture Diagram">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="blog-grid">
+            <!-- Blog Card 1 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/react-performance.jpg" alt="React Performance Optimization">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Frontend</span>
+                    <h3><a href="/blog/react-performance-patterns">React Performance Patterns That Actually Matter</a></h3>
+                    <p class="blog-card-excerpt">Stop chasing micro-optimizations. Here are the performance patterns that moved the needle for our enterprise clients.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/sarah-chen.jpg" alt="Sarah Chen" class="author-avatar">
+                            <span>Sarah Chen</span>
+                        </div>
+                        <span>8 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Card 2 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/kubernetes-gotchas.jpg" alt="Kubernetes Deployment">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">DevOps</span>
+                    <h3><a href="/blog/kubernetes-gotchas">5 Kubernetes Gotchas That Cost Us Sleep (And How to Avoid Them)</a></h3>
+                    <p class="blog-card-excerpt">Real-world Kubernetes pitfalls we encountered in production and the monitoring strategies that saved us.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/alex-rivera.jpg" alt="Alex Rivera" class="author-avatar">
+                            <span>Alex Rivera</span>
+                        </div>
+                        <span>10 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Card 3 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/team-culture.jpg" alt="Engineering Team Culture">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Engineering Culture</span>
+                    <h3><a href="/blog/building-trust-remote-teams">Building High-Trust Remote Engineering Teams</a></h3>
+                    <p class="blog-card-excerpt">How we transformed a struggling remote team into a high-performing unit through intentional culture building.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/marcus-johnson.jpg" alt="Marcus Johnson" class="author-avatar">
+                            <span>Marcus Johnson</span>
+                        </div>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Card 4 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/database-migration.jpg" alt="Database Migration">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Backend</span>
+                    <h3><a href="/blog/zero-downtime-database-migration">Zero-Downtime Database Migration: A Step-by-Step Guide</a></h3>
+                    <p class="blog-card-excerpt">Migrating 100TB of data without a minute of downtime. Here's our playbook for seamless database transitions.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/priya-patel.jpg" alt="Priya Patel" class="author-avatar">
+                            <span>Priya Patel</span>
+                        </div>
+                        <span>15 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Card 5 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/api-design.jpg" alt="API Design">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Architecture</span>
+                    <h3><a href="/blog/api-design-real-world">API Design for the Real World: Beyond REST vs GraphQL</a></h3>
+                    <p class="blog-card-excerpt">Forget the debates. Here's how we design APIs that developers actually want to use, with real examples from production.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/david-kim.jpg" alt="David Kim" class="author-avatar">
+                            <span>David Kim</span>
+                        </div>
+                        <span>11 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Card 6 -->
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <img src="/blog/images/technical-debt.jpg" alt="Technical Debt">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Case Study</span>
+                    <h3><a href="/blog/taming-technical-debt">Taming a 10-Year-Old Codebase: A Refactoring Success Story</a></h3>
+                    <p class="blog-card-excerpt">How we transformed a legacy monolith into a maintainable system while keeping the business running at full speed.</p>
+                    <div class="blog-card-meta">
+                        <div class="blog-card-author">
+                            <img src="/blog/images/authors/emma-wilson.jpg" alt="Emma Wilson" class="author-avatar">
+                            <span>Emma Wilson</span>
+                        </div>
+                        <span>14 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Load More -->
+    <section class="load-more-section">
+        <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-inner">
+            <h2>Stay Ahead of the Curve</h2>
+            <p>Get our latest engineering insights delivered to your inbox every month</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a> • <a href="/">Back to Main Site</a></p>
+    </footer>
+
+    <script>
+        // Category filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter logic would go here
+                const category = btn.getAttribute('data-category');
+                console.log('Filter by category:', category);
+            });
+        });
+
+        // Load more functionality
+        document.getElementById('loadMoreBtn').addEventListener('click', () => {
+            console.log('Load more articles...');
+            // Load more logic would go here
+        });
+
+        // Newsletter form
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Newsletter signup...');
+            // Newsletter signup logic would go here
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
