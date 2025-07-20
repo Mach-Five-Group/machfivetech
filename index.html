@@ -321,14 +321,14 @@
 
          
         .services {
-            padding: 120px 0 60px 0;
+            padding: 0;
             position: relative;
         }
 
         .l-content-row {
             max-width: 1400px;
-            margin: 0 auto 80px;
-            padding: 0 80px;
+            margin: 0 auto;
+            padding: 120px 80px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -336,6 +336,33 @@
             position: relative;
             z-index: 2;
             min-height: 480px;
+        }
+
+         
+        .l-content-row:nth-child(even) {
+            background-color: #f8f8f8;
+            background-image: none;
+            box-shadow: inset 0 1px 0 rgba(0,0,0,0.05), inset 0 -1px 0 rgba(0,0,0,0.05);
+        }
+
+         
+        .l-content-row:nth-child(odd) {
+            background-color: transparent;
+        }
+
+         
+        .l-content-row::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            top: 0;
+            bottom: 0;
+            background-color: inherit;
+            background-image: inherit;
+            z-index: -1;
         }
 
          
@@ -1403,14 +1430,14 @@
 
 
             .services {
-                padding: 80px 0;
+                padding: 0;
             }
 
             .l-content-row {
                 grid-template-columns: 1fr;
                 gap: 0;
-                margin-bottom: 40px;
-                padding: 0 24px;
+                margin-bottom: 0;
+                padding: 60px 24px;
                 min-height: auto;
                 align-items: start;
             }
@@ -1713,6 +1740,10 @@
             <div class="top-bar-left">
             </div>
             <div class="top-bar-right">
+                <a href="/knowledge-base/" class="top-bar-link">
+                    <span class="material-symbols-outlined">rss_feed</span>
+                    Knowledge Base
+                </a>
                 <a href="/careers/" class="top-bar-link">
                     <span class="material-symbols-outlined">person</span>
                     Careers
@@ -2282,7 +2313,10 @@
                         <span class="material-symbols-outlined">send</span>
                         Contact Us
                     </a>
-                    
+                    <a href="/knowledge-base" class="cta-button">
+                        <span class="material-symbols-outlined">rss_feed</span>
+                        Knowledge Base
+                    </a>
                 </div>
             </div>
         </section>
@@ -2308,6 +2342,7 @@
                 <li><a href="/services/culture">Culture</a></li>
                 <li><a href="/services/minds">Minds</a></li>
                 <li><a href="/services/future-proof">To Future-Proof</a></li>
+                <li><a href="/knowledge-base">Knowledge Base</a></li>
             </ul>
         </div>
 

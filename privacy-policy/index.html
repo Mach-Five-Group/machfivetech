@@ -216,6 +216,10 @@
             <div class="top-bar-left">
             </div>
             <div class="top-bar-right">
+                <a href="/knowledge-base/" class="top-bar-link">
+                    <span class="material-symbols-outlined">rss_feed</span>
+                    Knowledge Base
+                </a>
                 <a href="/careers/" class="top-bar-link">
                     <span class="material-symbols-outlined">person</span>
                     Careers
@@ -463,6 +467,251 @@
 
 </div>
 
+
+<section class="more-from-mach-five">
+    <div class="more-from-container">
+        <h2 class="more-from-title">More from Mach Five</h2>
+        <div class="more-from-grid">
+            
+            <div class="brand-card current-site">
+                <div class="brand-logo">
+                    <img src="/img/Logo_M5T Dark Web.png" alt="Mach Five Tech">
+                </div>
+                <h3 class="brand-name">Mach Five Tech</h3>
+                <p class="brand-description">Custom software development and technology solutions built for performance and scale.</p>
+                <span class="brand-link current">You're Here <span class="material-symbols-outlined">check_circle</span></span>
+            </div>
+
+            
+            <a href="https://www.machfivemarketing.com/" class="brand-card" target="_blank" rel="noopener">
+                <div class="brand-logo">
+                    <img src="/img/Logo_M5G Dark Web.png" alt="Mach Five Group">
+                </div>
+                <h3 class="brand-name">Mach Five Group</h3>
+                <p class="brand-description">Strategic consulting and business development for ambitious companies looking to scale.</p>
+                <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+            </a>
+
+            
+            <a href="https://www.machfivemarketing.com/" class="brand-card" target="_blank" rel="noopener">
+                <div class="brand-logo">
+                    <img src="/img/Logo_M5M Dark Web.png" alt="Mach Five Marketing">
+                </div>
+                <h3 class="brand-name">Mach Five Marketing</h3>
+                <p class="brand-description">Performance marketing and technology solutions for ambitious companies.</p>
+                <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+            </a>
+
+            
+            <a href="https://github.com/Arcanus-Software/MachVive" class="brand-card" target="_blank" rel="noopener">
+                <div class="brand-logo">
+                    <img src="/img/Logo_M5G Dark Web.png" alt="MachVive">
+                </div>
+                <h3 class="brand-name">MachVive</h3>
+                <p class="brand-description">Lightweight, open-source web application framework for building responsive and high-performance web applications.</p>
+                <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.more-from-mach-five {
+    background: #f8f8f8;
+    padding: 80px 0;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+ 
+.more-from-mach-five::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.more-from-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.more-from-title {
+    text-align: center;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--m5-dark);
+    margin-bottom: 60px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.more-from-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--m5-brand);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.brand-card:hover::before {
+    transform: scaleX(1);
+}
+
+.brand-card.current-site {
+    background: linear-gradient(to bottom, white, #fafafa);
+    border: 2px solid var(--m5-brand);
+    cursor: default;
+}
+
+.brand-card.current-site:hover {
+    transform: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.brand-logo {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--m5-dark);
+    margin-bottom: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.brand-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--m5-text);
+    margin-bottom: 20px;
+    flex: 1;
+    min-height: 60px;
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--m5-brand);
+    font-weight: 500;
+    font-size: 16px;
+    transition: gap 0.3s ease;
+}
+
+.brand-card:hover .brand-link {
+    gap: 12px;
+}
+
+.brand-link.current {
+    color: var(--m5-brand);
+    opacity: 0.8;
+}
+
+.brand-link .material-symbols-outlined {
+    font-size: 20px;
+}
+
+ 
+@media (max-width: 1024px) {
+    .more-from-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    .more-from-mach-five {
+        padding: 60px 0;
+        margin-top: 60px;
+    }
+
+    .more-from-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .more-from-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .brand-card {
+        padding: 32px 24px;
+    }
+
+    .brand-logo {
+        width: 100px;
+        height: 60px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-description {
+        font-size: 14px;
+    }
+}
+</style>
+
     
     <footer class="footer">
     <div class="footer-content">
@@ -484,6 +733,7 @@
                 <li><a href="/services/culture">Culture</a></li>
                 <li><a href="/services/minds">Minds</a></li>
                 <li><a href="/services/future-proof">To Future-Proof</a></li>
+                <li><a href="/knowledge-base">Knowledge Base</a></li>
             </ul>
         </div>
 
