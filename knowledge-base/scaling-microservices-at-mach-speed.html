@@ -71,24 +71,35 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 5px 0;
         }
 
         .blog-nav-inner {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
+            gap: 20px;
         }
 
         .blog-nav-title {
-            font-size: 24px;
-            font-weight: 400;
-            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
             text-decoration: none;
-            letter-spacing: 1.2px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            justify-self: center;
+        }
+
+        .blog-nav-title img {
+            height: 60px;
+            width: auto;
+            display: block;
         }
 
         .blog-nav-title span {
@@ -100,6 +111,7 @@
             gap: 24px;
             list-style: none;
             align-items: center;
+            justify-self: end;
         }
 
         .blog-nav-links a {
@@ -128,7 +140,7 @@
         /* Progress bar */
         .progress-bar {
             position: fixed;
-            top: 72px;
+            top: 73px;
             left: 0;
             width: 0%;
             height: 3px;
@@ -646,7 +658,10 @@
     <!-- Blog Navigation -->
     <nav class="blog-nav">
         <div class="blog-nav-inner">
-            <a href="/blog" class="blog-nav-title">Mach Five <span>Tech</span> Blog</a>
+            <a href="/blog" class="blog-nav-title">
+                <img src="/img/Logo_M5T Dark Web.png" alt="M5T">
+                <span>Blog</span>
+            </a>
             <ul class="blog-nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog">All Posts</a></li>

@@ -23,6 +23,9 @@
         const effect_3d_spheresCustom = {"context": "[data-n55-token='effect_3d_spheres']", "color": 0xFFB11B, "speed_x": 0.0004, "speed_y": 0.002, "camera_z": "+1500"}
     </script>
     <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
+    <script>
+        const contact_form_iframe_sfdcCustom = {"contact_cta_theme": ["danger"],"contact_cta_oid": ["00D6A000002intt"]}
+    </script>
     <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.css"></link>
     <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400|Roboto+Slab:wght@300|Roboto+Mono:wght@300">
@@ -134,6 +137,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     rgba(0,0,0,0.2) 90%,
                     transparent 100%);
             }
+
+            /* Adjust top-bar-right position for laptop viewports */
+            .top-bar-right {
+                margin-right: 150px;
+            }
         }
 
         /* Header - Fixed */
@@ -174,6 +182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: flex;
             gap: 24px;
             align-items: center;
+            margin-right: 200px;
         }
 
         .top-bar-link {
@@ -194,9 +203,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--m5-brand);
         }
 
+        /* Make login link more prominent */
+        .top-bar-link[href="/customer-portal/"] {
+            background: var(--m5-brand);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--m5-brand);
+            transition: all 0.2s ease;
+        }
+
+        .top-bar-link[href="/customer-portal/"]:hover {
+            background: var(--m5-brand-dark);
+            border-color: var(--m5-brand-dark);
+            color: white;
+        }
+
+        .top-bar-link[href="/customer-portal/"] .material-symbols-outlined {
+            color: white;
+        }
+
         .main-nav {
             background: white;
-            padding: 20px 0;
+            padding: 5px 0;
             position: relative;
             border-bottom: 3px solid var(--m5-brand);
         }
@@ -205,47 +234,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 24px;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
+            gap: 20px;
         }
 
-        /* Hide nav logo on desktop */
+        /* Show nav logo on desktop */
         .main-nav .nav-logo {
+            display: inline-flex;
+            justify-self: center;
+        }
+
+        /* Desktop only logo */
+        .nav-logo.desktop-only {
             display: none;
         }
 
         .nav-logo {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--m5-dark);
-            text-decoration: none;
-            font-family: 'Roboto Condensed', sans-serif;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            letter-spacing: -0.5px;
+            text-decoration: none;
         }
 
-        .nav-logo span {
-            color: white;
-            background: var(--m5-brand);
-            padding: 3px 10px;
-            border-radius: 3px;
-            font-weight: 600;
-            font-size: 20px;
-            transition: all 0.2s ease;
-            display: inline-block;
-            line-height: 1.2;
-            vertical-align: baseline;
-            letter-spacing: -0.5px;
+        .nav-logo img {
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-logo:hover img {
+            opacity: 0.8;
         }
 
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 6px;
             list-style: none;
+            justify-self: end;
+            white-space: nowrap;
+        }
+
+        .nav-menu a {
+            white-space: nowrap;
+        }
+
+        .nav-spacer {
+            justify-self: end;
+            display: flex;
+            align-items: center;
         }
 
         /* I Need prompt */
@@ -253,11 +289,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--m5-brand);
             font-size: 16px;
             font-weight: 600;
-            margin-right: 20px;
+            margin-right: 16px;
             display: flex;
             align-items: center;
             gap: 8px;
             letter-spacing: -0.02em;
+            white-space: nowrap;
         }
 
         .nav-prompt::after {
@@ -716,6 +753,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding: 0 16px;
             }
 
+            .nav-logo img {
+                height: 42px;
+            }
+
             .mobile-menu-toggle {
                 display: block !important;
                 background: transparent;
@@ -850,20 +891,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="top-bar">
         <div class="top-bar-inner">
             <div class="top-bar-left">
-                <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
             </div>
             <div class="top-bar-right">
-                <a href="/knowledge-base" class="top-bar-link">
+                <!-- <a href="/knowledge-base" class="top-bar-link">
                     <span class="material-symbols-outlined">rss_feed</span>
                     Knowledge Base
-                </a>
-                <a href="/careers" class="top-bar-link">
+                </a> -->
+                <a href="/careers/" class="top-bar-link">
                     <span class="material-symbols-outlined">person</span>
                     Careers
                 </a>
                 <a href="/customer-portal/" class="top-bar-link">
                     <span class="material-symbols-outlined">login</span>
-                    Login
+                    Portal
                 </a>
             </div>
         </div>
@@ -871,7 +911,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">Mach Five <span>Tech</span></a>
+            <a href="/" class="nav-logo">
+                <img src="/img/Logo_M5T Dark Web.png" alt="M5T" style="height: 60px; width: auto;">
+            </a>
             
             <ul class="nav-menu">
                 <li class="mobile-nav-prompt">I Need...</li>
@@ -885,13 +927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
                 <li class="nav-divider"></li>
                 <li class="mobile-only">
-                    <a href="/knowledge-base">
-                        <span class="material-symbols-outlined">rss_feed</span>
-                        Knowledge Base
-                    </a>
-                </li>
-                <li class="mobile-only">
-                    <a href="/careers">
+                    <a href="/careers/">
                         <span class="material-symbols-outlined">person</span>
                         Careers
                     </a>
@@ -899,11 +935,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li class="mobile-only">
                     <a href="/customer-portal/">
                         <span class="material-symbols-outlined">login</span>
-                        Login
+                        Portal
                     </a>
                 </li>
             </ul>
 
+            <div class="nav-spacer"></div>
+            
             <button class="mobile-menu-toggle">
                 <span></span>
                 <span></span>
@@ -1150,7 +1188,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul>
                 <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
                 <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
-                <li><a href="https://www.webtooltoys.com" target="_blank">Web Tool Toys</a></li>
                 <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
             </ul>
         </div>
