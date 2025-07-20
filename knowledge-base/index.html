@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.css">
     <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v4_0.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300|Roboto+Mono:wght@300|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0">
+    <link rel="stylesheet" href="/css/common.css">
 
     <!-- Existing favicon and meta tags -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,7 +33,7 @@
     <meta property="og:type" content="website">
 
     <style>
-        /* Global theme variables */
+        /* Knowledge Base specific variables */
         :root {
             --m5lc-theme-brand: #DD4124;
             --m5lc-theme-brand-alt: #810000;
@@ -45,17 +46,9 @@
             --m5lc-theme-night-mid: #323232;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Override body padding for blog layout */
         body {
-            font-family: 'Roboto', sans-serif;
-            background: #fafafa;
-            color: #333;
-            line-height: 1.6;
+            padding-top: 0;
         }
 
         /* Blog-specific navigation */

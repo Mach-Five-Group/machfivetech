@@ -25,132 +25,15 @@
     <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:wght@200;300;400;500;600;700|Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300;400|Roboto+Mono:wght@300;400|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0|Permanent+Marker">
+    <link rel="stylesheet" href="/css/common.css">
 
     <style>
+        /* Override accent color for this page */
         :root {
-            --m5-brand: #DD4124;
-            --m5-brand-dark: #810000;
             --m5-accent: #7BC4C4;
-            --m5-dark: #181818;
-            --m5-darker: #000;
-            --m5-night-mid: #323232;
-            --m5-light: #f8f8f8;
-            --m5-lighter: #fff;
-            --m5-text: #333;
-            --m5-text-light: #666;
-            --m5-border: #e0e0e0;
-            --m5-shadow: 0 2px 16px rgba(0,0,0,0.08);
-            --m5-radius: 8px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--m5-lighter);
-            color: var(--m5-text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-top: 120px;
-            position: relative;
-        }
-
-        /* Grid texture with fade effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-            background-size: 50px 50px, 50px 50px;
-            mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
-                transparent 100%);
-            -webkit-mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
-                transparent 100%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Neodigm button overrides */
-        [data-n55-enchanted-cta][data-n55-theme='primary'] { 
-            background: linear-gradient(var(--m5-night-mid), var(--m5-night-mid)) !important; 
-        }
-        
-        .l-content-row:hover [data-n55-enchanted-cta][data-n55-theme='primary'] {
-            background: linear-gradient(var(--m5-brand), var(--m5-brand-dark)) !important;
-        }
-
-        /* Header - Fixed */
-        .header-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .top-bar {
-            background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 10px 0;
-            font-size: 13px;
-        }
-
-        .top-bar-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 36px;
-        }
-
-        .top-bar-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-bar-right {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .top-bar-link {
-            color: #666;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s;
-        }
-
-        .top-bar-link:hover {
-            color: var(--m5-brand);
-        }
-
-        .top-bar-link .material-symbols-outlined {
-            font-size: 16px;
-            color: var(--m5-brand);
-        }
+        /* Page-specific styles */
 
         /* Make login link more prominent */
         .top-bar-link[href="/customer-portal/"] {
@@ -170,23 +53,6 @@
 
         .top-bar-link[href="/customer-portal/"] .material-symbols-outlined {
             color: white;
-        }
-
-        .main-nav {
-            background: white;
-            padding: 5px 0;
-            position: relative;
-            border-bottom: 3px solid var(--m5-brand);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            gap: 20px;
         }
 
         /* Show nav logo on desktop */
@@ -213,15 +79,6 @@
             display: block;
         }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            list-style: none;
-            justify-self: end;
-            white-space: nowrap;
-        }
-
         .nav-menu a {
             white-space: nowrap;
         }
@@ -232,105 +89,6 @@
             align-items: center;
         }
 
-        /* I Need prompt */
-        .nav-prompt {
-            color: var(--m5-brand);
-            font-size: 16px;
-            font-weight: 600;
-            margin-right: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            letter-spacing: -0.02em;
-            white-space: nowrap;
-        }
-
-        .nav-prompt::after {
-            content: '→';
-            font-size: 20px;
-            animation: pointRight 2s ease-in-out infinite;
-        }
-
-        /* Mobile nav prompt - hidden by default */
-        .mobile-nav-prompt {
-            display: none;
-            color: var(--m5-brand);
-            font-size: 18px;
-            font-weight: 600;
-            width: 100%;
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(221, 65, 36, 0.2);
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-        }
-
-        .mobile-nav-prompt::after {
-            content: '→';
-            font-size: 22px;
-            margin-left: 8px;
-            display: inline-block;
-            animation: pointRight 2s ease-in-out infinite;
-        }
-
-        @keyframes pointRight {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(5px); }
-        }
-
-        /* Updated nav menu with glassmorphic style from home page */
-        .nav-menu a {
-            color: var(--m5-text);
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            padding: 10px 20px;
-            position: relative;
-            background: rgba(0, 0, 0, 0.02);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-        }
-
-        .nav-menu a:hover {
-            color: var(--m5-brand);
-            background: rgba(221, 65, 36, 0.05);
-            border-color: rgba(221, 65, 36, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(221, 65, 36, 0.1);
-        }
-
-        /* Special styling for Contact CTA */
-        .nav-menu a[onclick*="openContactForm"] {
-            background: rgba(221, 65, 36, 0.1) !important;
-            border-color: rgba(221, 65, 36, 0.2) !important;
-            color: var(--m5-brand) !important;
-        }
-
-        .nav-menu a[onclick*="openContactForm"]:hover {
-            background: var(--m5-brand) !important;
-            border-color: var(--m5-brand) !important;
-            color: white !important;
-            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3) !important;
-        }
-
-        /* Mobile menu links with icons - hidden on desktop */
-        .nav-menu .mobile-only {
-            display: none;
-        }
-
-        /* Add divider styling for mobile menu */
-        .nav-menu .nav-divider {
-            display: none;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-        }
 
         /* Hero Section */
         .hero {
@@ -1078,42 +836,11 @@
             letter-spacing: 1px;
         }
 
-        /* Footer - Matching home page */
+        /* Footer overrides for this page */
         .footer {
-            background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
-            border-top: 1px solid var(--m5-border);
-            color: var(--m5-text);
             padding: 80px 24px 32px;
-            position: relative;
         }
 
-        /* Add grid background to footer */
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-            background-size: 50px 50px, 50px 50px;
-            mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
-                transparent 100%);
-            -webkit-mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
-                transparent 100%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Subtle brand accent line at top */
         .footer::after {
             content: '';
             position: absolute;
@@ -1125,62 +852,6 @@
             background: var(--m5-brand);
             border-radius: 0 0 3px 3px;
             z-index: 1;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 48px;
-            border-bottom: 1px solid var(--m5-border);
-            padding-bottom: 48px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-brand {
-            flex: 1 1 400px;
-        }
-
-        .footer-brand p {
-            color: var(--m5-text-light);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .footer-section {
-            flex: 1 1 200px;
-        }
-
-        .footer-section h4 {
-            color: var(--m5-brand);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section a {
-            color: var(--m5-text-light);
-            text-decoration: none;
-            transition: all 0.2s;
-            font-size: 15px;
-        }
-
-        .footer-section a:hover {
-            color: var(--m5-brand);
-            transform: translateX(2px);
         }
 
         .footer-contact {
@@ -1203,25 +874,6 @@
             transform: translateX(2px);
         }
 
-        .footer-bottom {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 14px;
-            color: var(--m5-text-light);
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-bottom a {
-            color: var(--m5-text-light);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-bottom a:hover {
-            color: var(--m5-brand);
-        }
-
         /* Animation Classes */
         .fade-in {
             opacity: 0;
@@ -1232,6 +884,26 @@
         .fade-in.in-view {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Fallback for when JavaScript doesn't load */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Make content visible after a delay if JS fails */
+        .fade-in {
+            animation: fadeInFallback 0.6s ease-out 0.5s forwards;
+        }
+
+        @keyframes fadeInFallback {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
@@ -1248,162 +920,6 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-
-            /* Hide top bar on mobile */
-            .top-bar {
-                display: none;
-            }
-
-            /* Show nav logo on mobile */
-            .main-nav .nav-logo {
-                display: inline-flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                margin-left: 0;
-                justify-self: start;
-            }
-
-            .main-nav .nav-logo img {
-                height: 40px;
-            }
-
-            /* Adjust main nav for mobile */
-            .nav-container {
-                justify-content: space-between;
-                padding: 0 16px;
-            }
-
-            /* Show mobile menu toggle */
-            .mobile-menu-toggle {
-                display: block !important;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                padding: 8px;
-                z-index: 1001;
-                position: relative;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
-            .mobile-menu-toggle span {
-                display: block !important;
-                width: 28px;
-                height: 3px;
-                background-color: #181818 !important;
-                margin: 6px 0;
-                transition: all 0.3s ease;
-                border-radius: 2px;
-                visibility: visible !important;
-                opacity: 1 !important;
-                transform-origin: center;
-            }
-
-            /* Hamburger to X animation */
-            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-
-            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(2) {
-                opacity: 0;
-                transform: scaleX(0);
-            }
-
-            .nav-menu.active ~ .mobile-menu-toggle span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -8px);
-            }
-
-            /* Updated mobile nav menu with scroll */
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 320px;
-                height: 100vh;
-                background: white;
-                flex-direction: column;
-                padding: 80px 32px 32px 32px;
-                gap: 20px;
-                box-shadow: -2px 0 16px rgba(0, 0, 0, 0.1);
-                transition: right 0.3s;
-                z-index: 999;
-                align-items: stretch;
-                overflow-y: auto;
-                overflow-x: hidden;
-            }
-
-            /* Add scrollbar styling */
-            .nav-menu::-webkit-scrollbar {
-                width: 6px;
-            }
-
-            .nav-menu::-webkit-scrollbar-track {
-                background: rgba(0, 0, 0, 0.05);
-            }
-
-            .nav-menu::-webkit-scrollbar-thumb {
-                background: rgba(221, 65, 36, 0.3);
-                border-radius: 3px;
-            }
-
-            .nav-menu::-webkit-scrollbar-thumb:hover {
-                background: rgba(221, 65, 36, 0.5);
-            }
-
-            .nav-menu.active {
-                right: 0;
-            }
-
-            /* Hide desktop nav prompt on mobile */
-            .nav-prompt {
-                display: none !important;
-            }
-
-            /* Show mobile nav prompt */
-            .mobile-nav-prompt {
-                display: block !important;
-            }
-
-            /* Show mobile only links on mobile */
-            .nav-menu .mobile-only {
-                display: list-item !important;
-            }
-
-            /* Enhanced divider styling on mobile */
-            .nav-menu .nav-divider {
-                display: block;
-                width: calc(100% + 64px);
-                margin-left: -32px;
-                margin-right: -32px;
-                height: 1px;
-                background: linear-gradient(
-                    90deg, 
-                    transparent 0%, 
-                    rgba(221, 65, 36, 0.2) 20%, 
-                    rgba(221, 65, 36, 0.2) 80%, 
-                    transparent 100%
-                );
-                margin-top: 24px;
-                margin-bottom: 24px;
-                position: relative;
-            }
-
-            /* Optional: Add decorative element to divider */
-            .nav-menu .nav-divider::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 8px;
-                height: 8px;
-                background: rgba(221, 65, 36, 0.2);
-                border-radius: 50%;
-            }
 
             /* Update mobile nav menu styles */
             .nav-menu a {
@@ -1867,43 +1383,43 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
-                <p>We are a technical consulting and development team helping companies move faster and build smarter through architecture, automation, and app delivery.</p>
-                <p>Headquartered in Chicago. Supporting clients nationwide.</p>
-                <a href="mailto:support@machfivetech.com" class="footer-contact">
-                    <span class="material-symbols-outlined">mail</span>
-                    support@machfivetech.com
-                </a>
-            </div>
-
-            <div class="footer-section">
-                <h4>I Need...</h4>
-                <ul>
-                    <li><a href="/services/plan">A Plan</a></li>
-                    <li><a href="/services/code">Code</a></li>
-                    <li><a href="/services/culture">Culture</a></li>
-                    <li><a href="/services/minds">Minds</a></li>
-                    <li><a href="/services/future-proof">To Future-Proof</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Mach Five</h4>
-                <ul>
-                    <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
-                    <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
-                    <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
-                </ul>
-            </div>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+            <p>We are a technical consulting and development team helping companies move faster and build smarter through architecture, automation, and app delivery.</p>
+            <p>Headquartered in Chicago. Supporting clients nationwide.</p>
+            <a href="mailto:support@machfivetech.com" class="footer-contact">
+                <span class="material-symbols-outlined">mail</span>
+                support@machfivetech.com
+            </a>
         </div>
 
-        <div class="footer-bottom">
-            <p>Proudly built by the <a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a>.</p>
-            <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a></p>
+        <div class="footer-section">
+            <h4>I Need...</h4>
+            <ul>
+                <li><a href="/services/plan">A Plan</a></li>
+                <li><a href="/services/code">Code</a></li>
+                <li><a href="/services/culture">Culture</a></li>
+                <li><a href="/services/minds">Minds</a></li>
+                <li><a href="/services/future-proof">To Future-Proof</a></li>
+            </ul>
         </div>
-    </footer>
+
+        <div class="footer-section">
+            <h4>Mach Five</h4>
+            <ul>
+                <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
+                <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
+                <li><a href="https://www.machfivemarketing.com" target="_blank">Mach Five Marketing</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Proudly built by the <a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a>.</p>
+        <p>© 2025 Mach Five Tech • <a href="/privacy-policy">Privacy Policy</a></p>
+    </div>
+</footer>
 
     <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
 

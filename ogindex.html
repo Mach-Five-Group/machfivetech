@@ -25,79 +25,10 @@
     <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></script>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:wght@200;300;400;500;600;700|Roboto+Condensed:wght@100;300;400;700|Roboto+Slab:wght@300;400|Roboto+Mono:wght@300;400|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0|Permanent+Marker">
+    <link rel="stylesheet" href="/css/common.css">
 
     <style>
-        :root {
-            --m5-brand: #DD4124;
-            --m5-brand-dark: #810000;
-            --m5-accent: #7BC4C4;
-            --m5-dark: #181818;
-            --m5-darker: #000;
-            --m5-night-mid: #323232;
-            --m5-light: #f8f8f8;
-            --m5-lighter: #fff;
-            --m5-text: #333;
-            --m5-text-light: #666;
-            --m5-border: #e0e0e0;
-            --m5-shadow: 0 2px 16px rgba(0,0,0,0.08);
-            --m5-radius: 8px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--m5-lighter);
-            color: var(--m5-text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-top: 120px;
-            position: relative;
-        }
-
-        /* Global scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--m5-brand);
-            border-radius: 6px;
-            border: 2px solid transparent;
-            background-clip: content-box;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--m5-brand-dark);
-            background-clip: content-box;
-        }
-
-        /* Firefox scrollbar styling */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: var(--m5-brand) rgba(0, 0, 0, 0.05);
-        }
-
-        /* Grid texture with fade effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        /* Page-specific styles for ogindex.html */
                 linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
             background-size: 50px 50px, 50px 50px;
             mask-image: linear-gradient(90deg, 

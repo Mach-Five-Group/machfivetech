@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mach Five Tech</title>
-    <link>/</link>
-    <description>Recent content on Mach Five Tech</description>
+    <title>Services on Mach Five Tech</title>
+    <link>/services/</link>
+    <description>Recent content in Services on Mach Five Tech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code</title>
       <link>/services/code/</link>
@@ -59,27 +59,6 @@
       
       <guid>/services/plan/</guid>
       <description>Home Services Planning Planning Without Guesswork Every great build starts with a great blueprint. We help you align business goals with engineering realities, translating vision into actionable steps without the fluff. architecture Strategic Blueprint timeline Clear Roadmaps target Business Alignment From Ideas to Architecture When you need a plan, you&#39;re likely standing at a crossroads: too many ideas, too little structure, or simply not enough time to pause and plot the course.</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy - Mach Five Tech</title>
-      <link>/privacy-policy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/privacy-policy/</guid>
-      <description>Home Privacy Policy Privacy Policy Understanding how we collect, use, and protect your personal information when you use our services.
-Last updated: May 11, 2025
-This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-We use Your Personal data to provide and improve the Service.</description>
-    </item>
-    
-    <item>
-      <title>Test Page</title>
-      <link>/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/test/</guid>
-      <description>This is a test page.</description>
     </item>
     
   </channel>
