@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knowledge Base on Mach Five Tech</title>
-    <link>/knowledge-base/</link>
-    <description>Recent content in Knowledge Base on Mach Five Tech</description>
+    <title>trust-building on Mach Five Tech</title>
+    <link>/tags/trust-building/</link>
+    <description>Recent content in trust-building on Mach Five Tech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="/knowledge-base/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/trust-building/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecting Trust: Building Secure Marketplace Authentication</title>
       <link>/knowledge-base/architecting-trust-marketplace-authentication/</link>

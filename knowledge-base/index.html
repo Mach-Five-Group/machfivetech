@@ -75,6 +75,40 @@
         color: rgba(255, 255, 255, 0.9);
         max-width: 800px;
         line-height: 1.5;
+        margin-bottom: 32px;
+    }
+
+     
+    .kb-search {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .kb-search-input {
+        width: 100%;
+        padding: 16px 50px 16px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .kb-search-input:focus {
+        outline: none;
+        background: white;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--m5-brand);
+        pointer-events: none;
     }
 
      
@@ -167,10 +201,21 @@
         padding: 20px 24px 16px;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         gap: 12px;
         font-size: 14px;
         color: var(--m5-text-light);
+    }
+
+    .article-logo {
+        height: 24px;
+        width: auto;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .article-card:hover .article-logo {
+        opacity: 1;
     }
 
      
@@ -315,10 +360,9 @@
             <ul class="nav-menu">
                 <li class="mobile-nav-prompt">Knowledge Base</li>
                 <li class="nav-prompt">Knowledge Base</li>
-                <li><a href="/">Main Website</a></li>
                 <li><a href="/knowledge-base/">All Posts</a></li>
                 <li><a href="#categories">Categories</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="/">Main Website</a></li>
                 <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
                 <li class="nav-divider"></li>
                 <li class="mobile-only">
@@ -357,6 +401,11 @@
             Engineering insights, technical deep-dives, and lessons learned from building scalable software. 
             Real stories from real projects.
         </p>
+        
+        <div class="kb-search">
+            <input type="text" id="kb-search-input" class="kb-search-input" placeholder="Search articles...">
+            <span class="material-symbols-outlined search-icon">search</span>
+        </div>
     </div>
 </section>
 
@@ -380,45 +429,15 @@
         
         <div class="articles-grid">
             
-            <a href="/knowledge-base/scaling-microservices-at-mach-speed/" class="article-card" data-category="architecture">
+            <a href="/knowledge-base/architecting-trust-marketplace-authentication/" class="article-card" data-category="architecture">
                 <div class="article-meta">
-                    <time class="sr-only">December 15, 2024</time>
+                    <img src="/img/Logo_M5T Dark Web.png" alt="Mach Five Tech" class="article-logo">
+                    <time class="sr-only">December 20, 2024</time>
                     <span class="article-category">Architecture</span>
                 </div>
                 <div class="article-content">
-                    <h2 class="article-title">Scaling Microservices at Mach Speed</h2>
-                    <p class="article-excerpt">When our client came to us, their monolithic application was buckling under the weight of success. What started as a fintech MVP serving 10,000 …</p>
-                    <span class="article-read-more">
-                        Read More
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </span>
-                </div>
-            </a>
-            
-            <a href="/knowledge-base/building-culture-remote-engineering-teams/" class="article-card" data-category="culture">
-                <div class="article-meta">
-                    <time class="sr-only">November 28, 2024</time>
-                    <span class="article-category">Culture</span>
-                </div>
-                <div class="article-content">
-                    <h2 class="article-title">Building Culture in Remote Engineering Teams</h2>
-                    <p class="article-excerpt">When the world went remote in 2020, many thought it would be temporary. Four years later, remote work has become the norm for engineering teams. But …</p>
-                    <span class="article-read-more">
-                        Read More
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </span>
-                </div>
-            </a>
-            
-            <a href="/knowledge-base/legacy-modernization-without-tears/" class="article-card" data-category="engineering">
-                <div class="article-meta">
-                    <time class="sr-only">October 15, 2024</time>
-                    <span class="article-category">Engineering</span>
-                </div>
-                <div class="article-content">
-                    <h2 class="article-title">Legacy Modernization Without Tears</h2>
-                    <p class="article-excerpt">&ldquo;We need to rewrite everything from scratch.&rdquo;
-Those six words have killed more engineering teams than any bug ever could. After …</p>
+                    <h2 class="article-title">Architecting Trust: Building Secure Marketplace Authentication</h2>
+                    <p class="article-excerpt">Building a marketplace isn&rsquo;t just about connecting buyers and sellers. It&rsquo;s about creating an environment of trust from the very first …</p>
                     <span class="article-read-more">
                         Read More
                         <span class="material-symbols-outlined">arrow_forward</span>
@@ -456,6 +475,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+const searchInput = document.getElementById('kb-search-input');
+const articleCards = document.querySelectorAll('.article-card');
+const articlesGrid = document.querySelector('.articles-grid');
+
+if (searchInput && articleCards.length > 0) {
+    
+    const searchIndex = Array.from(articleCards).map(card => {
+        const title = card.querySelector('.article-title').textContent.toLowerCase();
+        const excerpt = card.querySelector('.article-excerpt').textContent.toLowerCase();
+        const category = card.dataset.category.toLowerCase();
+        
+        return {
+            element: card,
+            title: title,
+            excerpt: excerpt,
+            category: category,
+            searchText: `${title} ${excerpt} ${category}`
+        };
+    });
+    
+    
+    function performSearch(query) {
+        const searchTerm = query.toLowerCase().trim();
+        let hasResults = false;
+        
+        if (searchTerm === '') {
+            
+            searchIndex.forEach(item => {
+                item.element.style.display = 'flex';
+            });
+            hasResults = true;
+        } else {
+            
+            searchIndex.forEach(item => {
+                if (item.searchText.includes(searchTerm)) {
+                    item.element.style.display = 'flex';
+                    hasResults = true;
+                } else {
+                    item.element.style.display = 'none';
+                }
+            });
+        }
+        
+        
+        const emptyState = document.querySelector('.empty-state');
+        if (!hasResults && !emptyState) {
+            
+            const searchEmptyState = document.createElement('div');
+            searchEmptyState.className = 'empty-state search-empty-state';
+            searchEmptyState.innerHTML = `
+                <div class="empty-state-icon">
+                    <span class="material-symbols-outlined">search_off</span>
+                </div>
+                <h3>No results found</h3>
+                <p>Try adjusting your search terms or browse by category above.</p>
+            `;
+            articlesGrid.appendChild(searchEmptyState);
+        } else if (hasResults && document.querySelector('.search-empty-state')) {
+            
+            document.querySelector('.search-empty-state').remove();
+        }
+    }
+    
+    
+    let searchTimeout;
+    searchInput.addEventListener('input', function(e) {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            performSearch(e.target.value);
+        }, 300);
+    });
+    
+    
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            clearTimeout(searchTimeout);
+            performSearch(e.target.value);
+        }
+    });
+}
 
 
 const menuToggle = document.querySelector('.mobile-menu-toggle');

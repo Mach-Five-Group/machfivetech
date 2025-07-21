@@ -31,6 +31,10 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: #f5f5f5; /* Match footer background for overscroll */
+}
+
 body {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--m5-lighter);
@@ -1070,4 +1074,13 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
     .section-subtitle {
         font-size: 16px;
     }
+}
+
+/* Content H1 Styling */
+main h1,
+.l-content h1,
+.article-content h1,
+.content h1,
+article h1 {
+    color: var(--m5-brand);
 }
