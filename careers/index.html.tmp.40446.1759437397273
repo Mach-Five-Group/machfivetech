@@ -187,31 +187,6 @@
             background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
         }
 
-        .why-work-here::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                linear-gradient(rgba(221, 65, 36, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(221, 65, 36, 0.15) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(90deg,
-                transparent 0%,
-                black 10%,
-                black 90%,
-                transparent 100%);
-            -webkit-mask-image: linear-gradient(90deg,
-                transparent 0%,
-                black 10%,
-                black 90%,
-                transparent 100%);
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
         .section-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -281,61 +256,151 @@
             border-color: rgba(221, 65, 36, 0.2);
         }
 
-        /* Clean, modern value titles */
+        /* Updated Value Title with Plan Page Orange Tape Style */
         .value-title {
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 28px;
+            font-size: 13px;
             font-weight: 700;
-            color: var(--m5-dark);
-            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             position: relative;
             display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-3deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
         }
 
+        /* Heavy wear pattern with brand color - matching plan page */
+        .value-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
         .value-title::after {
             content: '';
             position: absolute;
-            bottom: -8px;
             left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--m5-brand);
-            border-radius: 2px;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Paper texture overlay */
+        .texture-noise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.15;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255,255,255,0.02) 2px,
+                    rgba(255,255,255,0.02) 3px
+                );
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+
+        /* Different angles for each card - more subtle */
+        .value-card:nth-child(1) .value-title {
+            transform: rotate(-1deg);
+        }
+
+        .value-card:nth-child(2) .value-title {
+            transform: rotate(1deg);
+        }
+
+        .value-card:nth-child(3) .value-title {
+            transform: rotate(-0.5deg);
+        }
+
+        .value-card:nth-child(4) .value-title {
+            transform: rotate(1.5deg);
+        }
+
+        .value-card:nth-child(5) .value-title {
+            transform: rotate(-1deg);
+        }
+
+        .value-card:nth-child(6) .value-title {
+            transform: rotate(0.5deg);
         }
 
         .value-description {
             color: var(--m5-text-light);
             font-size: 16px;
-            line-height: 1.7;
-            margin-top: 20px;
+            line-height: 1.6;
         }
 
-        /* Featured card (first one) styling */
-        .value-card:nth-child(1) .value-title {
-            font-size: 36px;
-        }
-
-        .value-card:nth-child(1) .value-description {
-            font-size: 18px;
-        }
-
-        /* Open Positions Section - Clean dark section */
+        /* Open Positions Section - Updated with hero background */
         .open-positions {
             padding: 120px 0;
-            background: var(--m5-dark);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .open-positions .section-headline {
-            color: white;
-            font-weight: 300;
-            text-align: left;
+        /* Add hero background image with light opacity */
+        .open-positions-background {
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background-image: url('/img/mt5-hero.png');
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+            opacity: 0.4;
+            z-index: 1;
         }
 
-        .open-positions .section-headline strong {
-            font-weight: 700;
-            color: var(--m5-brand);
+        .open-positions::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(221, 65, 36, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(123, 196, 196, 0.06) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 0%, rgba(221, 65, 36, 0.02) 50%, transparent 100%);
+            z-index: 2;
+        }
+
+        .open-positions .section-headline {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .positions-container {
@@ -343,15 +408,16 @@
             z-index: 3;
         }
 
-        /* Evergreen Section - Distinct section style */
+        /* Evergreen Section - Updated for dark theme */
         .evergreen-section {
-            background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
-            border-radius: 0;
-            padding: 120px 0;
-            margin-bottom: 0;
-            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.9) 100%);
+            border-radius: 20px;
+            padding: 64px 48px;
+            margin-bottom: 80px;
             position: relative;
-            border: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .evergreen-section::before {
@@ -360,62 +426,41 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-image:
-                linear-gradient(rgba(221, 65, 36, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(221, 65, 36, 0.15) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(90deg,
-                transparent 0%,
-                black 10%,
-                black 90%,
-                transparent 100%);
-            -webkit-mask-image: linear-gradient(90deg,
-                transparent 0%,
-                black 10%,
-                black 90%,
-                transparent 100%);
-            opacity: 0.3;
-            pointer-events: none;
+            height: 6px;
+            background: var(--m5-brand);
+            border-radius: 20px 20px 0 0;
+            transform: skew(-2deg);
+            transform-origin: top left;
+            box-shadow: 0 2px 8px rgba(221, 65, 36, 0.4);
         }
 
         .evergreen-content {
             text-align: center;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
         .evergreen-title {
-            font-size: clamp(48px, 5vw, 72px);
-            font-weight: 300;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
             color: var(--m5-dark);
             font-family: 'Roboto Condensed', sans-serif;
             margin-bottom: 24px;
             line-height: 1.2;
         }
 
-        .evergreen-title strong {
-            font-weight: 700;
-            color: var(--m5-brand);
-        }
-
         .evergreen-description {
-            font-size: 18px;
+            font-size: 20px;
             color: var(--m5-text-light);
-            line-height: 1.7;
-            margin-bottom: 64px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.6;
+            margin-bottom: 48px;
         }
 
         .evergreen-roles {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-bottom: 64px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 48px;
         }
 
         .evergreen-role {
@@ -423,50 +468,92 @@
             align-items: flex-start;
             gap: 20px;
             text-align: left;
-            padding: 48px;
-            background: white;
-            border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .evergreen-role:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
-            border-color: rgba(221, 65, 36, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .role-content {
             flex: 1;
         }
 
-        /* Clean role titles */
+        /* Role titles with plan page orange tape style */
         .role-title {
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 28px;
+            font-size: 13px;
             font-weight: 700;
-            color: var(--m5-dark);
-            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             position: relative;
             display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-2deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
         }
 
+        /* Heavy wear pattern with brand color - matching plan page */
+        .role-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
         .role-title::after {
             content: '';
             position: absolute;
-            bottom: -8px;
             left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--m5-brand);
-            border-radius: 2px;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Different angles for role titles - more subtle */
+        .evergreen-role:nth-child(1) .role-title {
+            transform: rotate(-1deg);
+        }
+
+        .evergreen-role:nth-child(2) .role-title {
+            transform: rotate(1deg);
         }
 
         .role-desc {
             color: var(--m5-text-light);
             font-size: 16px;
-            line-height: 1.7;
-            margin-top: 20px;
+            line-height: 1.5;
         }
 
         .evergreen-cta {
@@ -480,42 +567,62 @@
 
         .openings-title {
             font-size: clamp(32px, 4vw, 48px);
-            font-weight: 300;
+            font-weight: 700;
             color: white;
             font-family: 'Roboto Condensed', sans-serif;
-            text-align: left;
+            text-align: center;
             margin-bottom: 16px;
             line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .openings-subtitle {
-            text-align: left;
+            text-align: center;
             font-size: 18px;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 64px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
             line-height: 1.6;
         }
 
         .positions-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 32px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .position-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            padding: 48px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 248, 248, 0.9) 100%);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .position-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(45deg, var(--m5-brand) 0%, var(--m5-accent) 100%);
+            transform: skew(-3deg);
+            transform-origin: top left;
+            box-shadow: 0 2px 8px rgba(221, 65, 36, 0.4);
         }
 
         .position-card:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(221, 65, 36, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 0.95) 100%);
         }
 
         .position-header {
@@ -525,13 +632,67 @@
             margin-bottom: 24px;
         }
 
-        /* Clean position titles */
+        /* Position titles with plan page orange tape style */
         .position-title {
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 28px;
+            font-size: 16px;
             font-weight: 700;
-            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 8px 25px 8px 40px;
+            transform: rotate(-2deg);
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 16px;
+        }
+
+        /* Heavy wear pattern with brand color - matching plan page */
+        .position-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Bigger scratches */
+                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
+                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
+                /* Multiple scuff marks */
+                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
+                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
+                radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 15%),
+                radial-gradient(ellipse at 40% 50%, rgba(255,255,255,0.06) 0%, transparent 18%),
+                /* Faded edges with brand color */
+                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
+            z-index: -1;
+            box-shadow: 
+                0 2px 5px rgba(0, 0, 0, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Left edge gradient for depth */
+        .position-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.15) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Different angles for position titles - more subtle */
+        .position-card:nth-child(1) .position-title {
+            transform: rotate(-1deg);
+        }
+
+        .position-card:nth-child(2) .position-title {
+            transform: rotate(1deg);
         }
 
         .position-meta {
@@ -541,20 +702,19 @@
         }
 
         .position-tag {
-            padding: 6px 16px;
-            background: rgba(221, 65, 36, 0.15);
+            padding: 4px 12px;
+            background: rgba(221, 65, 36, 0.1);
             color: var(--m5-brand);
-            border-radius: 24px;
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid rgba(221, 65, 36, 0.2);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .position-description {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--m5-text);
             font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 32px;
+            line-height: 1.6;
+            margin-bottom: 24px;
         }
 
         .position-requirements {
@@ -562,10 +722,10 @@
         }
 
         .position-requirements h4 {
-            color: white;
+            color: var(--m5-dark);
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .position-requirements ul {
@@ -574,10 +734,10 @@
         }
 
         .position-requirements li {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--m5-text-light);
             font-size: 15px;
-            margin-bottom: 10px;
-            padding-left: 28px;
+            margin-bottom: 8px;
+            padding-left: 24px;
             position: relative;
         }
 
@@ -593,7 +753,7 @@
             text-align: right;
         }
 
-        /* Culture Section - With background image */
+        /* Culture Section - Updated with whiteboard background */
         .culture-section {
             padding: 120px 0;
             background: linear-gradient(135deg, var(--m5-dark) 0%, var(--m5-night-mid) 100%);
@@ -602,6 +762,7 @@
             overflow: hidden;
         }
 
+        /* Add whiteboard background image with light opacity */
         .culture-section::before {
             content: '';
             position: absolute;
@@ -620,18 +781,19 @@
         .culture-section::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(221, 65, 36, 0.12);
-            z-index: 1;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(221, 65, 36, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
             pointer-events: none;
+            z-index: 2;
         }
 
         .culture-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             text-align: center;
         }
 
@@ -649,43 +811,39 @@
         }
 
         .culture-description {
-            font-size: clamp(18px, 2.5vw, 22px);
-            line-height: 1.7;
+            font-size: clamp(18px, 2.5vw, 24px);
+            line-height: 1.6;
             max-width: 800px;
-            margin: 0 auto 80px auto;
+            margin: 0 auto 64px auto;
             color: rgba(255, 255, 255, 0.9);
         }
 
         .culture-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 64px;
-            max-width: 1200px;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 48px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .culture-stat {
             text-align: center;
-            padding: 40px 24px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .culture-stat:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(221, 65, 36, 0.3);
         }
 
         .stat-number {
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: clamp(40px, 5vw, 56px);
+            font-size: clamp(36px, 5vw, 54px);
             font-weight: 700;
             color: var(--m5-brand);
             line-height: 1;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(221, 65, 36, 0.3);
+        }
+
+        /* Larger infinity symbol */
+        .culture-stat:nth-child(3) .stat-number {
+            font-size: clamp(72px, 8vw, 96px);
         }
 
         .stat-label {
@@ -810,18 +968,9 @@
                 text-align: center;
             }
 
-            .section-headline {
-                text-align: center;
-                margin-bottom: 48px;
-            }
-
             .values-grid {
                 grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .value-card:nth-child(1) {
-                grid-column: span 1;
+                gap: 32px;
             }
 
             .value-card {
@@ -829,7 +978,7 @@
             }
 
             .evergreen-section {
-                padding: 48px 24px;
+                padding: 48px 32px;
                 margin-bottom: 64px;
             }
 
@@ -839,21 +988,14 @@
             }
 
             .evergreen-role {
-                padding: 32px 24px;
-            }
-
-            .openings-title,
-            .openings-subtitle {
+                padding: 24px;
+                flex-direction: column;
                 text-align: center;
+                align-items: center;
             }
 
-            .positions-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .position-card {
-                padding: 32px 24px;
+            .role-content {
+                margin-top: 16px;
             }
 
             .position-header {
@@ -869,9 +1011,15 @@
                 text-align: left;
             }
 
-            .culture-stats {
+            .apply-steps {
                 grid-template-columns: 1fr;
-                gap: 24px;
+                gap: 32px;
+            }
+
+            .culture-stats {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 32px;
             }
 
             .footer-content {
@@ -995,46 +1143,64 @@
 
         <section class="why-work-here" id="why-work-here">
             <div class="section-container">
-                <h2 class="section-headline">Why Work at <strong>Mach Five Tech?</strong></h2>
-
+                <h2 class="section-headline">Why Work at Mach Five Tech?</h2>
+                
                 <div class="values-grid">
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Impact From Day One</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Impact From Day One
+                        </h3>
                         <p class="value-description">
                             No months of onboarding or meaningless busy work. You'll be solving real problems for real clients from your first week, with the autonomy to implement solutions your way.
                         </p>
                     </div>
 
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Learn From the Best</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Learn From the Best
+                        </h3>
                         <p class="value-description">
                             Work alongside engineers who've scaled systems, led teams, and solved problems you've only read about. Continuous learning isn't a buzzword here—it's how we operate.
                         </p>
                     </div>
 
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Sustainable Excellence</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Sustainable Excellence
+                        </h3>
                         <p class="value-description">
                             We believe great work comes from great developers, not burned-out ones. Flexible schedules, remote-first culture, and a team that respects your time and expertise.
                         </p>
                     </div>
 
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Own Your Growth</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Own Your Growth
+                        </h3>
                         <p class="value-description">
                             Whether you want to dive deep into architecture, lead client relationships, or explore new technologies, we'll support your path with real opportunities and resources.
                         </p>
                     </div>
 
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Client Partnership</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Client Partnership
+                        </h3>
                         <p class="value-description">
                             Work directly with CTOs, founders, and technical leaders who value your expertise. Your recommendations drive real business decisions, not just code changes.
                         </p>
                     </div>
 
                     <div class="value-card fade-in">
-                        <h3 class="value-title">Technology That Matters</h3>
+                        <h3 class="value-title">
+                            <div class="texture-noise"></div>
+                            Technology That Matters
+                        </h3>
                         <p class="value-description">
                             Build with modern stacks, proven patterns, and tools that make sense. No legacy PHP from 2008 or frameworks chosen by committee. Technology decisions based on what actually works.
                         </p>
@@ -1044,8 +1210,9 @@
         </section>
 
         <section class="open-positions" id="positions">
+            <div class="open-positions-background"></div>
             <div class="section-container positions-container">
-                <h2 class="section-headline"><strong>Join</strong> Our Team</h2>
+                <h2 class="section-headline">Join Our Team</h2>
                 
                 <!-- Specific Openings Section -->
                 <div class="specific-openings">
@@ -1058,7 +1225,10 @@
                         <div class="position-card fade-in">
                             <div class="position-header">
                                 <div>
-                                    <h3 class="position-title">Senior Full-Stack Engineer</h3>
+                                    <h3 class="position-title">
+                                        <div class="texture-noise"></div>
+                                        Senior Full-Stack Engineer
+                                    </h3>
                                     <div class="position-meta">
                                         <span class="position-tag">Remote</span>
                                         <span class="position-tag">Full-Time</span>
@@ -1099,7 +1269,10 @@
                         <div class="position-card fade-in">
                             <div class="position-header">
                                 <div>
-                                    <h3 class="position-title">DevOps Engineer</h3>
+                                    <h3 class="position-title">
+                                        <div class="texture-noise"></div>
+                                        DevOps Engineer
+                                    </h3>
                                     <div class="position-meta">
                                         <span class="position-tag">Remote</span>
                                         <span class="position-tag">Full-Time</span>
@@ -1139,44 +1312,47 @@
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Evergreen Positions Section -->
-        <section class="evergreen-section">
-            <div class="section-container">
-                <div class="evergreen-content">
-                    <h3 class="evergreen-title"><strong>Always</strong> Looking For</h3>
-                    <p class="evergreen-description">
-                    Even if we don't have a specific opening posted, we're always interested in connecting with experienced professionals who share our commitment to technical excellence.
-                    </p>
-
-                <div class="evergreen-roles">
-                    <div class="evergreen-role">
-                        <div class="role-content">
-                            <h4 class="role-title">Full-Stack Engineers</h4>
-                            <p class="role-desc">Strong problem solvers with deep vanilla JavaScript skills and solid web fundamentals. You build reliable REST APIs, work confidently with PostgreSQL, and choose proven technologies over the latest trends.</p>
+                <!-- Evergreen Positions Section -->
+                <div class="evergreen-section">
+                    <div class="evergreen-content">
+                        <h3 class="evergreen-title">Always Looking For</h3>
+                        <p class="evergreen-description">
+                        Even if we don't have a specific opening posted, we're always interested in connecting with experienced professionals who share our commitment to technical excellence.
+                        </p>
+                        
+                        <div class="evergreen-roles">
+                            <div class="evergreen-role">
+                                <div class="role-content">
+                                    <h4 class="role-title">
+                                        <div class="texture-noise"></div>
+                                        Full-Stack Engineers
+                                    </h4>
+                                    <p class="role-desc">Strong problem solvers with deep vanilla JavaScript skills and solid web fundamentals. You build reliable REST APIs, work confidently with PostgreSQL, and choose proven technologies over the latest trends.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="evergreen-role">
+                                <div class="role-content">
+                                    <h4 class="role-title">
+                                        <div class="texture-noise"></div>
+                                        Technical Project Managers
+                                    </h4>
+                                    <p class="role-desc">Technical leaders who can bridge client needs with engineering solutions and drive successful project delivery. You speak both business and code, manage scope without micromanaging people, and keep projects moving through technical complexity and changing requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="evergreen-cta">
+                            <p style="font-size: 18px; color: var(--m5-text-light); margin-bottom: 0;">
+                                We always take resumes for these roles at 
+                                <a href="mailto:jobs@machfivetech.com" class="footer-contact" style="color: var(--m5-brand); text-decoration: none; font-weight: 500;">
+                                    <span class="material-symbols-outlined" style="color: var(--m5-brand);">mail</span>
+                                    jobs@machfivetech.com
+                                </a>
+                                (yes, we check the inbox).
+                            </p>
                         </div>
                     </div>
-
-                    <div class="evergreen-role">
-                        <div class="role-content">
-                            <h4 class="role-title">Technical Project Managers</h4>
-                            <p class="role-desc">Technical leaders who can bridge client needs with engineering solutions and drive successful project delivery. You speak both business and code, manage scope without micromanaging people, and keep projects moving through technical complexity and changing requirements.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="evergreen-cta">
-                    <p style="font-size: 18px; color: var(--m5-text-light); margin-bottom: 0;">
-                        We always take resumes for these roles at
-                        <a href="mailto:jobs@machfivetech.com" class="footer-contact" style="color: var(--m5-brand); text-decoration: none; font-weight: 500;">
-                            <span class="material-symbols-outlined" style="color: var(--m5-brand);">mail</span>
-                            jobs@machfivetech.com
-                        </a>
-                        (yes, we check the inbox).
-                    </p>
-                </div>
                 </div>
             </div>
         </section>
