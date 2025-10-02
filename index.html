@@ -703,8 +703,8 @@
 
          
         .embed-excellence {
-            padding: 60px 0 120px 0;
-            background: linear-gradient(135deg, var(--m5-dark) 0%, var(--m5-night-mid) 100%);
+            padding: 120px 0;
+            background: #ffffff;
             position: relative;
             overflow: hidden;
         }
@@ -716,25 +716,26 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                linear-gradient(rgba(221, 65, 36, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(221, 65, 36, 0.15) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
+            background-image:
+                linear-gradient(rgba(221, 65, 36, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(221, 65, 36, 0.08) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: linear-gradient(90deg,
+                transparent 0%,
+                black 10%,
+                black 90%,
                 transparent 100%);
-            -webkit-mask-image: linear-gradient(90deg, 
-                transparent 0%, 
-                black 15%, 
-                black 85%, 
+            -webkit-mask-image: linear-gradient(90deg,
+                transparent 0%,
+                black 10%,
+                black 90%,
                 transparent 100%);
+            opacity: 0.5;
             z-index: 0;
         }
 
         .embed-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
             position: relative;
@@ -742,108 +743,75 @@
         }
 
         .embed-headline {
-            text-align: center;
+            text-align: left;
             font-size: clamp(48px, 5vw, 80px);
-            font-weight: 700;
-            color: var(--m5-lighter);
+            font-weight: 300;
+            color: var(--m5-dark);
             font-family: 'Roboto Condensed', sans-serif;
-            margin: 0 auto 32px auto;
-            max-width: 800px;
+            margin: 0 0 24px 0;
             line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .embed-headline strong {
+            font-weight: 700;
+            color: var(--m5-brand);
         }
 
         .embed-subheadline {
-            text-align: center;
+            text-align: left;
             font-size: 20px;
-            color: rgba(255,255,255,0.8);
-            margin: 0 auto 80px auto;
-            max-width: 600px;
-            line-height: 1.6;
+            color: var(--m5-text-light);
+            margin: 0 0 80px 0;
+            max-width: 800px;
+            line-height: 1.7;
         }
 
         .embed-interactive {
-            display: grid;
-            grid-template-rows: auto 1fr;
-            gap: 80px;
-            align-items: stretch;
-            max-height: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
         .embed-scenarios {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(221, 65, 36, 0.1);
-            padding: 40px;
-            overflow-y: auto;
-            max-height: 700px;
-            border: 2px solid rgba(221, 65, 36, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
          
-        .embed-scenarios::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .embed-scenarios::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 4px;
-        }
-
-        .embed-scenarios::-webkit-scrollbar-thumb {
-            background: var(--m5-brand);
-            border-radius: 4px;
-        }
-
-        .embed-scenarios::-webkit-scrollbar-thumb:hover {
-            background: var(--m5-brand-dark);
-        }
-
         .scenario-item {
-            padding: 24px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(221, 65, 36, 0.1);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            position: relative;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
             overflow: hidden;
-        }
-
-        .scenario-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(221, 65, 36, 0.05) 0%, transparent 100%);
-            transition: width 0.3s ease;
-            z-index: -1;
-        }
-
-        .scenario-item:hover::before {
-            width: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
 
         .scenario-item:hover {
-            border-color: rgba(221, 65, 36, 0.3);
-            transform: translateX(4px);
-        }
-
-        .scenario-item.active::before {
-            width: 100%;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            border-color: rgba(221, 65, 36, 0.2);
         }
 
         .scenario-item.active {
-            border-color: var(--m5-brand);
-            transform: translateX(8px);
+            border-color: rgba(221, 65, 36, 0.3);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+         
+        .scenario-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 32px;
+            cursor: pointer;
+            position: relative;
         }
 
         .scenario-icon {
-            width: 40px;
-            height: 40px;
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
             background: 
                  
                 repeating-linear-gradient(
@@ -894,79 +862,145 @@
             pointer-events: none;
         }
 
-        .scenario-item:hover .scenario-icon,
+        .scenario-item:hover .scenario-icon {
+            transform: scale(1.05);
+        }
+
         .scenario-item.active .scenario-icon {
-            transform: scale(1.1);
-            box-shadow: 0 4px 16px rgba(221, 65, 36, 0.3);
+            transform: scale(1.05);
         }
 
         .scenario-icon .material-symbols-outlined {
             color: white;
-            font-size: 24px;
+            font-size: 28px;
+        }
+
+        .scenario-info {
+            flex: 1;
         }
 
         .scenario-title {
-            position: relative;
-            display: inline-block;
-            padding: 8px 25px 8px 20px;
-            font-size: 16px;
+            font-size: 24px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             font-family: 'Roboto Condensed', sans-serif;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 16px;
-            transform: rotate(-1deg);
-            
-             
-            background: 
-                 
-                linear-gradient(95deg, transparent 15%, rgba(255,255,255,0.12) 16%, transparent 18%),
-                linear-gradient(-25deg, transparent 35%, rgba(255,255,255,0.1) 36%, transparent 37%),
-                 
-                radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.15) 0%, transparent 25%),
-                radial-gradient(ellipse at 60% 70%, rgba(255,255,255,0.12) 0%, transparent 20%),
-                 
-                radial-gradient(ellipse at center, #DD4124 0%, #B73820 100%);
-            
-            box-shadow: 
-                0 2px 5px rgba(0, 0, 0, 0.3),
-                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-         
-        .scenario-title::after {
-            content: '';
-            position: absolute;
-            right: -8px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 12px 0 12px 8px;
-            border-color: transparent transparent transparent #C63C28;
-            filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.2));
+            color: var(--m5-dark);
+            margin-bottom: 8px;
         }
 
         .scenario-desc {
             font-size: 16px;
             color: var(--m5-text-light);
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+
+         
+        .scenario-toggle {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: rgba(221, 65, 36, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-toggle .material-symbols-outlined {
+            color: var(--m5-brand);
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .scenario-item.active .scenario-toggle .material-symbols-outlined {
+            transform: rotate(180deg);
+        }
+
+         
+        .scenario-content-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scenario-item.active .scenario-content-wrapper {
+            max-height: 2000px;
+        }
+
+        .scenario-content {
+            padding: 32px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            background: #fafafa;
+        }
+
+        .scenario-content .composition-header {
+            color: var(--m5-brand);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .scenario-content .timeline-phase {
+            margin-bottom: 32px;
+        }
+
+        .scenario-content .phase-title {
+            color: var(--m5-dark);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .scenario-content .phase-insight {
+            color: var(--m5-text-light);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .scenario-content .composition-outcomes {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .scenario-content .outcomes-title {
+            color: var(--m5-brand);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .scenario-content .outcome-item {
+            color: var(--m5-dark);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .scenario-content .outcome-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--m5-brand);
+            font-weight: 700;
+        }
+
+        .scenario-content .outcome-item:last-child {
+            border-bottom: none;
         }
 
         .embed-composition {
-            background: var(--m5-dark);
-            border-radius: 16px;
-            padding: 40px;
-            height: 700px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(221, 65, 36, 0.3);
-            display: flex;
-            flex-direction: column;
-            border: 2px solid rgba(221, 65, 36, 0.2);
+            display: none;  
         }
 
         .embed-composition::before {
@@ -1135,42 +1169,174 @@
         }
 
          
-        .closing-value {
-            padding: 120px 0;
+        .more-from-mach-five {
+            background: white;
+            padding: 80px 0;
+            margin-top: 0;
             position: relative;
-            background: #0A0A0A;
             overflow: hidden;
+            z-index: 10;
         }
 
-         
-        .closing-background {
-            position: absolute;
-            top: -10%;
-            left: -5%;
-            width: 110%;
-            height: 110%;
-            background-image: url('/img/m5t_hero-01.jpg');
-            background-size: cover;
-            background-position: center;
-            will-change: transform;
-            opacity: 0.4;
-            z-index: 1;
-        }
-
-         
-        .closing-value::after {
+        .more-from-mach-five::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 40%, rgba(221, 65, 36, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 70% 60%, rgba(123, 196, 196, 0.15) 0%, transparent 40%);
-            animation: heroGradientShift 15s ease-in-out infinite;
-            z-index: 2;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-attachment: fixed;
+            mask-image: linear-gradient(90deg,
+                transparent 0%,
+                black 15%,
+                black 85%,
+                transparent 100%);
+            -webkit-mask-image: linear-gradient(90deg,
+                transparent 0%,
+                black 15%,
+                black 85%,
+                transparent 100%);
             pointer-events: none;
+            z-index: 0;
+        }
+
+        .more-from-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .more-from-title {
+            text-align: left;
+            font-size: clamp(48px, 5vw, 80px);
+            font-weight: 300;
+            color: var(--m5-dark);
+            margin-bottom: 60px;
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1.1;
+        }
+
+        .more-from-title strong {
+            font-weight: 700;
+            color: var(--m5-brand);
+        }
+
+        .more-from-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--m5-brand);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .brand-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .brand-card.current-site {
+            background: linear-gradient(to bottom, white, #fafafa);
+            border: 2px solid var(--m5-brand);
+            cursor: default;
+        }
+
+        .brand-card.current-site:hover {
+            transform: none;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .brand-logo {
+            width: 100px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--m5-dark);
+            margin-bottom: 12px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .brand-description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--m5-text);
+            margin-bottom: 20px;
+            flex: 1;
+            min-height: 60px;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5-brand);
+            font-weight: 500;
+            font-size: 16px;
+            transition: gap 0.3s ease;
+        }
+
+        .brand-card:hover .brand-link {
+            gap: 12px;
+        }
+
+        .brand-link.current {
+            color: var(--m5-brand);
+            opacity: 0.8;
+        }
+
+        .brand-link .material-symbols-outlined {
+            font-size: 20px;
         }
 
          
@@ -1428,13 +1594,24 @@
         @media (max-width: 768px) {
 
              
+            .hero {
+                padding: 80px 0 60px 0;
+                min-height: 70vh;
+            }
+
             .hero-content {
                 text-align: center;
-                padding: 0 24px;
+                padding: 0 20px;
             }
 
             .hero-title {
-                font-size: clamp(36px, 10vw, 64px);
+                font-size: clamp(36px, 10vw, 56px);
+                margin-bottom: 20px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+                margin-bottom: 32px;
             }
 
             .hero-cta {
@@ -1442,28 +1619,20 @@
                 width: 100%;
                 max-width: 300px;
                 margin: 0 auto;
+                gap: 12px;
             }
 
             .hero-button {
                 width: 100%;
                 text-align: center;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-
-            .hero-button {
-                width: 100%;
-                text-align: center;
+                padding: 14px 24px;
+                font-size: 16px;
             }
 
              
 
 
+             
             .services {
                 padding: 0;
             }
@@ -1472,21 +1641,21 @@
                 grid-template-columns: 1fr;
                 gap: 0;
                 margin-bottom: 0;
-                padding: 60px 24px;
+                padding: 50px 20px;
                 min-height: auto;
                 align-items: start;
             }
 
             .l-content-row .service-content {
                 order: 1;
-                margin-bottom: 32px;
+                margin-bottom: 28px;
                 display: block;
                 min-height: auto;
             }
 
             .l-content-row .content-row__panel {
                 order: 2;
-                padding: 32px 24px;
+                padding: 28px 20px;
                 min-height: auto;
                 background: #ffffff;
                 display: block;
@@ -1526,15 +1695,15 @@
 
              
             .i-need-tag {
-                font-size: clamp(32px, 8vw, 48px);
-                margin-bottom: 16px;
+                font-size: clamp(28px, 7vw, 40px);
+                margin-bottom: 14px;
                 text-align: center;
             }
 
             .readampm {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1.6;
-                margin-bottom: 24px;
+                margin-bottom: 20px;
                 text-align: center;
             }
 
@@ -1544,16 +1713,27 @@
 
             .service-content nav a[data-n55-enchanted-cta] {
                 margin: 0 auto;
+                font-size: 15px;
+                padding: 12px 24px;
             }
 
              
             .proficiencies-header {
-                margin-bottom: 16px;
+                margin-bottom: 14px;
             }
 
             .sticky-tab-scuffed {
-                font-size: 14px;
-                padding: 8px 16px;
+                font-size: 13px;
+                padding: 7px 14px;
+            }
+
+            .proficiencies-list {
+                padding-top: 24px;
+            }
+
+            .proficiencies-list li {
+                font-size: 15px;
+                margin-bottom: 10px;
             }
 
             .footer-content {
@@ -1561,13 +1741,61 @@
                 text-align: center;
             }
 
+             
             .embed-excellence {
-                padding: 80px 0;
+                padding: 60px 0;
+            }
+
+            .embed-container {
+                padding: 0 20px;
+            }
+
+            .embed-headline {
+                font-size: clamp(36px, 8vw, 64px);
+                margin-bottom: 20px;
+                text-align: center;
             }
 
             .embed-subheadline {
                 margin-bottom: 40px;
-                padding: 0 20px;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .scenario-header {
+                padding: 24px 20px;
+                gap: 16px;
+            }
+
+            .scenario-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .scenario-title {
+                font-size: 20px;
+            }
+
+            .scenario-desc {
+                font-size: 14px;
+            }
+
+            .scenario-content {
+                padding: 24px 20px;
+            }
+
+            .scenario-content .composition-header {
+                font-size: 12px;
+                margin-bottom: 24px;
+            }
+
+            .scenario-content .phase-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .scenario-content .phase-insight {
+                font-size: 15px;
             }
 
             .embed-interactive {
@@ -1711,14 +1939,61 @@
                 font-size: 15px;
             }
 
+             
             .cta-section {
-                padding: 40px 0;
+                padding: 50px 20px;
+            }
+
+            .cta-content h2 {
+                font-size: clamp(32px, 8vw, 48px);
+                margin-bottom: 16px;
+            }
+
+            .cta-content p {
+                font-size: 16px;
+                margin-bottom: 28px;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
                 gap: 12px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+
+             
+            .more-from-mach-five {
+                padding: 60px 0;
+            }
+
+            .more-from-container {
+                padding: 0 20px;
+            }
+
+            .more-from-title {
+                font-size: clamp(36px, 8vw, 48px);
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .more-from-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .brand-card {
+                padding: 24px 20px;
+            }
+
+            .brand-description {
+                font-size: 14px;
+                min-height: auto;
             }
 
             .cta-button {
@@ -2117,50 +2392,219 @@
 
         <section class="embed-excellence" id="embed-excellence">
             <div class="embed-container">
-                <h2 class="embed-headline">The Standard We Operate At</h2>
+                <h2 class="embed-headline">The <strong>Standard</strong> We Operate At</h2>
                 <p class="embed-subheadline">These moments define your trajectory. The difference between scaling smoothly and scrambling to catch up often comes down to having the right technical partner when it matters most. Smart leaders don't wait for the crisis. They prepare for the opportunity.</p>
-                <p class="mobile-instruction">Tap each scenario to see our approach</p>
                 
                 <div class="embed-interactive">
                     <div class="embed-scenarios">
                         <div class="scenario-item" data-scenario="racing">
-                            <div class="scenario-icon">
-                                <span class="material-symbols-outlined">rocket_launch</span>
+                            <div class="scenario-header">
+                                <div class="scenario-icon">
+                                    <span class="material-symbols-outlined">rocket_launch</span>
+                                </div>
+                                <div class="scenario-info">
+                                    <h3 class="scenario-title">"Ship it in 8 weeks"</h3>
+                                    <p class="scenario-desc">The board promised customers a feature that doesn't exist yet</p>
+                                </div>
+                                <div class="scenario-toggle">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
-                            <h3 class="scenario-title">"Ship it in 8 weeks"</h3>
-                            <p class="scenario-desc">The board promised customers a feature that doesn't exist yet</p>
+                            <div class="scenario-content-wrapper">
+                                <div class="scenario-content" id="racing-content">
+                                    <div class="composition-header">THE 8-WEEK REALITY CHECK</div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Week 1: Cut the fluff</h4>
+                                        <p class="phase-insight">Most "urgent" features aren't. We identify what actually moves the needle and what's just noise. One tech lead, direct stakeholder access, zero PowerPoints.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Week 2-7: Build smart, not fast</h4>
+                                        <p class="phase-insight">Fast means making the right technical decisions upfront. We use patterns we've proven at scale, not whatever's trending on HackerNews. Our embedded team ships daily while your original timeline was measuring in months.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Week 8: Launch with confidence</h4>
+                                        <p class="phase-insight">Real monitoring, real rollback plans, real user feedback loops. Not just "it worked on my machine."</p>
+                                    </div>
+
+                                    <div class="composition-outcomes">
+                                        <h4 class="outcomes-title">WHAT YOU GET</h4>
+                                        <div class="outcome-item">A feature that actually works in production</div>
+                                        <div class="outcome-item">Code your team can maintain and extend</div>
+                                        <div class="outcome-item">Processes that prevent the next crisis</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="scenario-item" data-scenario="debt">
-                            <div class="scenario-icon">
-                                <span class="material-symbols-outlined">warning</span>
+                            <div class="scenario-header">
+                                <div class="scenario-icon">
+                                    <span class="material-symbols-outlined">warning</span>
+                                </div>
+                                <div class="scenario-info">
+                                    <h3 class="scenario-title">"Every deploy breaks something"</h3>
+                                    <p class="scenario-desc">Your technical debt just became business debt</p>
+                                </div>
+                                <div class="scenario-toggle">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
-                            <h3 class="scenario-title">"Every deploy breaks something"</h3>
-                            <p class="scenario-desc">Your technical debt just became business debt</p>
+                            <div class="scenario-content-wrapper">
+                                <div class="scenario-content" id="debt-content">
+                                    <div class="composition-header">BREAKING THE DEPLOY FEAR CYCLE</div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Stop the bleeding first</h4>
+                                        <p class="phase-insight">We don't start with grand refactoring plans. We identify the three things causing 80% of your production fires and fix those immediately. Your deploy anxiety should drop within two weeks.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Systematic debt elimination</h4>
+                                        <p class="phase-insight">Technical debt isn't just messy code. It's architectural decisions that made sense then but hurt now. We've seen this pattern across dozens of codebases. There's usually a clear path out.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Build confidence, not just tests</h4>
+                                        <p class="phase-insight">Automated testing is table stakes. We build deployment confidence through incremental rollouts, feature flags, and monitoring that tells you what's actually broken instead of just that something is broken.</p>
+                                    </div>
+
+                                    <div class="composition-outcomes">
+                                        <h4 class="outcomes-title">WHAT CHANGES</h4>
+                                        <div class="outcome-item">Deploys become boring routine, not Friday night disasters</div>
+                                        <div class="outcome-item">Your team starts shipping features again instead of fighting fires</div>
+                                        <div class="outcome-item">New engineers can be productive in days, not months</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="scenario-item" data-scenario="scale">
-                            <div class="scenario-icon">
-                                <span class="material-symbols-outlined">trending_up</span>
+                            <div class="scenario-header">
+                                <div class="scenario-icon">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <div class="scenario-info">
+                                    <h3 class="scenario-title">"We're on TechCrunch tomorrow"</h3>
+                                    <p class="scenario-desc">Traffic spike will either make you or break you</p>
+                                </div>
+                                <div class="scenario-toggle">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
-                            <h3 class="scenario-title">"We're on TechCrunch tomorrow"</h3>
-                            <p class="scenario-desc">Traffic spike will either make you or break you</p>
+                            <div class="scenario-content-wrapper">
+                                <div class="scenario-content" id="scale-content">
+                                    <div class="composition-header">SURVIVING SUCCESS</div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Find the real bottlenecks</h4>
+                                        <p class="phase-insight">It's rarely the database. Usually it's something embarrassingly simple that everyone assumed was fine. We profile first, optimize second. Most scaling problems are solved with better caching and database indexes, not microservices.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Scale the right layer</h4>
+                                        <p class="phase-insight">Premature optimization kills more startups than slow websites. We scale the constraint, not everything. Sometimes it's adding read replicas. Sometimes it's CDN configuration. Usually it's not rewriting everything in Go.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Build for the next spike</h4>
+                                        <p class="phase-insight">Auto-scaling that actually works requires more than spinning up servers. We implement circuit breakers, graceful degradation, and monitoring that predicts problems instead of just reporting them.</p>
+                                    </div>
+
+                                    <div class="composition-outcomes">
+                                        <h4 class="outcomes-title">RESULT</h4>
+                                        <div class="outcome-item">Your success story doesn't become a cautionary tale</div>
+                                        <div class="outcome-item">Infrastructure that grows with your user base</div>
+                                        <div class="outcome-item">Team that understands their system's limits</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="scenario-item" data-scenario="transform">
-                            <div class="scenario-icon">
-                                <span class="material-symbols-outlined">psychology</span>
+                            <div class="scenario-header">
+                                <div class="scenario-icon">
+                                    <span class="material-symbols-outlined">psychology</span>
+                                </div>
+                                <div class="scenario-info">
+                                    <h3 class="scenario-title">"The team keeps burning out"</h3>
+                                    <p class="scenario-desc">Smart people, wrong processes, diminishing returns</p>
+                                </div>
+                                <div class="scenario-toggle">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
-                            <h3 class="scenario-title">"The team keeps burning out"</h3>
-                            <p class="scenario-desc">Smart people, wrong processes, diminishing returns</p>
+                            <div class="scenario-content-wrapper">
+                                <div class="scenario-content" id="transform-content">
+                                    <div class="composition-header">FIXING THE BURNOUT CYCLE</div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Diagnose the real problem</h4>
+                                        <p class="phase-insight">Burnout isn't caused by hard work. It's caused by futile work. When smart people feel stupid, when simple tasks take forever, when every victory is temporary. We identify what's making your team feel ineffective.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Fix the process, not the people</h4>
+                                        <p class="phase-insight">Your developers aren't lazy or incompetent. They're fighting a system that makes good work nearly impossible. We embed with your team to identify what slows them down and systematically remove those obstacles.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Build momentum through wins</h4>
+                                        <p class="phase-insight">Nothing fixes morale like shipping good software regularly. We help your team experience what high-velocity, low-stress development feels like when the tools and processes actually support the work.</p>
+                                    </div>
+
+                                    <div class="composition-outcomes">
+                                        <h4 class="outcomes-title">TRANSFORMATION</h4>
+                                        <div class="outcome-item">Teams that want to come to work again</div>
+                                        <div class="outcome-item">Engineering that attracts talent instead of burning it out</div>
+                                        <div class="outcome-item">Sustainable velocity that compounds over time</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="scenario-item" data-scenario="pivot">
-                            <div class="scenario-icon">
-                                <span class="material-symbols-outlined">transform</span>
+                            <div class="scenario-header">
+                                <div class="scenario-icon">
+                                    <span class="material-symbols-outlined">transform</span>
+                                </div>
+                                <div class="scenario-info">
+                                    <h3 class="scenario-title">"We need to be a product company"</h3>
+                                    <p class="scenario-desc">From services business to platform play overnight</p>
+                                </div>
+                                <div class="scenario-toggle">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
-                            <h3 class="scenario-title">"We need to be a product company"</h3>
-                            <p class="scenario-desc">From services business to platform play overnight</p>
+                            <div class="scenario-content-wrapper">
+                                <div class="scenario-content" id="pivot-content">
+                                    <div class="composition-header">THE PIVOT THAT WORKS</div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Validate before you build</h4>
+                                        <p class="phase-insight">Most pivots fail because teams build the wrong thing really well. We help you test assumptions with real customers before writing production code. An MVP isn't about building faster—it's about learning what to build.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Architecture for change</h4>
+                                        <p class="phase-insight">Platform businesses need different technical foundations than service businesses. We design systems that can evolve as you learn what customers actually need, not just what they say they need.</p>
+                                    </div>
+
+                                    <div class="timeline-phase">
+                                        <h4 class="phase-title">Bridge the gap</h4>
+                                        <p class="phase-insight">Your existing customers still need support while you're building the future. We help you manage both: keeping revenue flowing while building the platform that scales.</p>
+                                    </div>
+
+                                    <div class="composition-outcomes">
+                                        <h4 class="outcomes-title">NEW FOUNDATION</h4>
+                                        <div class="outcome-item">Product architecture that supports rapid iteration</div>
+                                        <div class="outcome-item">Team that thinks product-first, not project-first</div>
+                                        <div class="outcome-item">Platform that compounds value instead of just delivering it</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2305,33 +2749,46 @@
             </div>
         </section>
 
-        <section class="closing-value" id="closing-value">
-            <div class="closing-background" id="closingBackground"></div>
-            <div class="closing-overlay"></div>
-            
-            <div class="closing-container">
-                <div class="contrast-headline">
-                    <span class="contrast-word contrast-talking" id="talkingWord">TALKING</span>
-                    <span class="contrast-word contrast-doing">DOING</span>
-                </div>
-                
-                <p class="closing-subtitle">
-                    Software fails in spectacular ways. We've seen every one and fixed them all. Five consultants couldn't solve it? We did. Technical disasters become competitive advantages, and we don't just prevent the problems other teams create, we prevent the ones they don't even know exist.
-                </p>
-                
-                <div class="experience-metrics">
-                    <div class="metric-item">
-                        <div class="metric-number">Day 1</div>
-                        <div class="metric-label">When we start shipping value</div>
+        <section class="more-from-mach-five">
+            <div class="more-from-container">
+                <h2 class="more-from-title">More from <strong>Mach Five</strong></h2>
+                <div class="more-from-grid">
+
+                    <div class="brand-card current-site">
+                        <div class="brand-logo">
+                            <img src="/img/Logo_M5T Dark Web.png" alt="Mach Five Tech">
+                        </div>
+                        <h3 class="brand-name">Mach Five Tech</h3>
+                        <p class="brand-description">Custom software development and technology solutions built for performance and scale.</p>
+                        <span class="brand-link current">You're Here <span class="material-symbols-outlined">check_circle</span></span>
                     </div>
-                    <div class="metric-item">
-                        <div class="metric-number">Zero</div>
-                        <div class="metric-label">Deadlines we've missed</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-number">∞</div>
-                        <div class="metric-label">Times we've heard "impossible"</div>
-                    </div>
+
+                    <a href="https://www.machfivegroup.com/" class="brand-card" target="_blank" rel="noopener">
+                        <div class="brand-logo">
+                            <img src="/img/Logo_M5G Dark Web.png" alt="Mach Five Group">
+                        </div>
+                        <h3 class="brand-name">Mach Five Group</h3>
+                        <p class="brand-description">Strategic consulting and business development for ambitious companies looking to scale.</p>
+                        <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+                    </a>
+
+                    <a href="https://www.machfivemarketing.com/" class="brand-card" target="_blank" rel="noopener">
+                        <div class="brand-logo">
+                            <img src="/img/Logo_M5M Dark Web.png" alt="Mach Five Marketing">
+                        </div>
+                        <h3 class="brand-name">Mach Five Marketing</h3>
+                        <p class="brand-description">Performance marketing and technology solutions for ambitious companies.</p>
+                        <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+                    </a>
+
+                    <a href="https://www.machvive.com/" class="brand-card" target="_blank" rel="noopener">
+                        <div class="brand-logo">
+                            <img src="/img/Logo_M5G Dark Web.png" alt="MachVive">
+                        </div>
+                        <h3 class="brand-name">MachVive</h3>
+                        <p class="brand-description">Lightweight, open-source web application framework for building responsive and high-performance web applications.</p>
+                        <span class="brand-link">Learn More <span class="material-symbols-outlined">arrow_forward</span></span>
+                    </a>
                 </div>
             </div>
         </section>
