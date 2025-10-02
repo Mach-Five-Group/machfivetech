@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architecting Trust: Building Secure Marketplace Authentication - Mach Five Tech</title>
+    <title>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery - Mach Five Tech</title>
     
     
     <script>
@@ -11,7 +11,7 @@
         let neodigmOpt_launchCompleteCustom = {
           ver: "1.2.4",
           N55_LC_DOMAIN: ["MachFiveTech.com", 256],
-          N55_LC_TAG1: ["Architecting Trust: Building Secure Marketplace Authentication - Mach Five Tech", 256],
+          N55_LC_TAG1: ["Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery - Mach Five Tech", 256],
           N55_LC_COLOR_BRAND: ["192839", 256],
           CONSOLE_LOG_VER: true,
         }
@@ -1221,7 +1221,7 @@
         <ul class="breadcrumb-list">
             <li><a href="/">Home</a></li>
             <li><a href="/knowledge-base/">Knowledge Base</a></li>
-            <li>Architecting Trust: Building Secure Marketplace Authentication</li>
+            <li>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</li>
         </ul>
     </div>
 </nav>
@@ -1230,13 +1230,13 @@
 <header class="article-header">
     <div class="article-header-content">
         <div class="article-meta-top">
-            <time class="sr-only">December 20, 2024</time>
-            <span class="sr-only">7 min read</span>
-            <span class="article-category-badge">Architecture</span>
+            <time class="sr-only">January 20, 2025</time>
+            <span class="sr-only">6 min read</span>
+            <span class="article-category-badge">Product-Announcement</span>
         </div>
-        <h1>Architecting Trust: Building Secure Marketplace Authentication</h1>
+        <h1>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</h1>
         
-        <p class="article-excerpt-header">How we built thoughtful authentication architecture for CarsYours that creates trust in their automotive marketplace. A deep dive into building secure, user-friendly signup flows that convert visitors into confident participants.</p>
+        <p class="article-excerpt-header">Stream Sync Engage (SSE) is a live notification engine built for modern apps that demand more than static push. Deliver intelligent, timely, context-aware interactions with auditory and haptic cues, configuration changes, and graceful offline recovery.</p>
         
     </div>
     <div class="article-header-logo">
@@ -1258,206 +1258,137 @@
         
         
         
-        <p>Building a marketplace isn&rsquo;t just about connecting buyers and sellers. It&rsquo;s about creating an environment of trust from the very first interaction. When we designed CarsYours&rsquo;s authentication system, we knew that users would be making a leap of faith with one of their most valuable assets: their vehicle. The architecture we built needed to reinforce that trust, not erode it.</p>
-<h2 id="the-trust-equation-in-marketplace-design">The Trust Equation in Marketplace Design</h2>
-<p>Trust in digital marketplaces is built on three pillars:</p>
+        <p>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product <strong>Stream Sync Engage (SSE)</strong> — a live notification engine built for modern apps that want to go beyond static push.</p>
+<h2 id="why-stream-sync-engage-matters">Why Stream Sync Engage Matters</h2>
+<p>Applications today demand more than just alerts. Users expect intelligent, timely, context-aware interactions. SSE is built for that need. It not only delivers messages in real time, but also adds auditory and haptic cues, delivers configuration changes instantly, and recovers gracefully when connectivity falters.</p>
+<p><img src="/img/knowledge-base/sse/dashboard-overview.png" alt="Stream Sync Engage Dashboard Overview">
+<em>The Stream Sync Engage command center: Real-time event monitoring, delivery status, and segment targeting all in one interface.</em></p>
+<p>SSE is your tool to:</p>
+<ul>
+<li><strong>Broadcast engaging notifications</strong> (sound + haptic) in real time</li>
+<li><strong>Target specific user segments</strong> with precision</li>
+<li><strong>Push functional events</strong> (toggle features, reconfigure behavior) without requiring an app update</li>
+<li><strong>Define a relevancy window</strong> so events only matter when they are fresh</li>
+<li><strong>Resume missed deliveries</strong> when an offline client reconnects</li>
+</ul>
+<p>In short: SSE combines power, flexibility, and reliability.</p>
+<h2 id="how-stream-sync-engage-works">How Stream Sync Engage Works</h2>
+<h3 id="real-time-pipeline-with-fallbacks">Real-Time Pipeline with Fallbacks</h3>
+<p><img src="/img/knowledge-base/sse/architecture-diagram.png" alt="SSE Architecture Diagram">
+<em>The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</em></p>
+<p>When you push a notification or event through SSE&rsquo;s pipeline, it&rsquo;s immediately streamed to connected clients. For devices that are offline at the moment, SSE keeps a resync buffer. Once those devices come back online, it delivers missed events automatically. This avoids data loss, misfires, or stale content.</p>
+<h3 id="functional-event-channel">Functional Event Channel</h3>
+<p><img src="/img/knowledge-base/sse/functional-events-flow.png" alt="Functional Events Flow">
+<em>Not just notifications: SSE can toggle features, update configuration, and trigger internal state changes—all without shipping a new build.</em></p>
+<p>Not all events are user-visible. SSE supports &ldquo;functional&rdquo; events: commands you send to the app logic itself. You can flip a feature flag, tweak behavior, or trigger internal state changes — all without shipping a new build or forcing a refresh. With that, tweaking app behavior becomes as easy as sending a notification.</p>
+<h3 id="relevancy-windows">Relevancy Windows</h3>
+<p><img src="/img/knowledge-base/sse/relevancy-window-config.png" alt="Relevancy Window Configuration">
+<em>Smart expiration: Define time windows for events so users never receive stale notifications after coming back online.</em></p>
+<p>Some events lose value if delivered late. SSE lets you define a time window during which a notification is &ldquo;live.&rdquo; If a client comes online after that window, SSE can expire or discard the event so you don&rsquo;t clutter a user with stale messages.</p>
+<h2 id="ai-agent--mcp-server">AI Agent &amp; MCP Server</h2>
+<p><img src="/img/knowledge-base/sse/mcp-server-interface.png" alt="MCP Server Interface">
+<em>Intelligence at the core: The MCP (Message Control Plane) Server exposes your notification logic to AI agents for smart routing and context-aware delivery.</em></p>
+<p>At the core, SSE&rsquo;s <strong>MCP (Message Control Plane) Server</strong> acts as a control hub. It provides an interface that exposes your notification logic to an AI Agent. The result: you can build intelligent routing rules, personalized messaging logic, or context‑aware delivery (for example, suppressing a message if a user is in a meeting). SSE turns static alerts into smart notifications.</p>
+<h2 id="rich-webhooks-for-enterprise-integration">Rich Webhooks for Enterprise Integration</h2>
+<p><img src="/img/knowledge-base/sse/webhook-config.png" alt="Webhook Configuration Dashboard">
+<em>Full observability: Hook SSE into your logging, analytics, or dashboard systems to track delivery success, latency, and user responses.</em></p>
+<p>You can hook SSE into your logging, analytics, or dashboard systems. SSE supports a suite of webhooks so you can track event reception, delivery success, latency, user responses, and more. That gives you full observability over how notifications behave in the wild.</p>
+<h2 id="developer-experience--security">Developer Experience &amp; Security</h2>
+<p><img src="/img/knowledge-base/sse/typescript-client-sample.png" alt="TypeScript Client Code Sample">
+<em>Clean, intuitive API: Get started in minutes with our TypeScript client library.</em></p>
+<p>We ship a TypeScript client library so you can get started in minutes. SSE&rsquo;s architecture is lean: minimal runtime overhead, efficient connection handling, and built with security principles in mind. Data in transit is encrypted, clients authenticate with robust tokens, and permissions guard which segments or commands each user or system can send.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">SSEClient</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@machfivetech/stream-sync-engage&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Initialize the client
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SSEClient</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">endpoint</span><span class="o">:</span> <span class="s1">&#39;wss://sse.yourdomain.com&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">token</span><span class="o">:</span> <span class="s1">&#39;your-auth-token&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Listen for user-facing notifications
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">client</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;notification&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received:&#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Trigger sound and haptic feedback
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">playSound</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">audio</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">vibrate</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">haptic</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Listen for functional events
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">client</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;functional&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="kr">type</span> <span class="o">===</span> <span class="s1">&#39;feature-toggle&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">toggleFeature</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">featureName</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">enabled</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Connect and start receiving
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+</span></span></code></pre></div><h2 id="use-cases">Use Cases</h2>
+<h3 id="app-engagement--retention">App Engagement &amp; Retention</h3>
+<p>Send pulses of audio + vibrate notifications to reengage idle users.</p>
+<p><img src="/img/knowledge-base/sse/engagement-campaigns.png" alt="Engagement Campaign Dashboard">
+<em>Targeted re-engagement: Define user segments, set delivery windows, and measure conversion rates.</em></p>
+<h3 id="live-operational-alerts">Live Operational Alerts</h3>
+<p>Push system or workflow notifications to staff in the field.</p>
+<p><img src="/img/knowledge-base/sse/operational-alerts.png" alt="Operational Alerts Interface">
+<em>Mission-critical notifications: Ensure your field team receives alerts instantly with delivery confirmation.</em></p>
+<h3 id="feature-rollout">Feature Rollout</h3>
+<p>Gradually enable or disable app modules or features per segment.</p>
+<p><img src="/img/knowledge-base/sse/feature-flags.png" alt="Feature Flag Management">
+<em>Dynamic feature control: Roll out features to beta users, specific regions, or based on user behavior—all in real time.</em></p>
+<h3 id="contextual-nudges">Contextual Nudges</h3>
+<p>Suppress, reroute or resend messages based on user context derived by AI logic.</p>
+<p><img src="/img/knowledge-base/sse/ai-routing-rules.png" alt="AI-Powered Routing Rules">
+<em>Context-aware intelligence: Let AI agents decide when, where, and how to deliver messages based on user state.</em></p>
+<h3 id="offline-recovery">Offline Recovery</h3>
+<p>Guarantee users don&rsquo;t miss a critical notification, even after network drops.</p>
+<p><img src="/img/knowledge-base/sse/offline-sync-status.png" alt="Offline Sync Status">
+<em>Resilient delivery: The resync buffer ensures offline clients receive missed events when they reconnect.</em></p>
+<h2 id="getting-started">Getting Started</h2>
 <ol>
-<li><strong>Security</strong>: Users know their data is protected</li>
-<li><strong>Transparency</strong>: The process is clear and predictable</li>
-<li><strong>Control</strong>: Users feel empowered, not trapped</li>
+<li><strong>Install the TypeScript client</strong> and register with your SSE endpoint</li>
+<li><strong>Define your message types</strong> (user-facing, functional, control)</li>
+<li><strong>Register segment rules</strong> for targeting</li>
+<li><strong>Push events</strong> via API or dashboard</li>
+<li><strong>Monitor deliveries</strong> via webhooks or built-in dashboard</li>
 </ol>
-<p>Let&rsquo;s examine how we achieved all three through the authentication flow we built for CarsYours.</p>
-<h2 id="the-architecture-of-confidence">The Architecture of Confidence</h2>
-<p><img src="/img/knowledge-base/carsyours/dashboard-ui.png" alt="CarsYours Dashboard Interface">
-<em>The CarsYours dashboard we designed: Where trust meets transaction. Notice the clear visual hierarchy, seller ratings, and multiple action pathways that empower users.</em></p>
-<h3 id="multi-state-account-management">Multi-State Account Management</h3>
-<p>We implemented a sophisticated state machine for CarsYours user accounts:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Account states provide granular control
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Account</span><span class="o">::</span><span class="na">STATE_STATUS_ENABLED</span>  <span class="c1">// Can access the platform
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Account</span><span class="o">::</span><span class="na">STATE_STATUS_DISABLED</span> <span class="c1">// Temporarily restricted
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Account</span><span class="o">::</span><span class="na">STATE_STAGE_ACTIVE</span>    <span class="c1">// Fully verified
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Account</span><span class="o">::</span><span class="na">STATE_STAGE_INACTIVE</span>  <span class="c1">// Awaiting verification
-</span></span></span></code></pre></div><p>This isn&rsquo;t just technical overhead: it&rsquo;s trust architecture. We designed it so CarsYours users would see that the platform takes verification seriously, signaling that bad actors will be filtered out. When you&rsquo;re about to list your $30,000 vehicle or apply for an auto loan, knowing that every participant went through the same rigorous process creates confidence.</p>
-<h3 id="the-signup-journey-from-visitor-to-verified-user">The Signup Journey: From Visitor to Verified User</h3>
-<p><img src="/img/knowledge-base/carsyours/signup-form.png" alt="CarsYours Signup Form">
-<em>Smart form design at work: Real-time password strength indicator, inline validation, helpful tooltips, and a clear choice between buying and selling roles. We made security features visible rather than hidden.</em></p>
-<p>The authentication flow we built demonstrates several trust-building patterns:</p>
-<h4 id="1-progressive-disclosure">1. Progressive Disclosure</h4>
-<p>Instead of overwhelming users with a massive form, the system uses a multi-step approach:</p>
+<p><img src="/img/knowledge-base/sse/quick-start-guide.png" alt="Quick Start Guide">
+<em>Five-minute setup: From installation to your first notification.</em></p>
+<p>In minutes you can be streaming notifications, toggling features, or running intelligent notification logic — all without reboots or forced updates.</p>
+<h2 id="what-sets-sse-apart">What Sets SSE Apart</h2>
 <ul>
-<li>Choose your role (Buyer or Seller)</li>
-<li>Basic account creation with visual password strength feedback</li>
-<li>Security question setup for account recovery</li>
-<li>Email verification with clear messaging</li>
-<li>Profile completion with reputation building</li>
+<li><strong>Seamless recovery</strong> for offline devices</li>
+<li><strong>Ability to send both engaging user events and internal functional commands</strong></li>
+<li><strong>Relevancy windows</strong> to prevent notification fatigue</li>
+<li><strong>Exposure of your notification logic to AI agents</strong> via the MCP</li>
+<li><strong>Webhooks for full observability</strong> and integration</li>
+<li><strong>A developer-friendly client stack</strong></li>
 </ul>
-<p>Each step builds on the previous one, creating momentum rather than friction. The password strength indicator turns from red to green, providing immediate visual feedback that builds confidence.</p>
-<h4 id="2-immediate-feedback">2. Immediate Feedback</h4>
-<p>The notification system provides instant confirmation:</p>
-<p><img src="/img/knowledge-base/carsyours/notification-code.png" alt="CarsYours Notification System Code">
-<em>Clean, readable code that powers trust: The notification system we built ensures users never wonder if their action succeeded.</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Notification</span><span class="o">::</span><span class="na">create</span><span class="p">([</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;to_id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;from_id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;notification_caption&#39;</span> <span class="o">=&gt;</span> <span class="nv">$notification_caption</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;notification_msg&#39;</span> <span class="o">=&gt;</span> <span class="nv">$notification_msg</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;display_class&#39;</span> <span class="o">=&gt;</span> <span class="nv">$display_class</span>
-</span></span><span class="line"><span class="cl"><span class="p">]);</span>
-</span></span></code></pre></div><p>Users aren&rsquo;t left wondering if their action succeeded. Every significant step triggers a notification, maintaining engagement and reducing abandonment.</p>
-<h4 id="3-graceful-recovery">3. Graceful Recovery</h4>
-<p>The password reset flow shows thoughtful error handling:</p>
+<p><img src="/img/knowledge-base/sse/feature-comparison.png" alt="SSE Feature Comparison">
+<em>How SSE stacks up: Traditional push vs Stream Sync Engage capabilities.</em></p>
+<p>Stream Sync Engage is built in the Mach Five Tech spirit: high performance, dependable, and expressive. It turns your app into a responsive, evolving experience rather than a static container for content.</p>
+<h2 id="the-real-time-advantage">The Real-Time Advantage</h2>
+<p><img src="/img/knowledge-base/sse/performance-metrics.png" alt="Performance Metrics Dashboard">
+<em>Lightning-fast delivery: Track average latency, delivery success rates, and client connection health in real time.</em></p>
+<p>SSE is engineered for performance:</p>
 <ul>
-<li>Time-limited reset links (1 hour)</li>
-<li>Security questions as backup</li>
-<li>Clear messaging about what went wrong</li>
-<li>Always guides users to the next step</li>
+<li><strong>Sub-100ms delivery latency</strong> for connected clients</li>
+<li><strong>Efficient connection pooling</strong> minimizes resource overhead</li>
+<li><strong>Intelligent batching</strong> reduces network chattiness</li>
+<li><strong>Graceful degradation</strong> maintains service during high load</li>
 </ul>
-<h2 id="the-three-tier-trust-architecture">The Three-Tier Trust Architecture</h2>
-<p><img src="/img/knowledge-base/carsyours/architecture-diagram.png" alt="CarsYours System Architecture">
-<em>The elegant three-tier architecture we designed for CarsYours: Clear separation between sellers, buyers, and lenders with OAuth 2.0 at the heart of secure transactions.</em></p>
-<p><img src="/img/knowledge-base/carsyours/oauth-flow-diagram.png" alt="OAuth 2.0 Implementation Flow">
-<em>Security meets usability: Our OAuth 2.0 implementation with ID tokens for seamless authentication across web service, sign-in gateway, and sales transactions. Notice the layered validation approach with multiple checkpoints ensuring data integrity.</em></p>
-<p>The system&rsquo;s architecture reveals a clear separation of concerns:</p>
-<h3 id="presentation-layer-the-trust-interface">Presentation Layer: The Trust Interface</h3>
+<h2 id="security--compliance">Security &amp; Compliance</h2>
+<p><img src="/img/knowledge-base/sse/security-architecture.png" alt="Security Architecture">
+<em>Enterprise-grade security: Token-based authentication, encrypted transit, and granular permissions.</em></p>
+<p>We take security seriously:</p>
 <ul>
-<li>Clean, focused forms</li>
-<li>Visual feedback for actions</li>
-<li>Consistent design language</li>
-<li>No surprise redirects</li>
-</ul>
-<h3 id="business-layer-the-trust-engine">Business Layer: The Trust Engine</h3>
-<ul>
-<li>OAuth 2.0 integration for secure token management</li>
-<li>Session handling that remembers user progress</li>
-<li>Transaction validation at every critical point</li>
-<li>State machine ensuring users can&rsquo;t skip steps</li>
-</ul>
-<h3 id="data-layer-the-trust-vault">Data Layer: The Trust Vault</h3>
-<ul>
-<li>Encrypted password storage</li>
-<li>Audit trails for all actions</li>
-<li>Relationship integrity between accounts, profiles, and transactions</li>
-<li>No orphaned data that could compromise trust</li>
-</ul>
-<h2 id="security-as-a-feature-not-a-barrier">Security as a Feature, Not a Barrier</h2>
-<p>Our implementation demonstrates that security enhances rather than hinders user experience:</p>
-<h3 id="smart-session-management">Smart Session Management</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$from</span> <span class="o">==</span> <span class="k">null</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// New users get guided onboarding
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$id</span> <span class="o">=</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Returning users resume where they left off
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$id</span> <span class="o">=</span> <span class="nx">Account</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nv">$from</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                 <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;state_status&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="nx">Account</span><span class="o">::</span><span class="na">STATE_STATUS_ENABLED</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                 <span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>The system remembers context, reducing friction for legitimate users while maintaining security.</p>
-<h3 id="email-verification-that-makes-sense">Email Verification That Makes Sense</h3>
-<p>Rather than blocking all access until verification, the system allows users to explore while limiting critical actions. This builds investment in the platform before asking for the verification commitment.</p>
-<h2 id="the-carsyours-dashboard-where-trust-pays-off">The CarsYours Dashboard: Where Trust Pays Off</h2>
-<p>Once authenticated, CarsYours users see their personalized dashboard with:</p>
-<ul>
-<li>Current vehicles with make, model, year, and mileage</li>
-<li>Active offers with real prices ($18,600 for that 2008 Nissan Altima)</li>
-<li>5-star seller rating system</li>
-<li>Multiple action options: Edit, Invite Seller, Make Offer, Apply for Loan, Message Seller</li>
-<li>Social sharing and embed options</li>
-</ul>
-<p>This rich functionality is the payoff for the authentication investment. When users see actual vehicle listings with real prices and verified sellers, they understand that the verification process unlocked real value, not just another empty platform.</p>
-<h2 id="building-trust-through-profile-completion">Building Trust Through Profile Completion</h2>
-<p><img src="/img/knowledge-base/carsyours/profile-form.png" alt="CarsYours Profile Management">
-<em>Trust through transparency: The profile system we designed shows member since dates, reputation scores, earned badges, and even includes a recommendation slider. Every element reinforces that this is a community of real, verified people.</em></p>
-<p>We designed the profile system understanding that trust compounds over time. It includes:</p>
-<ul>
-<li><strong>Tenure Display</strong>: &ldquo;Member Since: 21 Mar 2015&rdquo; immediately shows established users</li>
-<li><strong>Reputation System</strong>: Visual 5-star ratings that can&rsquo;t be faked</li>
-<li><strong>Earned Badges</strong>: Gamification elements that reward good behavior</li>
-<li><strong>Recommendation Score</strong>: A 0-10 slider asking &ldquo;How likely are you to recommend a friend?&rdquo;</li>
-<li><strong>Multiple Authentication Options</strong>: Gmail integration for added convenience</li>
-</ul>
-<p>The genius is in making trust metrics visible. When a buyer sees a seller has been on the platform for 8 years with a 4.5-star rating, the sale practically makes itself.</p>
-<h2 id="building-for-real-human-behavior">Building for Real Human Behavior</h2>
-<p>We built the authentication system to acknowledge how real users behave:</p>
-<h3 id="they-forget-passwords">They Forget Passwords</h3>
-<ul>
-<li>Recovery flow that&rsquo;s as smooth as signup</li>
-<li>Multiple recovery methods</li>
-<li>Clear time limits set expectations</li>
-</ul>
-<h3 id="theyre-suspicious-of-new-platforms">They&rsquo;re Suspicious of New Platforms</h3>
-<ul>
-<li>Familiar OAuth options</li>
-<li>Progressive commitment (browse cars before listing)</li>
-<li>Visible security indicators (verified seller badges)</li>
-</ul>
-<h3 id="they-value-their-time">They Value Their Time</h3>
-<ul>
-<li>Single sign-on once verified</li>
-<li>Remember me functionality</li>
-<li>Quick re-authentication</li>
-</ul>
-<h2 id="technical-excellence-in-service-of-trust">Technical Excellence in Service of Trust</h2>
-<p>The Laravel implementation shows several best practices:</p>
-<h3 id="eloquent-orm-for-data-integrity">Eloquent ORM for Data Integrity</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Eloquent</span><span class="o">::</span><span class="na">unguard</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$insert_notf</span> <span class="o">=</span> <span class="nx">Notification</span><span class="o">::</span><span class="na">create</span><span class="p">([</span><span class="o">...</span><span class="p">]);</span>
-</span></span></code></pre></div><p>Using Laravel&rsquo;s ORM ensures data consistency and prevents SQL injection. This technical excellence translates into reliability that users can feel.</p>
-<h3 id="notification-system-architecture">Notification System Architecture</h3>
-<p>The dedicated notification system isn&rsquo;t just for emails. It&rsquo;s an event-driven architecture that can:</p>
-<ul>
-<li>Send emails</li>
-<li>Update UI in real-time</li>
-<li>Log security events</li>
-<li>Trigger downstream processes</li>
-</ul>
-<h3 id="clean-separation-of-concerns">Clean Separation of Concerns</h3>
-<p>Each component has a single responsibility:</p>
-<ul>
-<li>Authentication handles identity</li>
-<li>Profiles handle user data</li>
-<li>Notifications handle communication</li>
-<li>Transactions handle business logic</li>
-</ul>
-<h2 id="the-automation-advantage">The Automation Advantage</h2>
-<p><img src="/img/knowledge-base/carsyours/workflow-automation.png" alt="CarsYours Workflow Automation">
-<em>Intelligent automation at scale: The workflow engine we built handles everything from organic search vehicle ads to automated welcome emails and account lifecycle management. The system even tracks inactive accounts with automatic cleanup after 7 or 14 days.</em></p>
-<p>We automated critical workflows to ensure trust at scale:</p>
-<h3 id="buyer-journey-automation">Buyer Journey Automation</h3>
-<ul>
-<li>Organic search leads directly to vehicle ads</li>
-<li>One-click signup from interested buyers</li>
-<li>Welcome email triggered immediately upon registration</li>
-<li>Account activation tracked and managed</li>
-</ul>
-<h3 id="seller-protection">Seller Protection</h3>
-<ul>
-<li>Vehicle ID verification before listings go live</li>
-<li>Automated inactive account detection</li>
-<li>7-day and 14-day cleanup cycles for abandoned accounts</li>
-<li>Framework integration for consistent experience</li>
-</ul>
-<p>This automation ensures every user has the same high-quality onboarding experience, building trust through consistency.</p>
-<h2 id="lessons-for-marketplace-builders">Lessons for Marketplace Builders</h2>
-<h3 id="1-start-with-the-user-journey-not-the-database">1. Start with the User Journey, Not the Database</h3>
-<p>Map out how users will feel at each step before writing code. The technical architecture should support the emotional journey.</p>
-<h3 id="2-make-security-visible">2. Make Security Visible</h3>
-<p>Users can&rsquo;t appreciate what they can&rsquo;t see. We surfaced security features in the UI by showing verified badges, displaying seller ratings, and celebrating successful verification with clear notifications.</p>
-<h3 id="3-design-for-failure">3. Design for Failure</h3>
-<p>Every input can fail, every network request can timeout. Plan the unhappy paths as carefully as the happy ones.</p>
-<h3 id="4-progressive-trust-building">4. Progressive Trust Building</h3>
-<p>Don&rsquo;t ask for everything upfront. We designed CarsYours to let users browse vehicles, check prices, and see seller ratings before requiring account creation. This builds investment before asking for commitment.</p>
-<h3 id="5-consistent-feedback-loops">5. Consistent Feedback Loops</h3>
-<p>Every action should produce visible feedback. Silence breeds suspicion in digital interactions.</p>
-<h2 id="the-roi-of-trust-architecture">The ROI of Trust Architecture</h2>
-<p>Investing in thoughtful authentication architecture pays dividends:</p>
-<ul>
-<li><strong>Higher Conversion</strong>: Users complete signup when they trust the process</li>
-<li><strong>Lower Support Costs</strong>: Clear flows mean fewer confused users</li>
-<li><strong>Better User Quality</strong>: Verification filters out bad actors</li>
-<li><strong>Platform Reputation</strong>: Word spreads when a platform feels secure</li>
+<li><strong>End-to-end encryption</strong> for all data in transit</li>
+<li><strong>Token-based authentication</strong> with automatic rotation</li>
+<li><strong>Granular permissions</strong> control who can send what to whom</li>
+<li><strong>Audit logs</strong> track every event for compliance</li>
+<li><strong>SOC 2 Type II</strong> compliant infrastructure</li>
 </ul>
 <hr>
-<p><em>Building a marketplace that needs enterprise-grade authentication architecture? Whether you&rsquo;re trading cars, boats, or collectibles, let&rsquo;s design a system that converts visitors into confident users. <a href="#contact">Get in touch</a> to discuss your marketplace vision.</em></p>
+<p><em>Ready to bring real-time intelligence into your apps? SSE is the tool you&rsquo;ve been waiting for. Let us show you how you can deploy it in your stack and begin crafting smarter user journeys today. <a href="#contact">Get in touch</a> to schedule a demo.</em></p>
 
         
         
@@ -1466,33 +1397,33 @@
             <h4 class="tags-title">Tagged With</h4>
             <div class="tags-list">
                 
-                <a href="/knowledge-base/tags/marketplace/" class="tag-link">#marketplace</a>
+                <a href="/knowledge-base/tags/real-time/" class="tag-link">#real-time</a>
                 
-                <a href="/knowledge-base/tags/authentication/" class="tag-link">#authentication</a>
+                <a href="/knowledge-base/tags/notifications/" class="tag-link">#notifications</a>
                 
-                <a href="/knowledge-base/tags/php/" class="tag-link">#php</a>
+                <a href="/knowledge-base/tags/engagement/" class="tag-link">#engagement</a>
                 
-                <a href="/knowledge-base/tags/laravel/" class="tag-link">#laravel</a>
+                <a href="/knowledge-base/tags/push-notifications/" class="tag-link">#push-notifications</a>
                 
-                <a href="/knowledge-base/tags/security/" class="tag-link">#security</a>
+                <a href="/knowledge-base/tags/typescript/" class="tag-link">#typescript</a>
+                
+                <a href="/knowledge-base/tags/websockets/" class="tag-link">#websockets</a>
+                
+                <a href="/knowledge-base/tags/ai-agent/" class="tag-link">#ai-agent</a>
+                
+                <a href="/knowledge-base/tags/mcp-server/" class="tag-link">#mcp-server</a>
+                
+                <a href="/knowledge-base/tags/webhooks/" class="tag-link">#webhooks</a>
+                
+                <a href="/knowledge-base/tags/offline-sync/" class="tag-link">#offline-sync</a>
+                
+                <a href="/knowledge-base/tags/feature-flags/" class="tag-link">#feature-flags</a>
                 
                 <a href="/knowledge-base/tags/user-experience/" class="tag-link">#user-experience</a>
                 
-                <a href="/knowledge-base/tags/architecture/" class="tag-link">#architecture</a>
+                <a href="/knowledge-base/tags/sse/" class="tag-link">#sse</a>
                 
-                <a href="/knowledge-base/tags/trust-building/" class="tag-link">#trust-building</a>
-                
-                <a href="/knowledge-base/tags/oauth/" class="tag-link">#oauth</a>
-                
-                <a href="/knowledge-base/tags/session-management/" class="tag-link">#session-management</a>
-                
-                <a href="/knowledge-base/tags/verification/" class="tag-link">#verification</a>
-                
-                <a href="/knowledge-base/tags/user-flow/" class="tag-link">#user-flow</a>
-                
-                <a href="/knowledge-base/tags/carsyours/" class="tag-link">#carsyours</a>
-                
-                <a href="/knowledge-base/tags/automotive/" class="tag-link">#automotive</a>
+                <a href="/knowledge-base/tags/stream-sync-engage/" class="tag-link">#stream-sync-engage</a>
                 
             </div>
         </div>
@@ -1503,17 +1434,17 @@
             <h3 class="share-heading">Found this helpful?</h3>
             <p class="share-subheading">Share it with your team</p>
             <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?text=Architecting%20Trust%3a%20Building%20Secure%20Marketplace%20Authentication&url=%2fknowledge-base%2farchitecting-trust-marketplace-authentication%2f" 
+                <a href="https://twitter.com/intent/tweet?text=Introducing%20Stream%20Sync%20Engage%3a%20Real-Time%20Engagement%2c%20Smarter%20Delivery&url=%2fknowledge-base%2fintroducing-stream-sync-engage%2f" 
                    class="share-button" target="_blank" rel="noopener">
                     <span class="material-symbols-outlined">share</span>
                     <span>Twitter</span>
                 </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=%2fknowledge-base%2farchitecting-trust-marketplace-authentication%2f" 
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=%2fknowledge-base%2fintroducing-stream-sync-engage%2f" 
                    class="share-button" target="_blank" rel="noopener">
                     <span class="material-symbols-outlined">work</span>
                     <span>LinkedIn</span>
                 </a>
-                <a href="mailto:?subject=Architecting%20Trust%3a%20Building%20Secure%20Marketplace%20Authentication&body=Check out this article: %2fknowledge-base%2farchitecting-trust-marketplace-authentication%2f" 
+                <a href="mailto:?subject=Introducing%20Stream%20Sync%20Engage%3a%20Real-Time%20Engagement%2c%20Smarter%20Delivery&body=Check out this article: %2fknowledge-base%2fintroducing-stream-sync-engage%2f" 
                    class="share-button">
                     <span class="material-symbols-outlined">mail</span>
                     <span>Email</span>
@@ -1531,14 +1462,14 @@
         <h2>Continue Reading</h2>
         <div class="related-grid">
             
-            <a href="/knowledge-base/introducing-stream-sync-engage/" class="related-link">
+            <a href="/knowledge-base/architecting-trust-marketplace-authentication/" class="related-link">
                 <div class="related-link-content">
                     <div class="related-link-info">
-                        <h3 class="related-link-title">Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</h3>
+                        <h3 class="related-link-title">Architecting Trust: Building Secure Marketplace Authentication</h3>
                         <div class="related-link-meta">
-                            <span class="related-link-category">Product-Announcement</span>
+                            <span class="related-link-category">Architecture</span>
                             <span>•</span>
-                            <span>6 min read</span>
+                            <span>7 min read</span>
                         </div>
                     </div>
                     <span class="material-symbols-outlined related-link-arrow">arrow_forward</span>

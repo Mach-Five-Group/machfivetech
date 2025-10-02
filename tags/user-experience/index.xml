@@ -6,7 +6,17 @@
     <description>Recent content in user-experience on Mach Five Tech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/user-experience/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/user-experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</title>
+      <link>/knowledge-base/introducing-stream-sync-engage/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/knowledge-base/introducing-stream-sync-engage/</guid>
+      <description>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product Stream Sync Engage (SSE) — a live notification engine built for modern apps that want to go beyond static push.
+Why Stream Sync Engage Matters Applications today demand more than just alerts. Users expect intelligent, timely, context-aware interactions. SSE is built for that need. It not only delivers messages in real time, but also adds auditory and haptic cues, delivers configuration changes instantly, and recovers gracefully when connectivity falters.</description>
+    </item>
+    
     <item>
       <title>Architecting Trust: Building Secure Marketplace Authentication</title>
       <link>/knowledge-base/architecting-trust-marketplace-authentication/</link>
