@@ -1268,8 +1268,11 @@
         
         
         <p>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product <strong>Stream Sync Engage (SSE)</strong> — a live notification engine built for modern apps that want to go beyond static push.</p>
-<p><img src="/img/sse_diagram_1000.png" alt="Stream Sync Engage Architecture">
-<em>Stream Sync Engage architecture: Real-time event delivery with intelligent targeting, offline recovery, and multi-platform support.</em></p>
+<h2 id="how-stream-sync-engage-works">How Stream Sync Engage Works</h2>
+<h3 id="real-time-pipeline-with-fallbacks">Real-Time Pipeline with Fallbacks</h3>
+<p><img src="/img/sse_diagram_1000.png" alt="SSE Architecture Diagram">
+<em>The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</em></p>
+<p>When you push a notification or event through SSE&rsquo;s pipeline, it&rsquo;s immediately streamed to connected clients. For devices that are offline at the moment, SSE keeps a resync buffer. Once those devices come back online, it delivers missed events automatically. This avoids data loss, misfires, or stale content.</p>
 <h2 id="why-stream-sync-engage-matters">Why Stream Sync Engage Matters</h2>
 <p>Applications today demand more than just alerts. Users expect intelligent, timely, context-aware interactions. SSE is built for that need. It not only delivers messages in real time, but also adds auditory and haptic cues, delivers configuration changes instantly, and recovers gracefully when connectivity falters.</p>
 <p><img src="/img/knowledge-base/sse/dashboard-overview.png" alt="Stream Sync Engage Dashboard Overview">
@@ -1283,11 +1286,6 @@
 <li><strong>Resume missed deliveries</strong> when an offline client reconnects</li>
 </ul>
 <p>In short: SSE combines power, flexibility, and reliability.</p>
-<h2 id="how-stream-sync-engage-works">How Stream Sync Engage Works</h2>
-<h3 id="real-time-pipeline-with-fallbacks">Real-Time Pipeline with Fallbacks</h3>
-<p><img src="/img/knowledge-base/sse/architecture-diagram.png" alt="SSE Architecture Diagram">
-<em>The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</em></p>
-<p>When you push a notification or event through SSE&rsquo;s pipeline, it&rsquo;s immediately streamed to connected clients. For devices that are offline at the moment, SSE keeps a resync buffer. Once those devices come back online, it delivers missed events automatically. This avoids data loss, misfires, or stale content.</p>
 <h3 id="functional-event-channel">Functional Event Channel</h3>
 <p><img src="/img/knowledge-base/sse/functional-events-flow.png" alt="Functional Events Flow">
 <em>Not just notifications: SSE can toggle features, update configuration, and trigger internal state changes—all without shipping a new build.</em></p>

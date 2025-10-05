@@ -14,8 +14,7 @@
       
       <guid>/knowledge-base/introducing-stream-sync-engage/</guid>
       <description>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product Stream Sync Engage (SSE) — a live notification engine built for modern apps that want to go beyond static push.
-Stream Sync Engage architecture: Real-time event delivery with intelligent targeting, offline recovery, and multi-platform support.
-Why Stream Sync Engage Matters Applications today demand more than just alerts.</description>
+How Stream Sync Engage Works Real-Time Pipeline with Fallbacks The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</description>
     </item>
     
     <item>
