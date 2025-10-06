@@ -1025,13 +1025,40 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
     }
 
     /* Footer mobile */
+    .footer {
+        padding: 32px 16px 0;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 8px;
+        padding-bottom: 24px;
     }
 
     .footer-brand {
-        margin-bottom: 32px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .footer-brand neodigm-widget {
+        margin-bottom: 12px !important;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .footer-brand p:last-of-type {
+        margin-bottom: 8px;
+    }
+
+    .footer-contact {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
     }
 
     .footer-brand .social-links {
@@ -1039,11 +1066,30 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
     }
 
     .footer-section {
-        margin-bottom: 32px;
+        margin-bottom: 0;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section a {
+        font-size: 14px;
     }
 
     .footer-bottom {
+        margin-top: 16px;
+        padding: 16px 0;
         font-size: 12px;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 4px;
     }
 
     /* CTA mobile */
