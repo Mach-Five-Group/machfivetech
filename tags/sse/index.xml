@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>sse on Mach Five Tech</title>
-    <link>/tags/sse/</link>
-    <description>Recent content in sse on Mach Five Tech</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/sse/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</title>
-      <link>/knowledge-base/introducing-stream-sync-engage/</link>
-      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>/knowledge-base/introducing-stream-sync-engage/</guid>
-      <description>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product Stream Sync Engage (SSE) — a live notification engine built for modern apps that want to go beyond static push.
-How Stream Sync Engage Works Real-Time Pipeline with Fallbacks The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sse on Mach Five Tech</title><link>/tags/sse/</link><description>Recent content in sse on Mach Five Tech</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/sse/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing Stream Sync Engage: Real-Time Engagement, Smarter Delivery</title><link>/knowledge-base/introducing-stream-sync-engage/</link><pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate><guid>/knowledge-base/introducing-stream-sync-engage/</guid><description>At Mach Five Tech, we believe that apps should respond to users in the moment. That is the core promise behind our new product Stream Sync Engage (SSE) — a live notification engine built for modern apps that want to go beyond static push.
+How Stream Sync Engage Works Real-Time Pipeline with Fallbacks The SSE pipeline: Events flow from your backend through the MCP Server to connected clients, with intelligent buffering for offline devices.</description></item></channel></rss>

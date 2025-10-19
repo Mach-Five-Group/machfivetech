@@ -1,0 +1,1 @@
+const{PI,cos,sin,abs,sqrt,pow,round,random,atan2}=Math,HALF_PI=.5*PI,TAU=2*PI,TO_RAD=PI/180,floor=e=>e|0,rand=e=>e*random(),randIn=(e,t)=>rand(t-e)+e,randRange=e=>e-rand(2*e),fadeIn=(e,t)=>e/t,fadeOut=(e,t)=>(t-e)/t,fadeInOut=(e,t)=>{let n=.5*t;return abs((e+n)%t-n)/n},dist=(e,t,n,s)=>sqrt(pow(n-e,2)+pow(s-t,2)),angle=(e,t,n,s)=>atan2(s-t,n-e),lerp=(e,t,n)=>(1-n)*e+n*t
