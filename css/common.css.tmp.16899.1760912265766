@@ -710,8 +710,6 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
     position: relative;
     overflow: hidden;
     margin-bottom: 16px;
-    contain: layout size;
-    isolation: isolate;
 }
 
 .footer-brand .neodigm-widget-container neodigm-widget {
@@ -722,13 +720,6 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
     right: 0;
     transform: translateY(-50%);
     width: 100% !important;
-    contain: layout;
-}
-
-.footer-brand .neodigm-widget-container neodigm-widget * {
-    vertical-align: top !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 /* Mobile responsive sizing */
@@ -754,7 +745,6 @@ neodigm-widget[data-n55-widget-id="effect_two_word_rotate"] [class*="word"]:firs
         min-height: 3rem;
         max-height: 3rem;
         margin-bottom: 12px;
-        contain: layout size;
     }
 }
 
