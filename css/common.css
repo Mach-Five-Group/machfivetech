@@ -445,7 +445,7 @@ body::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 48px;
+    gap: 32px;
     border-bottom: 1px solid var(--m5-border);
     padding-bottom: 48px;
     position: relative;
