@@ -25,6 +25,109 @@ body[data-n55-is-signin="true"]  > section,
 body[data-n55-is-signin="true"]  > neodigm-widget > section { visibility:hidden; }
 body[data-n55-is-signin="false"] > section,
 body[data-n55-is-signin="false"] > neodigm-widget > section { visibility:visible; }
+
+        /* Hero background styling */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #C4381A 0%, #810000 100%);
+        }
+
+        /* Background image with Ken Burns animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background-image: url('/img/mt5-hero.png');
+            background-size: cover;
+            background-position: center;
+            will-change: filter, transform;
+            opacity: 0.3;
+            z-index: 0;
+            animation: meshWarpKenBurns 18s ease-in-out infinite;
+        }
+
+        @keyframes meshWarpKenBurns {
+            0% {
+                filter: hue-rotate(0deg) saturate(1.2) brightness(1.1);
+                transform: scale(1) translate(0, 0);
+            }
+            25% {
+                filter: hue-rotate(15deg) saturate(1.4) brightness(1.15);
+                transform: scale(1.08) translate(-1%, 0.5%);
+            }
+            50% {
+                filter: hue-rotate(30deg) saturate(1.5) brightness(1.2);
+                transform: scale(1.15) translate(-2%, 1%);
+            }
+            75% {
+                filter: hue-rotate(15deg) saturate(1.4) brightness(1.15);
+                transform: scale(1.08) translate(-1%, 0.5%);
+            }
+            100% {
+                filter: hue-rotate(0deg) saturate(1.2) brightness(1.1);
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        /* Paper texture overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.05) 2px,
+                    rgba(0,0,0,0.05) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255,255,255,0.05) 2px,
+                    rgba(255,255,255,0.05) 4px
+                ),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+            opacity: 0.8;
+            z-index: 0;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+
+        /* Vignette effect */
+        body > *:not(style) {
+            position: relative;
+        }
+
+        body > *:not(style)::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.25) 80%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Ensure widget appears above background */
+        neodigm-widget {
+            position: relative;
+            z-index: 10;
+        }
     </style>
     <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="m5t_customer_portal"></neodigm-widget>
 </body>
