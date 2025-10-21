@@ -1,0 +1,80 @@
+---
+title: "Applied Innovation: AI Hybrid CRM Experience"
+date: 2025-01-21
+category: "applied-innovation"
+author: "Mach Five Tech Team"
+author_role: "Engineering Team"
+excerpt: "Leverage advanced client-side UX technologies to optimize the field rep's workflow. Bridge the gap between disparate customer data sources and a customized conversational interface."
+tags:
+  - ai
+  - crm
+  - user-experience
+  - performance
+  - applied-innovation
+  - indexeddb
+  - sse
+  - offline-sync
+  - real-time
+---
+
+The AI Hybrid CRM Experience is a framework of technologies and expertise that bridge the gap between disparate customer data sources and a customized conversational interface. This is the tooling that solves the real-world challenges that arise when empowering sales and marketing with an AI experience that they will actually want to use.
+
+## The Challenge
+
+The challenge is persuading reluctant users to embrace, engage, and ideally advocate for your chat solution. Make the behavior transition from CRM forms to a conversational experience.
+
+## The Solution
+
+The solution is passive and instantaneous visual feedback giving the users a simplified framework for managing complex prompts. Smart prospect name resolution that is easy, forgiving, and FAST.
+
+Rather than an exhausting and expensive round trip only to discover that you've misspelled a name.
+
+**Offload processing onto the client and let the client do what it does best: interact.**
+
+## Why Client-Side Processing Matters
+
+AI is slow and expensive. Capture UX and architectural enhancements through advanced core web technologies. Repeatable patterns such as identity resolution, so common in CRM activities can be efficiently and inexpensively handled on the client via predictive caching and linguistic fuzzy logic.
+
+Meaning that an optimized UI client can pre-cache a sales rep's territory and use that data to assist in prompt building with an intuitive tap-to-select UX pattern. This is not only significantly faster than AI identity resolution, it results in a significant compute cost savings.
+
+## Key Technologies
+
+- **[Stream Sync Engage (SSE)](https://www.streamsyncengage.com/)** - Real-time event streaming
+- **IndexedDB** - Offline access
+- **Multithreaded Worklet** - Background processing
+- **LZ Compression** - Efficient data storage
+- **Linguistic Matching** - Advanced phonics algorithm to identify and correct common misspellings and typos
+- **Web Notifications** - Push alerts
+- **Voice Recognition** - Hands-free interaction
+
+## Cognitive Agency
+
+Invest in easy to use. Cognitive agency is giving the users ownership of the data. Allowing them to map the data in a way that matches the way that they work. Give them the ability to easily pin, like, save, and sort. If a user enters the same prompt every morning, why would you make them type it each time? Find a way to intelligently reuse history in a way that makes it seem clairvoyant and enchanted.
+
+## Onboarding
+
+Users will decide if they like the app within the first few minutes of use. Think about ways to make the first few engagements rewarding.
+
+### Share Prompts
+
+Allow new users to leverage the experience of established users by providing a facility to share insightful prompts. This is also a good venue for experienced sales people to highlight what information they have learned to rely on for decision support.
+
+### First Impressions
+
+- **Interactive Guided Tour** - A good way to gently introduce new users to a new way of working
+- **In-App Videos** - Can go a long way towards alleviating first-time anxiety
+- **Gamified Leaderboard** - Create a fun ego-boosting and team-building experience
+
+## Last Mile Performance
+
+Unfortunately AI apps can take time. Fortunately there are steps that you can take to make the wait less obvious. Recognize that there is a significant difference between performance and perceived performance.
+
+### Optimization Strategies
+
+1. **Stream Responses** - The user can start reading the response while the data is still loading
+2. **Engaging Wait State** - While loading, offer insightful tips and tricks
+3. **Instant Access to Historic Data** - If the data is slow-moving (seldom changes), serve the response from the cache
+
+---
+
+By combining AI intelligence with smart client-side optimization, you can create a CRM experience that users actually want to use—one that's fast, intuitive, and powerful.
