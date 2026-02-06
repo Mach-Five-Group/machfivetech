@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>technical-debt on Mach Five Tech</title><link>https://www.machfivetech.com/tags/technical-debt/</link><description>Recent content in technical-debt on Mach Five Tech</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 15 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.machfivetech.com/tags/technical-debt/index.xml" rel="self" type="application/rss+xml"/><item><title>Legacy Modernization Without Tears</title><link>https://www.machfivetech.com/knowledge-base/legacy-modernization-without-tears/</link><pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate><guid>https://www.machfivetech.com/knowledge-base/legacy-modernization-without-tears/</guid><description>&amp;ldquo;We need to rewrite everything from scratch.&amp;rdquo;
-Those six words have killed more engineering teams than any bug ever could. After modernizing dozens of legacy systems, we&amp;rsquo;ve learned that the rewrite is rarely the answer. Here&amp;rsquo;s our battle-tested approach to breathing new life into old code.
-The Reality of Legacy Let&amp;rsquo;s be honest about what we&amp;rsquo;re dealing with:
-A Java 6 monolith that processes $10M daily 500K lines of code, half without tests The original developers have long moved on Documentation exists&amp;hellip; somewhere It works, but nobody knows exactly how Sound familiar?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technical-Debt on Mach Five Tech</title><link>http://localhost:51847/tags/technical-debt/</link><description>Recent content in Technical-Debt on Mach Five Tech</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 15 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:51847/tags/technical-debt/index.xml" rel="self" type="application/rss+xml"/><item><title>Legacy Modernization Without Tears</title><link>http://localhost:51847/knowledge-base/legacy-modernization-without-tears/</link><pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:51847/knowledge-base/legacy-modernization-without-tears/</guid><description>&lt;p&gt;&amp;ldquo;We need to rewrite everything from scratch.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Those six words have killed more engineering teams than any bug ever could. After modernizing dozens of legacy systems, we&amp;rsquo;ve learned that the rewrite is rarely the answer. Here&amp;rsquo;s our battle-tested approach to breathing new life into old code.&lt;/p&gt;
+&lt;h2 id="the-reality-of-legacy"&gt;The Reality of Legacy&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s be honest about what we&amp;rsquo;re dealing with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Java 6 monolith that processes $10M daily&lt;/li&gt;
+&lt;li&gt;500K lines of code, half without tests&lt;/li&gt;
+&lt;li&gt;The original developers have long moved on&lt;/li&gt;
+&lt;li&gt;Documentation exists&amp;hellip; somewhere&lt;/li&gt;
+&lt;li&gt;It works, but nobody knows exactly how&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sound familiar? You&amp;rsquo;re not alone.&lt;/p&gt;</description></item></channel></rss>
