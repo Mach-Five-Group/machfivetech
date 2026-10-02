@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WebMCP hero background</title>
+<!--
+  Abstract "agent network" texture for the Enter WebMCP article hero.
+  White on transparent, so it layers over the orange header gradient.
+  Render at 1920x700 with a transparent background:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+    --hide-scrollbars --default-background-color=00000000 --force-device-scale-factor=1 \
+    --window-size=1920,700 --virtual-time-budget=4000 \
+    --screenshot=static/img/knowledge-base/webmcp/hero-network.png \
+    "file://$PWD/static/design/webmcp-hero-bg.html"
+-->
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; }
+  svg { display: block; width: 1920px; height: 700px; }
+</style>
+</head>
+<body>
+<svg id="art" viewBox="0 0 1920 700" xmlns="http://www.w3.org/2000/svg" fill="none"></svg>
+<script>
+  // Seeded RNG so the texture is reproducible.
+  let seed = 20261002;
+  const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+
+  const svg = document.getElementById('art');
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (name, attrs) => {
+    const n = document.createElementNS(NS, name);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  };
+
+  // Faint perspective grid, denser toward the right.
+  const grid = el('g', { stroke: '#fff', 'stroke-opacity': '0.10', 'stroke-width': '1' });
+  for (let x = 0; x <= 1920; x += 60) grid.appendChild(el('path', { d: `M${x} 0V700` }));
+  for (let y = 0; y <= 700; y += 60) grid.appendChild(el('path', { d: `M0 ${y}H1920` }));
+  svg.appendChild(grid);
+
+  // Nodes: clustered toward the right two thirds so the title area stays calm.
+  const nodes = [];
+  for (let i = 0; i < 110; i++) {
+    const t = rnd();
+    const x = 300 + Math.pow(t, 0.6) * 1700 - 80;
+    const y = 40 + rnd() * 620;
+    const r = 2 + rnd() * 4;
+    nodes.push({ x, y, r });
+  }
+
+  // Links between near neighbours.
+  const links = el('g', { stroke: '#fff', 'stroke-linecap': 'round' });
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const a = nodes[i], b = nodes[j];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 190 && rnd() < 0.55) {
+        const o = (0.55 * (1 - d / 190) + 0.08).toFixed(3);
+        links.appendChild(el('path', {
+          d: `M${a.x.toFixed(1)} ${a.y.toFixed(1)}L${b.x.toFixed(1)} ${b.y.toFixed(1)}`,
+          'stroke-opacity': o, 'stroke-width': d < 90 ? '1.6' : '1'
+        }));
+      }
+    }
+  }
+  svg.appendChild(links);
+
+  // Nodes.
+  const dots = el('g', { fill: '#fff' });
+  nodes.forEach(n => {
+    dots.appendChild(el('circle', { cx: n.x.toFixed(1), cy: n.y.toFixed(1), r: n.r.toFixed(1), 'fill-opacity': (0.5 + rnd() * 0.5).toFixed(2) }));
+  });
+  svg.appendChild(dots);
+
+  // A few "agent" hubs: rings with orbit arcs.
+  const hubs = el('g', { stroke: '#fff', 'stroke-width': '1.5' });
+  const hubPts = [[1240, 170], [1560, 470], [920, 520], [1760, 150], [640, 300]];
+  hubPts.forEach(([x, y], i) => {
+    const R = 36 + i * 8;
+    hubs.appendChild(el('circle', { cx: x, cy: y, r: R, 'stroke-opacity': '0.55' }));
+    hubs.appendChild(el('circle', { cx: x, cy: y, r: R * 0.55, 'stroke-opacity': '0.35', 'stroke-dasharray': '3 6' }));
+    hubs.appendChild(el('circle', { cx: x, cy: y, r: 5, fill: '#fff', 'fill-opacity': '0.95', stroke: 'none' }));
+    // Orbit arc
+    const a0 = rnd() * Math.PI * 2, a1 = a0 + Math.PI * (0.6 + rnd() * 0.6);
+    const R2 = R + 14;
+    const p = (a) => `${(x + Math.cos(a) * R2).toFixed(1)} ${(y + Math.sin(a) * R2).toFixed(1)}`;
+    hubs.appendChild(el('path', { d: `M${p(a0)}A${R2} ${R2} 0 ${(a1 - a0) > Math.PI ? 1 : 0} 1 ${p(a1)}`, 'stroke-opacity': '0.8', 'stroke-width': '2.5', 'stroke-linecap': 'round' }));
+  });
+  svg.appendChild(hubs);
+
+  // Long sweeping connector curves, suggesting tool calls across the site.
+  const sweeps = el('g', { stroke: '#fff', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-opacity': '0.45' });
+  sweeps.appendChild(el('path', { d: 'M640 300 C 800 120, 1060 120, 1240 170' }));
+  sweeps.appendChild(el('path', { d: 'M1240 170 C 1380 260, 1420 380, 1560 470' }));
+  sweeps.appendChild(el('path', { d: 'M920 520 C 1100 560, 1360 540, 1560 470' }));
+  sweeps.appendChild(el('path', { d: 'M1240 170 C 1420 110, 1600 120, 1760 150' }));
+  svg.appendChild(sweeps);
+</script>
+</body>
+</html>

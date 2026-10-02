@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Enter WebMCP card</title>
+<!--
+  Social share card for the "Enter WebMCP: The Agent of Change" article.
+  Render at 1200x627, 2x scale, with headless Chrome:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+    --hide-scrollbars --allow-file-access-from-files --force-device-scale-factor=2 \
+    --window-size=1200,627 --virtual-time-budget=8000 \
+    --screenshot=static/img/knowledge-base/webmcp/enter-mcp-agent-of-change.png \
+    "file://$PWD/static/design/linkedin-card-enter-mcp.html"
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #DD4124;
+    --brand-dark: #810000;
+    --dark: #181818;
+    --night: #323232;
+    --accent: #7BC4C4;
+    --light: #f8f8f8;
+  }
+  html, body { margin: 0; padding: 0; background: var(--dark); }
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 627px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1b1b1b 0%, #232323 55%, #2c2c2c 100%);
+    font-family: "Google Sans Flex", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  /* Grid texture, as on the site's "More from Mach Five" section */
+  .grid {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 50px 50px;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.5) 45%, transparent 85%);
+    mask-image: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.5) 45%, transparent 85%);
+  }
+  /* Soft orange glow behind the logo */
+  .glow {
+    position: absolute;
+    right: -200px; top: -260px;
+    width: 760px; height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(221,65,36,0.22) 0%, rgba(221,65,36,0.06) 40%, transparent 68%);
+  }
+  /*
+    Full Mach Five Tech lockup in brand orange. The white lockup PNG is used as
+    a mask over a brand-colored box, which tints the whole logo #DD4124.
+    The PNG is 4446x3279 (ratio 1.356).
+  */
+  .lockup {
+    position: absolute;
+    right: 64px; top: 44px;
+    width: 400px;
+    height: 295px;
+    background: #fff;
+    -webkit-mask: url("file:///Users/nicholaskrause/2025/machfivetech_hugo/static/img/New%20Logos/M5T-Secondary-White.png") center / contain no-repeat;
+    mask: url("file:///Users/nicholaskrause/2025/machfivetech_hugo/static/img/New%20Logos/M5T-Secondary-White.png") center / contain no-repeat;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35));
+  }
+  .headline {
+    position: absolute;
+    left: 72px; top: 76px;
+    width: 760px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 86px;
+    font-weight: 300;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "wght" 300;
+  }
+  h1 strong {
+    font-weight: 800;
+    font-variation-settings: "opsz" 144, "wght" 800;
+    color: #fff;
+  }
+  h1 .brand { color: var(--brand); }
+  /* Full-width quote band */
+  .quote {
+    position: absolute;
+    left: 72px; right: 72px;
+    top: 388px;
+    margin: 0;
+    padding: 6px 0 6px 26px;
+    border-left: 4px solid var(--brand);
+    font-family: "Inter", sans-serif;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.38;
+    color: rgba(255,255,255,0.88);
+    text-wrap: balance;
+  }
+  .quote em { font-style: normal; font-weight: 500; color: #fff; }
+  /* URL, bottom left, with a branded arrow */
+  .url {
+    position: absolute;
+    left: 72px; bottom: 44px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+  .url span { color: var(--brand); font-weight: 600; }
+  .url svg { width: 44px; height: 44px; flex: none; }
+  .bar {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 8px;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--brand-dark) 100%);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <div class="lockup" role="img" aria-label="Mach Five Tech"></div>
+  <div class="headline">
+    <h1>Enter <span class="brand">WebMCP</span>:<br><strong>The Agent of Change</strong></h1>
+  </div>
+  <p class="quote">&ldquo;I don&rsquo;t want to use your product&rsquo;s agent. <em>I want my agent to be able to use your product.</em>&rdquo;</p>
+  <div class="url">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#DD4124" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 12h15"/>
+      <path d="M13 6l6 6-6 6"/>
+    </svg>
+    <div>machfivetech.com<span>/knowledge-base</span></div>
+  </div>
+  <div class="bar"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mach Five Tech default share card</title>
+<!--
+  Site-wide fallback Open Graph / Twitter image (static/img/og-default.jpg),
+  used by any page that does not set `image` in its front matter.
+  Render at 1200x630, 2x scale, with headless Chrome:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+    --hide-scrollbars --allow-file-access-from-files --force-device-scale-factor=2 \
+    --window-size=1200,630 --virtual-time-budget=8000 \
+    --screenshot=/tmp/og-default.png "file://$PWD/static/design/og-default-card.html"
+  sips -s format jpeg -s formatOptions 88 /tmp/og-default.png --out static/img/og-default.jpg
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #DD4124;
+    --brand-dark: #810000;
+    --dark: #181818;
+    --accent: #7BC4C4;
+  }
+  html, body { margin: 0; padding: 0; background: var(--dark); }
+  .card {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1b1b1b 0%, #232323 55%, #2c2c2c 100%);
+    font-family: "Google Sans Flex", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 50px 50px;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.5) 45%, transparent 85%);
+    mask-image: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.5) 45%, transparent 85%);
+  }
+  .mark {
+    position: absolute;
+    right: -60px;
+    top: -30px;
+    width: 680px;
+    height: auto;
+    opacity: 0.92;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+  }
+  .glow {
+    position: absolute;
+    right: -120px; top: -160px;
+    width: 820px; height: 820px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(221,65,36,0.28) 0%, rgba(221,65,36,0.08) 40%, transparent 68%);
+  }
+  .veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, #1b1b1b 0%, rgba(27,27,27,0.96) 42%, rgba(27,27,27,0.55) 62%, rgba(27,27,27,0) 85%);
+  }
+  .content {
+    position: absolute;
+    left: 72px; top: 0; bottom: 0;
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo { height: 150px; width: auto; align-self: flex-start; margin-bottom: 40px; }
+  h1 {
+    margin: 0 0 22px;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "wght" 300;
+  }
+  h1 strong {
+    font-weight: 800;
+    font-variation-settings: "opsz" 144, "wght" 800;
+    color: var(--brand);
+  }
+  p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.82);
+    max-width: 640px;
+  }
+  .url {
+    position: absolute;
+    right: 72px; bottom: 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.7);
+  }
+  .bar {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 8px;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--brand-dark) 100%);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <img class="mark" src="file:///Users/nicholaskrause/2025/machfivetech_hugo/static/img/New%20Logos/M5T-Primary-Logo.png" alt="">
+  <div class="veil"></div>
+  <div class="content">
+    <img class="logo" src="file:///Users/nicholaskrause/2025/machfivetech_hugo/static/img/New%20Logos/M5T-Secondary-White.png" alt="Mach Five Tech">
+    <h1>Move faster.<br><strong>Build smarter.</strong></h1>
+    <p>Technical consulting and development: architecture, automation, and app delivery for companies that need to ship.</p>
+  </div>
+  <div class="url">www.machfivetech.com</div>
+  <div class="bar"></div>
+</div>
+</body>
+</html>
