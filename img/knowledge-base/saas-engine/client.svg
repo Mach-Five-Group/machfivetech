@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" fill="none">
+<defs>
+<linearGradient id="__ID__-panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F5F5F5"/></linearGradient>
+<linearGradient id="__ID__-brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6A3D"/><stop offset=".55" stop-color="#DD4124"/><stop offset="1" stop-color="#9A1500"/></linearGradient>
+<linearGradient id="__ID__-teal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#A5E0E0"/><stop offset="1" stop-color="#5FB3B3"/></linearGradient>
+<linearGradient id="__ID__-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#454545"/><stop offset="1" stop-color="#181818"/></linearGradient>
+<pattern id="__ID__-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#181818" stroke-opacity=".05" stroke-width="1"/></pattern>
+<filter id="__ID__-shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#181818" flood-opacity=".16"/></filter>
+</defs>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-panel)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-grid)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" stroke="#181818" stroke-opacity=".08"/>
+<!-- Three delivery surfaces subscribe to the same reusable component and event stream. -->
+<path d="M76 185H488M155 185V151M333 185V158M451 185V142" stroke="#181818" stroke-opacity=".14" stroke-width="3"/>
+<path d="M76 185H488M155 185V151M333 185V158M451 185V142" stroke="#DD4124" stroke-width="2.5"/>
+<path d="M480 180L488 185L480 190" stroke="#DD4124" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#__ID__-shadow)"><rect x="58" y="38" width="208" height="113" rx="11" fill="#FFF"/><rect x="58" y="38" width="208" height="22" rx="10" fill="url(#__ID__-ink)"/><path d="M58 49H266V60H58Z" fill="#252525"/>
+<rect x="301" y="24" width="65" height="134" rx="14" fill="url(#__ID__-ink)"/><rect x="307" y="32" width="53" height="118" rx="9" fill="#FFF"/>
+<rect x="399" y="58" width="105" height="84" rx="12" fill="#FFF"/></g>
+<g fill="#FFF" fill-opacity=".5"><circle cx="70" cy="49" r="2"/><circle cx="79" cy="49" r="2"/><circle cx="88" cy="49" r="2"/></g>
+<path d="M105 78H245M105 90H223M105 111H242M105 123H207" stroke="#181818" stroke-opacity=".14" stroke-width="3" stroke-linecap="round"/>
+<!-- Identical orange component tiles across browser, mobile, and plugin. -->
+<g fill="url(#__ID__-brand)"><rect x="73" y="75" width="23" height="23" rx="5"/><rect x="322" y="53" width="23" height="23" rx="5"/><rect x="410" y="74" width="23" height="23" rx="5"/></g>
+<g stroke="#FFF" stroke-width="1.5" stroke-linecap="round"><path d="M79 83H90M79 88H87M328 61H339M328 66H336M416 82H427M416 87H424"/></g>
+<path d="M318 44H348M318 89H349M318 100H341" stroke="#181818" stroke-opacity=".17" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="318" y="114" width="31" height="16" rx="4" fill="url(#__ID__-teal)"/>
+<path d="M444 78H491M444 89H480" stroke="#181818" stroke-opacity=".18" stroke-width="3" stroke-linecap="round"/>
+<path d="M411 109H488M411 120H470" stroke="#7BC4C4" stroke-width="3" stroke-linecap="round"/>
+<g fill="url(#__ID__-brand)" filter="url(#__ID__-shadow)"><circle cx="114" cy="185" r="6"/><circle cx="231" cy="185" r="6"/><circle cx="397" cy="185" r="6"/></g>
+<path d="M225 168L231 162L237 168M231 162V177" stroke="#7BC4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<title>Shared web components and a publish-subscribe event stream power browser, mobile, and platform-plugin experiences</title>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" fill="none">
+<defs>
+<linearGradient id="__ID__-panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F5F5F5"/></linearGradient>
+<linearGradient id="__ID__-brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6A3D"/><stop offset=".55" stop-color="#DD4124"/><stop offset="1" stop-color="#9A1500"/></linearGradient>
+<linearGradient id="__ID__-teal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#A5E0E0"/><stop offset="1" stop-color="#5FB3B3"/></linearGradient>
+<linearGradient id="__ID__-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#454545"/><stop offset="1" stop-color="#181818"/></linearGradient>
+<pattern id="__ID__-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#181818" stroke-opacity=".05" stroke-width="1"/></pattern>
+<filter id="__ID__-shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#181818" flood-opacity=".16"/></filter>
+</defs>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-panel)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-grid)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" stroke="#181818" stroke-opacity=".08"/>
+<!-- One administration console manages multiple SaaS instances. -->
+<path d="M318 110H365V47Q365 41 374 41H418M365 110H418M365 110V173Q365 179 374 179H418" stroke="#181818" stroke-opacity=".17" stroke-width="2.5"/>
+<path d="M318 110H418" stroke="#DD4124" stroke-width="2.5"/>
+<g filter="url(#__ID__-shadow)"><rect x="52" y="43" width="266" height="134" rx="14" fill="#FFF"/>
+<rect x="418" y="22" width="79" height="38" rx="8" fill="#FFF"/><rect x="418" y="91" width="79" height="38" rx="8" fill="#FFF"/><rect x="418" y="160" width="79" height="38" rx="8" fill="#FFF"/></g>
+<!-- Configuration controls and application health share the console. -->
+<path d="M74 66H143M74 98H172M74 128H172" stroke="#181818" stroke-opacity=".14" stroke-width="4" stroke-linecap="round"/>
+<path d="M74 98H143M74 128H108" stroke="url(#__ID__-brand)" stroke-width="4" stroke-linecap="round"/>
+<g fill="#FFF" stroke="url(#__ID__-brand)" stroke-width="4" filter="url(#__ID__-shadow)"><circle cx="143" cy="98" r="8"/><circle cx="108" cy="128" r="8"/></g>
+<path d="M194 66V155" stroke="#181818" stroke-opacity=".08"/>
+<g fill="url(#__ID__-teal)"><circle cx="215" cy="79" r="4"/><circle cx="215" cy="110" r="4"/><circle cx="215" cy="141" r="4"/></g>
+<path d="M229 79H290M229 110H290M229 141H290" stroke="#181818" stroke-opacity=".11" stroke-width="5" stroke-linecap="round"/>
+<path d="M229 79H281M229 110H267M229 141H286" stroke="#7BC4C4" stroke-width="5" stroke-linecap="round"/>
+<!-- Repeated orange core tiles identify separate deployments of the same system. -->
+<g fill="url(#__ID__-brand)"><rect x="429" y="31" width="20" height="20" rx="4"/><rect x="429" y="100" width="20" height="20" rx="4"/><rect x="429" y="169" width="20" height="20" rx="4"/></g>
+<path d="M459 37H476M459 44H470M459 106H476M459 113H470M459 175H476M459 182H470" stroke="#181818" stroke-opacity=".2" stroke-width="2" stroke-linecap="round"/>
+<g fill="#7BC4C4"><circle cx="487" cy="41" r="3"/><circle cx="487" cy="110" r="3"/><circle cx="487" cy="179" r="3"/></g>
+<!-- A separate viewing path represents the helpdesk's read-only access. -->
+<path d="M126 177V193H167" stroke="#181818" stroke-opacity=".2" stroke-width="1.5" stroke-dasharray="3 4"/>
+<path d="M172 193Q184 179 196 193Q184 207 172 193Z" stroke="#181818" stroke-opacity=".5" stroke-width="1.5"/><circle cx="184" cy="193" r="3" fill="#181818" fill-opacity=".5"/>
+<title>One admin console configures and monitors multiple SaaS deployments, with a separate read-only helpdesk view</title>
+</svg>

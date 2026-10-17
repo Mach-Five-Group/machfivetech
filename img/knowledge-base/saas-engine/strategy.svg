@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" fill="none">
+<defs>
+<linearGradient id="__ID__-panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F5F5F5"/></linearGradient>
+<linearGradient id="__ID__-brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6A3D"/><stop offset=".55" stop-color="#DD4124"/><stop offset="1" stop-color="#9A1500"/></linearGradient>
+<linearGradient id="__ID__-teal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#A5E0E0"/><stop offset="1" stop-color="#5FB3B3"/></linearGradient>
+<linearGradient id="__ID__-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#454545"/><stop offset="1" stop-color="#181818"/></linearGradient>
+<pattern id="__ID__-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#181818" stroke-opacity=".05" stroke-width="1"/></pattern>
+<filter id="__ID__-shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#181818" flood-opacity=".16"/></filter>
+</defs>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-panel)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" fill="url(#__ID__-grid)"/>
+<rect class="illustration-panel" x="1" y="1" width="558" height="218" rx="18" stroke="#181818" stroke-opacity=".08"/>
+<!-- Shared building blocks become differentiated products through configuration. -->
+<path d="M77 110H226M334 110H369Q383 110 383 94V58Q383 43 399 43H432M334 110H432M383 110V162Q383 177 399 177H432" stroke="#181818" stroke-opacity=".15" stroke-width="2.5"/>
+<path d="M77 110H226M334 110H432" stroke="#DD4124" stroke-width="3"/>
+<!-- Product feedback returns to the configurable core. -->
+<path d="M505 110H523V186Q523 201 507 201H280Q263 201 263 184V169" stroke="#7BC4C4" stroke-width="2" stroke-linecap="round"/>
+<path d="M258 176L263 169L268 176" stroke="#7BC4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#__ID__-shadow)">
+<rect x="58" y="68" width="34" height="34" rx="7" fill="url(#__ID__-brand)"/><rect x="102" y="68" width="34" height="34" rx="7" fill="url(#__ID__-brand)"/>
+<rect x="58" y="118" width="34" height="34" rx="7" fill="url(#__ID__-brand)"/><rect x="102" y="118" width="34" height="34" rx="7" fill="url(#__ID__-brand)"/>
+<rect x="226" y="56" width="108" height="108" rx="20" fill="#FFF"/><rect x="243" y="73" width="74" height="74" rx="14" fill="url(#__ID__-brand)"/>
+<rect x="432" y="21" width="74" height="44" rx="8" fill="#FFF"/><rect x="432" y="88" width="74" height="44" rx="8" fill="#FFF"/><rect x="432" y="155" width="74" height="44" rx="8" fill="#FFF"/>
+</g>
+<path d="M259 95H301M259 110H301M259 125H301" stroke="#FFF" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+<g fill="#FFF"><circle cx="270" cy="95" r="4"/><circle cx="290" cy="110" r="4"/><circle cx="278" cy="125" r="4"/></g>
+<!-- The identical orange tile in each product communicates reuse. -->
+<g fill="url(#__ID__-brand)"><rect x="442" y="33" width="20" height="20" rx="4"/><rect x="442" y="100" width="20" height="20" rx="4"/><rect x="442" y="167" width="20" height="20" rx="4"/></g>
+<g fill="url(#__ID__-teal)"><rect x="470" y="33" width="26" height="6" rx="3"/><rect x="470" y="44" width="18" height="6" rx="3"/>
+<rect x="470" y="100" width="7" height="20" rx="3"/><rect x="481" y="107" width="7" height="13" rx="3"/><rect x="492" y="102" width="5" height="18" rx="2"/>
+<circle cx="477" cy="177" r="7"/><circle cx="493" cy="177" r="4"/></g>
+<circle cx="181" cy="110" r="7" fill="url(#__ID__-brand)"/>
+<path d="M59 166H135" stroke="#181818" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
+<title>Reusable components pass through configuration to create distinct products, with a feedback loop back to the core</title>
+</svg>
